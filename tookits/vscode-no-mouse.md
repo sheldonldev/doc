@@ -1,0 +1,2 @@
+# VSCode No Mouse
+

@@ -12,7 +12,7 @@
     * [Fundamentals](tookits/unix-linux/fundamentals.md)
   * [Regex](tookits/regex.md)
   * [Git & Github](tookits/git-and-github.md)
-  * [VSCode on Keyboard](tookits/vscode-on-keyboard.md)
+  * [VSCode No Mouse](tookits/vscode-no-mouse.md)
 * [Ubuntu Workspace](ubuntu-workspace.md)
 * [macOS Workspace](macos-workspace.md)
 * [Vim Based Workspace](vim-based-workspace.md)
