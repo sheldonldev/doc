@@ -15,7 +15,8 @@
   * [VSCode No Mouse](tookits/vscode-no-mouse.md)
 * [Ubuntu Workspace](ubuntu-workspace.md)
 * [macOS Workspace](macos-workspace.md)
-* [Vim Based Workspace](vim-based-workspace.md)
+* [Vim Based Workspace](vim-based-workspace/README.md)
+  
 
 ## Learning Path
 
