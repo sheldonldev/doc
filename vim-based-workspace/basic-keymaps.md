@@ -5,6 +5,7 @@ __Key__ | __Map__
 `h: key-notation` | key notation manual
 -|-
 `<Esc>`/`:c` | command mode
+`:!_command_` | run a shell command
 -|-
 `v` | visual by cursor
 `V` | visual by line
