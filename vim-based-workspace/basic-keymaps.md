@@ -30,9 +30,11 @@ __Key__ | __Map__
 `P` | paset before the current line
 -|-
 `j`, `k`, `h`, `l` | move up, down, left, right
+`<CR>` | move cursor to the beginning of next line
+`gg`/`[[` | move cursor to the top of the file
 `gg`/`[[` | move cursor to the top of the file
 `G`/`]]` | move cursor to the bottom of the file
-`_n_G`/`:_n_` | move cursor to the _nth_ line
+`_n_G`/`:_n_` | move cursor to the _n_th line
 `0` | move cursor to the beginning of the current line
 `$` | move cursor to the end of the current line
 `w` | move cursor a word forward
@@ -42,13 +44,13 @@ __Key__ | __Map__
 `H` | move cursor to the top of the screen
 `L` | move cursor to the bottom of the screen
 `M` | move cursor to the middle of the screen
-`t_char_` | move cursor to the char before _char_
+`t_c_` | move cursor to before the char _c_
 `{` | move cursor above the paragraph
 `}` | move cursor to then end of the paragraph
 -|-
 `ygg` | yank current line and all above
 `yG` | yank current line and all below
-`y_n_G` | yank current linet and above/below till the _nth_ line
+`y_n_G` | yank current line and above/below till the _n_th line
 `y0` | yank content between the cursor and the start of the line (ends included)
 `y$` | yank content between the cursor and the end of the line (ends included)
 `yw` | yank the current word 
@@ -56,6 +58,9 @@ __Key__ | __Map__
 `yb` | yank the chars before the cursor of this word, cursor included
 `yB` | yank the chars before the cursor of this word, cursor excluded
 `c?`, `d?` | similar to `y?`
+-|-
+`>>` | indent current line
+`<<` | undent current line
 -|-
 `u` | undo
 `U` | undo line
@@ -69,10 +74,14 @@ __Key__ | __Map__
 `<C-b>` | scroll full page up
 `zz` | scroll the current line to the middle of the screen
 -|-
-`:/_str_<CR>` | search _str_
+`:/_str_<CR>` | search _str_ from top
+`:?_str_<CR>` | search _str_ from current line
+`*` | search current word under the cursor
 `n` | search next one
 `N` | search last one
 `:%s/foo/bar/gci` | search and replace, globally, with confirmation, case insensitive. `y(es)`/`n(o)`/`replace (a)ll`/`(q)uit`/`rep(l)ace`/`<C-e>`/`<C-y>`
 -|-
-`m_m_` | set mark _m_, such as `mh`, `mj`, `mk`, `ml`... 
-`\`_m` | goto mark _m_ 
+`m_m_` | set mark _m_, good practice: `mh`, `mj`, `mk`, `ml` 
+`'_m_` | goto mark _m_ line
+`<Grave_accent>_m_` | goto mark _m_ cursor
+`<C-o>` | goto prev mark
