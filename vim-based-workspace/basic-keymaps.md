@@ -1,87 +1,105 @@
 # Basic Keymaps
 
 __Key__ | __Map__
--|- 
-`h: key-notation` | key notation manual
 -|-
-`:!_command_` | run a shell command
-`:w` | save
-`:q` | quit
-`:wq`/`ZZ` | save and quit
-`:q!` | quit without save
-`v` | visual mode by cursor
-`V` | visual mode by line
-`<C-v>` | visual mode by block
-`<Esc>`/`<C-c>`| exit current mode
+`h: key-notation` | key notation manual.
 -|-
-`i` | insert before cursor
-`I` | insert at the beginning of the current line
-`a` | append after cursor
-`A` | append at the end of the current line
-`o` | open new line above the current line
-`O` | open new line below the current line
+`i` | insert before cursor.
+`I` | insert at the beginning of the current line.
+`a` | append after cursor.
+`A` | append at the end of the current line.
+`o` | open new line above the current line.
+`O` | open new line below the current line.
 -|-
-`x` | cut the char under the cursor
-`X` | cut the char before the cursor
-`dd` | cut the current line
-`yy` | yank the current line
-`cc` | cut the current line and insert
-`p` | paste after the current line
-`P` | paset before the current line
+`x` | cut the current char.
+`X` | cut the char before the cursor.
+`s` | cut the current char and insert.
+`S` | cut the current line and insert.
+`r` | replace the current char.
+`R` | replace chars afterward until exit the replace mode.
+`~` | reverse upper/lower case.
+`dd` | cut the current line.
+`yy` | yank the current line.
+`cc` | change current line to the insert, same as `S`.
+`p` | paste after the current line.
+`P` | paset before the current line.
 -|-
-`j`, `k`, `h`, `l` | move up, down, left, right
-`<CR>` | move cursor to the beginning of next line
-`gg`/`[[` | move cursor to the top of the file
-`gg`/`[[` | move cursor to the top of the file
-`G`/`]]` | move cursor to the bottom of the file
-`_n_G`/`:_n_` | move cursor to the _n_th line
-`0` | move cursor to the beginning of the current line
-`$` | move cursor to the end of the current line
-`w` | move cursor a word forward
-`W` | move cursor a word forward, skip punctuation
-`e` | move cursor to word end
-`B` | move cursor a word backward, skip punctuation
-`H` | move cursor to the top of the screen
-`L` | move cursor to the bottom of the screen
-`M` | move cursor to the middle of the screen
-`t_c_` | move cursor to before the char _c_
-`{` | move cursor above the paragraph
-`}` | move cursor to then end of the paragraph
+`j`, `k`, `h`, `l` | move up, down, left, right.
+`<CR>` | move cursor to the beginning of next line.
+`gg`/`[[` | move cursor to the top of the file.
+`G`/`]]` | move cursor to the bottom of the file.
+`_n_G`/`:_n_` | move cursor to the _n_th line.
+`^`/`0` | move cursor to the beginning of the current line.
+`$` | move cursor to the end of the current line.
+`w` | move cursor a word forward.
+`W` | move cursor a word forward, skip punctuation.
+`e` | move cursor to word end.
+`B` | move cursor a word backward, skip punctuation.
+`H` | move cursor to the top of the screen.
+`L` | move cursor to the bottom of the screen.
+`M` | move cursor to the middle of the screen.
+`f_c_` | find forward on char _c_ in the line.
+`F_c_` | find backward on char _c_ in the line.
+`t_c_` | forward until char _c_ in the line.
+`T_c_` | backward until char _c_ in the line.
+`;` | next `f`/`F`/`t`/`T` result.
+`,` | prev `f`/`F`/`t`/`T` result.
+`{` | move cursor above the paragraph.
+`}` | move cursor to the end of the paragraph.
+`(` | move cursor to the beginning of the sentence.
+`)` | move cursor to then end of the sentence.
 -|-
-`ygg` | yank current line and all above
-`yG` | yank current line and all below
-`y_n_G` | yank current line and above/below till the _n_th line
-`y0` | yank content between the cursor and the start of the line (ends included)
-`y$` | yank content between the cursor and the end of the line (ends included)
-`yw` | yank the current word 
-`yW` | yank the current word along with the punctuation
-`yb` | yank the chars before the cursor of this word, cursor included
-`yB` | yank the chars before the cursor of this word, cursor excluded
-`c?`, `d?` | similar to `y?`
+`ygg` | yank current line and all above.
+`yG` | yank current line and all below.
+`y_n_G` | yank current line and above/below till the _n_th line.
+`y0` | yank content between the cursor and the start of the line (ends included).
+`y$` | yank content between the cursor and the end of the line (ends included).
+`yw` | yank the current word.
+`yW` | yank the current word along with the punctuation.
+`yb` | yank the chars before the cursor of this word, cursor included.
+`yB` | yank the chars before the cursor of this word, cursor excluded.
+`c<?>`, `d<?>` | similar to `y<?>`.
+`_n_<?>` | repeate _n_ times, for example `3w`.
+`.` | repeate command.
 -|-
-`>>` | indent current line
-`<<` | undent current line
+`>>` | indent current line.
+`<<` | undent current line.
+`J` | join next line to current line.
 -|-
-`u` | undo
-`U` | undo line
-`<C-r>` | redo
+`u` | undo.
+`U` | undo line.
+`<C-r>` | redo.
 -|-
-`<C-e>` | scroll the screen up
-`<C-y>` | scroll the screen down
-`<C-d>` | scroll half page down
-`<C-f>` | scroll full page down
-`<C-u>` | scroll half page up
-`<C-b>` | scroll full page up
-`zz` | scroll the current line to the middle of the screen
+`<C-e>` | scroll the screen up.
+`<C-y>` | scroll the screen down.
+`<C-d>` | scroll half page down.
+`<C-f>` | scroll full page down.
+`<C-u>` | scroll half page up.
+`<C-b>` | scroll full page up.
+`zz` | scroll the current line to the middle of the screen.
 -|-
-`:/_str_<CR>` | search _str_ from top
-`:?_str_<CR>` | search _str_ from current line
-`*` | search current word under the cursor
-`n` | search next one
-`N` | search last one
-`:%s/foo/bar/gci` | search and replace, globally, with confirmation, case insensitive. `y(es)`/`n(o)`/`replace (a)ll`/`(q)uit`/`rep(l)ace`/`<C-e>`/`<C-y>`
+`:/_str_<CR>` | search _str_ from top.
+`:?_str_<CR>` | search _str_ from current line.
+`n` | search next one.
+`N` | search last one.
+`:%s/foo/bar/gci` | search and replace, globally, with confirmation, case insensitive. `y(es)`/`n(o)`/`replace (a)ll`/`(q)uit`/`rep(l)ace`/`<C-e>`/`<C-y>`.
+`:noh` | no highlighting.
+`*` | search next identifier of current word.
+`#` | search prev identifier of current word.
+`K` | search current word in manual
 -|-
-`m_m_` | set mark _m_, good practice: `mh`, `mj`, `mk`, `ml` 
-`'_m_` | goto mark _m_ line
-`<Grave_accent>_m_` | goto mark _m_ cursor
-`<C-o>` | goto prev mark
+`m_m_` | set mark _m_, good practice: `mh`, `mj`, `mk`, `ml`.
+`'_m_` | goto mark _m_ line.
+`<Grave_accent>_m_` | goto mark _m_ cursor.
+`<C-o>` | goto prev mark.
+-|-
+`:!_command_` | run a shell command.
+`:w` | save.
+`:q` | quit.
+`:wq`/`ZZ` | save and quit.
+`:q!` | quit without save.
+`<C-z>` | suspend and back to shell.
+`v` | visual mode. You can manipulate with `y`, `d`, `c`, `<`, `>`...
+`V` | visual line mode. You can manipulate with `y`, `d`, `c`, `<`, `>`...
+`<C-v>` | visual block mode. You can edit multi-lines in this mode!
+`<Esc>`/`<C-c>`| exit current mode.
