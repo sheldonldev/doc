@@ -1,5 +1,8 @@
 # Basic Keymaps
 
-`h: key-notation` - key notation manual
-
-`<Esc>`/`:c` - command mode
+_Key_ | _Map_
+-|-
+`h: key-notation` | key notation manual
+-|-
+`<Esc>`/`:c` | command mode
+-|-
