@@ -1,10 +1,8 @@
 # Basic Keymaps
 
 __Key__ | __Map__
-
 -|- 
 `h: key-notation` | key notation manual
-
 -|-
 `:!_command_` | run a shell command
 `:w` | save
@@ -15,7 +13,6 @@ __Key__ | __Map__
 `V` | visual mode by line
 `<C-v>` | visual mode by block
 `<Esc>`/`<C-c>`| exit current mode
-
 -|-
 `i` | insert before cursor
 `I` | insert at the beginning of the current line
@@ -23,7 +20,6 @@ __Key__ | __Map__
 `A` | insert at the end of the current line
 `o` | insert above the current line
 `O` | insert below the current line
-
 -|-
 `x` | cut the char under the cursor
 `X` | cut the char before the cursor
@@ -32,7 +28,6 @@ __Key__ | __Map__
 `cc` | cut the current line and insert
 `p` | paste after the current line
 `P` | paset before the current line
-
 -|-
 `j`, `k`, `h`, `l` | move up, down, left, right
 `gg`/`[[` | move cursor to the top of the file
@@ -50,7 +45,6 @@ __Key__ | __Map__
 `t_char_` | move cursor to the char before _char_
 `{` | move cursor above the block
 `}` | move cursor below the block
-
 -|-
 `ygg` | yank current line and all above
 `yG` | yank current line and all below
@@ -62,20 +56,17 @@ __Key__ | __Map__
 `yb` | yank the chars before the cursor of this word, cursor included
 `yB` | yank the chars before the cursor of this word, cursor excluded
 `c?`, `d?` | similar to `y?`
-
 -|-
 `u` | undo
 `<C-r>` | redo
-
 -|-
 `<C-e>` | scroll the screen up
 `<C-y>` | scroll the screen down
 `<C-d>` | scroll downward and move cursor a half screen
 `<C-u>` | scroll upward and move cursor a harf screen
 `zz` | scroll the current line to the middle of the screen
-
 -|-
 `:/_str_<CR>` | search _str_
 `n` | search next one
 `N` | search last one
-`:%s/foo/bar/gci` | search and replace, globally, with confirmation, case insensitive
+`:%s/foo/bar/gci` | search and replace, globally, with confirmation, case insensitive. `y(es)`/`n(o)`/`replace (a)ll`/`(q)uit`/`rep(l)ace`/`<C-e>`/`<C-y>`
