@@ -16,10 +16,10 @@ __Key__ | __Map__
 -|-
 `i` | insert before cursor
 `I` | insert at the beginning of the current line
-`a` | insert after cursor
-`A` | insert at the end of the current line
-`o` | insert above the current line
-`O` | insert below the current line
+`a` | append after cursor
+`A` | append at the end of the current line
+`o` | open new line above the current line
+`O` | open new line below the current line
 -|-
 `x` | cut the char under the cursor
 `X` | cut the char before the cursor
@@ -37,14 +37,14 @@ __Key__ | __Map__
 `$` | move cursor to the end of the current line
 `w` | move cursor a word forward
 `W` | move cursor a word forward, skip punctuation
-`b` | move cursor a word backward
+`e` | move cursor to word end
 `B` | move cursor a word backward, skip punctuation
 `H` | move cursor to the top of the screen
 `L` | move cursor to the bottom of the screen
 `M` | move cursor to the middle of the screen
 `t_char_` | move cursor to the char before _char_
-`{` | move cursor above the block
-`}` | move cursor below the block
+`{` | move cursor above the paragraph
+`}` | move cursor to then end of the paragraph
 -|-
 `ygg` | yank current line and all above
 `yG` | yank current line and all below
@@ -58,15 +58,21 @@ __Key__ | __Map__
 `c?`, `d?` | similar to `y?`
 -|-
 `u` | undo
+`U` | undo line
 `<C-r>` | redo
 -|-
 `<C-e>` | scroll the screen up
 `<C-y>` | scroll the screen down
-`<C-d>` | scroll downward and move cursor a half screen
-`<C-u>` | scroll upward and move cursor a harf screen
+`<C-d>` | scroll half page down
+`<C-f>` | scroll full page down
+`<C-u>` | scroll half page up
+`<C-b>` | scroll full page up
 `zz` | scroll the current line to the middle of the screen
 -|-
 `:/_str_<CR>` | search _str_
 `n` | search next one
 `N` | search last one
 `:%s/foo/bar/gci` | search and replace, globally, with confirmation, case insensitive. `y(es)`/`n(o)`/`replace (a)ll`/`(q)uit`/`rep(l)ace`/`<C-e>`/`<C-y>`
+-|-
+`m_m_` | set mark _m_, such as `mh`, `mj`, `mk`, `ml`... 
+`\`_m` | goto mark _m_ 
