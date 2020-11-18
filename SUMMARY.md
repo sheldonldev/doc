@@ -17,7 +17,7 @@
 * [macOS Workspace](macos-workspace.md)
 * [Vim Based Workspace](vim-based-workspace/README.md)
     * [Basic Keymaps](vim-based-workspace/basic-keymaps.md)
-    
+    * [Basic Commands](vim-based-workspace/basic-commands.md)
 
 ## Learning Path
 
