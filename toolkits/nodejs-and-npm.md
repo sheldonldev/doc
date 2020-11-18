@@ -41,7 +41,7 @@ npm -v
 ```bash
 brew uninstall node
 
-# check all these dir, remove node* and npm*
+# check all these dir, remove *node* and *npm*
 cd ~
 cd /usr/local/lib
 cd /opt/local/lib

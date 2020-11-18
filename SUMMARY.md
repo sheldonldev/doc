@@ -19,6 +19,7 @@
 * [Vim Based Workspace](vim-based-workspace/README.md)
     * [Basic Keymaps](vim-based-workspace/basic-keymaps.md)
     * [Basic Commands](vim-based-workspace/basic-commands.md)
+    * [Setting Up Neovim for Web Development](vim-based-workspace/nvim-for-web-dev.md)
 
 ## Learning Path
 
