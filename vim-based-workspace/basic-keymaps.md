@@ -97,7 +97,6 @@ __Key__ | __Map__
 `<Backtick>_m_` | goto mark _m_ cursor.
 `<C-o>` | goto prev mark.
 -|-
-`:!_command_` | run a shell command.
 `:w` | save.
 `:q` | quit.
 `:wq`/`ZZ` | save and quit.

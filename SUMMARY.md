@@ -6,10 +6,10 @@
 
 ---
 
-* [Tookits](tookits/README.md)
-    * [Unix/Linux](tookits/unix-linux/README.md)
-        * [Resources](tookits/unix-linux/resources.md)
-        * [Fundamentals](tookits/unix-linux/fundamentals.md)
+* [Toolkits](toolkits/README.md)
+    * [Unix/Linux](toolkits/unix-linux/README.md)
+        * [Resources](toolkits/unix-linux/resources.md)
+        * [Fundamentals](toolkits/unix-linux/fundamentals.md)
     * [Regex](tookits/regex.md)
     * [Git & Github](tookits/git-and-github.md)
     * [VSCode No Mouse](tookits/vscode-no-mouse.md)
