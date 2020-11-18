@@ -4,12 +4,12 @@ __Key__ | __Map__
 -|-
 `h: key-notation` | key notation manual.
 -|-
-`i` | insert before cursor.
+`i` | insert before the cursor.
 `I` | insert at the beginning of the current line.
-`a` | append after cursor.
+`a` | append after the cursor.
 `A` | append at the end of the current line.
-`o` | open new line above the current line.
-`O` | open new line below the current line.
+`o` | open a new line above the current line.
+`O` | open a new line below the current line.
 -|-
 `x` | cut the current char.
 `X` | cut the char before the cursor.
@@ -20,34 +20,34 @@ __Key__ | __Map__
 `~` | reverse upper/lower case.
 `dd` | cut the current line.
 `yy` | yank the current line.
-`cc` | change current line to the insert, same as `S`.
+`cc` | change the current line, same as `S`.
 `p` | paste after the current line.
-`P` | paset before the current line.
+`P` | paste before the current line.
 -|-
 `j`, `k`, `h`, `l` | move up, down, left, right.
-`<CR>` | move cursor to the beginning of next line.
-`gg`/`[[` | move cursor to the top of the file.
-`G`/`]]` | move cursor to the bottom of the file.
-`_n_G`/`:_n_` | move cursor to the _n_th line.
-`^`/`0` | move cursor to the beginning of the current line.
-`$` | move cursor to the end of the current line.
-`w` | move cursor a word forward.
-`W` | move cursor a word forward, skip punctuation.
-`e` | move cursor to word end.
-`B` | move cursor a word backward, skip punctuation.
-`H` | move cursor to the top of the screen.
-`L` | move cursor to the bottom of the screen.
-`M` | move cursor to the middle of the screen.
+`<CR>` | move the cursor to the beginning of the next line.
+`gg`/`[[` | move the cursor to the top of the file.
+`G`/`]]` | move the cursor to the bottom of the file.
+`_n_G`/`:_n_` | move the cursor to the _n_th line.
+`^`/`0` | move the cursor to the beginning of the current line.
+`$` | move the cursor to the end of the current line.
+`w` | move the cursor a word forward.
+`W` | move the cursor a word forward, skip punctuation.
+`e` | move the cursor to word end.
+`B` | move the cursor a word backward, skip punctuation.
+`H` | move the cursor to the top of the screen.
+`L` | move the cursor to the bottom of the screen.
+`M` | move the cursor to the middle of the screen.
 `f_c_` | find forward on char _c_ in the line.
 `F_c_` | find backward on char _c_ in the line.
 `t_c_` | forward until char _c_ in the line.
 `T_c_` | backward until char _c_ in the line.
 `;` | next `f`/`F`/`t`/`T` result.
 `,` | prev `f`/`F`/`t`/`T` result.
-`{` | move cursor above the paragraph.
-`}` | move cursor to the end of the paragraph.
-`(` | move cursor to the beginning of the sentence.
-`)` | move cursor to then end of the sentence.
+`{` | move the cursor above the paragraph.
+`}` | move the cursor to the end of the paragraph.
+`(` | move the cursor to the beginning of the sentence.
+`)` | move the cursor to the end of the sentence.
 -|-
 `ygg` | yank current line and all above.
 `yG` | yank current line and all below.
@@ -59,12 +59,12 @@ __Key__ | __Map__
 `yb` | yank the chars before the cursor of this word, cursor included.
 `yB` | yank the chars before the cursor of this word, cursor excluded.
 `c<?>`, `d<?>` | similar to `y<?>`.
-`_n_<?>` | repeate _n_ times, for example `3w`.
+`_n_<?>` | repeate command _n_ times, for example `3w`.
 `.` | repeate command.
 -|-
 `>>` | indent current line.
 `<<` | undent current line.
-`J` | join next line to current line.
+`J` | join next line to the current line.
 -|-
 `u` | undo.
 `U` | undo line.
@@ -72,10 +72,10 @@ __Key__ | __Map__
 -|-
 `<C-e>` | scroll the screen up.
 `<C-y>` | scroll the screen down.
-`<C-d>` | scroll half page down.
-`<C-f>` | scroll full page down.
-`<C-u>` | scroll half page up.
-`<C-b>` | scroll full page up.
+`<C-d>` | scroll a half page down.
+`<C-f>` | scroll a full page down.
+`<C-u>` | scroll a half page up.
+`<C-b>` | scroll a full page up.
 `zz` | scroll the current line to the middle of the screen.
 -|-
 `:/_str_<CR>` | search _str_ from top.
@@ -84,8 +84,8 @@ __Key__ | __Map__
 `N` | search last one.
 `:%s/foo/bar/gci` | search and replace, globally, with confirmation, case insensitive. `y(es)`/`n(o)`/`replace (a)ll`/`(q)uit`/`rep(l)ace`/`<C-e>`/`<C-y>`.
 `:noh` | no highlighting.
-`*` | search next identifier of current word.
-`#` | search prev identifier of current word.
+`*` | search next identifier of the current word.
+`#` | search prev identifier of the current word.
 `K` | search current word in manual
 -|-
 `m_m_` | set mark _m_, good practice: `mh`, `mj`, `mk`, `ml`.
