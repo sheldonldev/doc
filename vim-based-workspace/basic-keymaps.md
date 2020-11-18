@@ -5,11 +5,11 @@ __Key__ | __Map__
 `h: key-notation` | key notation manual.
 -|-
 `i` | insert before the cursor.
-`I` | insert at the beginning of the current line.
+`I` | insert at the start of line.
 `a` | append after the cursor.
-`A` | append at the end of the current line.
-`o` | open a new line above the current line.
-`O` | open a new line below the current line.
+`A` | append at the end of line.
+`o` | open a new line above.
+`O` | open a new line below.
 -|-
 `x` | cut the current char.
 `X` | cut the char before the cursor.
@@ -21,41 +21,45 @@ __Key__ | __Map__
 `dd` | cut the current line.
 `yy` | yank the current line.
 `cc` | change the current line, same as `S`.
-`p` | paste after the current line.
-`P` | paste before the current line.
+`p` | paste below the line.
+`P` | paste above the line.
 -|-
 `j`, `k`, `h`, `l` | move up, down, left, right.
-`<CR>` | move the cursor to the beginning of the next line.
+`<CR>` | move the cursor to the start of the next line.
 `gg`/`[[` | move the cursor to the top of the file.
 `G`/`]]` | move the cursor to the bottom of the file.
-`_n_G`/`:_n_` | move the cursor to the _n_th line.
-`^`/`0` | move the cursor to the beginning of the current line.
-`$` | move the cursor to the end of the current line.
+`_n_G`/`:_n_` | move the cursor to _n_th line.
+`^` | move the cursor to the start of line, after whitespace.
+`0` | move the cursor to the start of line.
+`$` | move the cursor to the end of line.
 `w` | move the cursor a word forward.
 `W` | move the cursor a word forward, skip punctuation.
 `e` | move the cursor to word end.
+`E` | move the cursor to word end, including punctuation.
+`b` | move the cursor a word backward.
 `B` | move the cursor a word backward, skip punctuation.
 `H` | move the cursor to the top of the screen.
 `L` | move the cursor to the bottom of the screen.
 `M` | move the cursor to the middle of the screen.
-`f_c_` | find forward on char _c_ in the line.
-`F_c_` | find backward on char _c_ in the line.
-`t_c_` | forward until char _c_ in the line.
-`T_c_` | backward until char _c_ in the line.
+`f_c_` | find char _c_ forward in the line.
+`F_c_` | find char _c_ backward in the line.
+`t_c_` | to until char _c_ forward in the line.
+`T_c_` | to until char _c_ backward in the line.
 `;` | next `f`/`F`/`t`/`T` result.
 `,` | prev `f`/`F`/`t`/`T` result.
 `{` | move the cursor above the paragraph.
 `}` | move the cursor to the end of the paragraph.
-`(` | move the cursor to the beginning of the sentence.
-`)` | move the cursor to the end of the sentence.
+`(` | move the cursor to the start of sentence.
+`)` | move the cursor to the end of sentence.
 -|-
-`ygg` | yank current line and all above.
-`yG` | yank current line and all below.
-`y_n_G` | yank current line and above/below till the _n_th line.
-`y0` | yank content between the cursor and the start of the line (ends included).
-`y$` | yank content between the cursor and the end of the line (ends included).
+`ygg` | yank the current line and all above.
+`yG` | yank the current line and all below.
+`y_n_G` | yank the current line and above/below till _n_th line.
+`y0` | yank content between the cursor and start of line, ends included.
+`y^` | yank content between the cursor and start of line before space, ends included.
+`y$` | yank content between the cursor and the end of line, ends included.
 `yw` | yank the current word.
-`yW` | yank the current word along with the punctuation.
+`yW` | yank the current word and punctuation.
 `yb` | yank the chars before the cursor of this word, cursor included.
 `yB` | yank the chars before the cursor of this word, cursor excluded.
 `c<?>`, `d<?>` | similar to `y<?>`.
@@ -90,7 +94,7 @@ __Key__ | __Map__
 -|-
 `m_m_` | set mark _m_, good practice: `mh`, `mj`, `mk`, `ml`.
 `'_m_` | goto mark _m_ line.
-`<Grave_accent>_m_` | goto mark _m_ cursor.
+`<Backtick>_m_` | goto mark _m_ cursor.
 `<C-o>` | goto prev mark.
 -|-
 `:!_command_` | run a shell command.
