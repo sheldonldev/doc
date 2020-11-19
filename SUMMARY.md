@@ -1,8 +1,6 @@
 # Table of contents
 
 * [About](README.md)
-* [Untitled](untitled.md)
-* [Untitled](untitled-1.md)
 
 ## Working Env
 
