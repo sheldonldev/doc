@@ -2,11 +2,11 @@
 
 ## Node
 
-* An important plugin of Neovim is `coc.nvim`, which depends on nodejs.
+* An important plugin of Neovim is `coc.nvim`, which depends on NodeJS.
 
 ### Install Node
 
-* [Installation](https://doc.sheldonl.dev/working-env/toolkits/nodejs-and-npm#installation)
+{% embed url="https://doc.sheldonl.dev/working-env/toolkits/nodejs-and-npm#installation" caption="NodeJS Installation" %}
 
 ### Node Packages for Neovim and Web Dev
 
