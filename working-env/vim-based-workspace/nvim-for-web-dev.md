@@ -1,4 +1,4 @@
-# Neovim for Web Dev
+# Nvim for Web Dev
 
 ## Node
 
