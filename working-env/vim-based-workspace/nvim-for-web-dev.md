@@ -1,18 +1,16 @@
-# Neovim for Web Development
-
+# Neovim for Web Dev
 
 ## Node
 
-- An important plugin of Neovim is `coc.nvim`, which depends on nodejs.
+* An important plugin of Neovim is `coc.nvim`, which depends on nodejs.
 
 ### Install Node
 
-- [Installation](https://doc.sheldonl.dev/working-env/toolkits/nodejs-and-npm#installation)
+* [Installation](https://doc.sheldonl.dev/working-env/toolkits/nodejs-and-npm#installation)
 
 ### Node Packages for Neovim and Web Dev
 
-- [Global Packages For Web Dev](https://dec.sheldonl.dev/toolkits/nodejs-and-npm#global-packages-for-web-dev)
-
+* [Global Packages For Web Dev](https://dec.sheldonl.dev/toolkits/nodejs-and-npm#global-packages-for-web-dev)
 
 ## Install Neovim
 
@@ -33,19 +31,15 @@ let g:loaded_python_provider = 0
 :checkhealth
 ```
 
-
 ## Awsome Settings for Neovim
 
 ### Integrated Terminal
 
-### Ignoring node_modules
-
-###
-
+### Ignoring node\_modules
 
 ## Install Plugin Manager
 
-- I use `vim-plugin` as plugin manager
+* I use `vim-plugin` as plugin manager
 
 ```bash
 # repo: https://github.com/junegunn/vim-plug
@@ -68,8 +62,7 @@ call plug#end()
 " You can append more settings and keymaps here following the caller "
 ```
 
-- Run `:w :PlugInstall`/`:w :PlugUpdate`
-
+* Run `:w :PlugInstall`/`:w :PlugUpdate`
 
 ## Neovim Plugins
 
@@ -119,7 +112,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 ```
 
-- More settings for `coc.nvim`
+* More settings for `coc.nvim`
 
 ```bash
 " Use tab for trigger completion with characters ahead and navigate.
@@ -163,7 +156,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " more: https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/
 ```
 
-- run `:CocConfig`
+* run `:CocConfig`
 
 ```bash
 {
@@ -181,7 +174,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 ```
 
-- config
+* config
 
 ```bash
 " nerdtree "
@@ -197,14 +190,14 @@ nnoremap <silent> <leader><C-e> :NERDTreeToggle<CR>
 
 ### FZF Finder
 
-- <https://github.com/junegunn/fzf/blob/master/README-VIM.md>
+* [https://github.com/junegunn/fzf/blob/master/README-VIM.md](https://github.com/junegunn/fzf/blob/master/README-VIM.md)
 
 ```bash
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 ```
 
-- config
+* config
 
 ```bash
 nnoremap <C-p> :FZF<CR>
@@ -218,5 +211,4 @@ let g:fzf_action = {
 " Install the_silver_searcher: https://github.com/ggreer/the_silver_searcher"
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 ```
-
 

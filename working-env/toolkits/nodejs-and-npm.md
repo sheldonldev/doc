@@ -2,11 +2,10 @@
 
 ## Documentation
 
-- <https://nodejs.org/en/docs/guides/>
-- <https://nodejs.dev/learn/introduction-to-nodejs>
-- <https://docs.npmjs.com/>
-- <https://yarnpkg.com/>
-
+* [https://nodejs.org/en/docs/guides/](https://nodejs.org/en/docs/guides/)
+* [https://nodejs.dev/learn/introduction-to-nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
+* [https://docs.npmjs.com/](https://docs.npmjs.com/)
+* [https://yarnpkg.com/](https://yarnpkg.com/)
 
 ## Installation
 
@@ -21,7 +20,6 @@ npm config get prefix
 npm config set prefix /usr/local
 ```
 
-
 ## Update
 
 ```bash
@@ -33,10 +31,9 @@ node -v
 npm -v
 ```
 
-
 ## Uninstallation
 
-- <https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx>
+* [https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx](https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx)
 
 ```bash
 brew uninstall node
@@ -55,26 +52,22 @@ cd /usr/local/share/doc/
 cd /usr/local/share/systemtap/tapset
 ```
 
-
 ## Usage
 
 ```bash
 # find all global packages
 npm list -g --depth=0
-
 ```
-
 
 ## Global Packages For Web Dev
 
 ### yarn
 
-- I use npm in global, while sometimes use yarn in projects
+* I use npm in global, while sometimes use yarn in projects
 
 ```bash
 # install yarn
 npm install -g yarn
-
 ```
 
 ### neovim
@@ -82,12 +75,11 @@ npm install -g yarn
 ```bash
 # if use neovim as editor
 npm install -g neovim
-
 ```
 
 ### browser-sync
 
-- I need this because I use neovim, no IDE
+* I need this because I use neovim, no IDE
 
 ```bash
 # allow web developers use live server
@@ -101,6 +93,5 @@ browser-sync start --server --files .
 
 ```bash
 npm install -g sass
-
-
 ```
+

@@ -1,6 +1,5 @@
 # Basic Commands
 
-
 ## Start
 
 ```bash
@@ -8,7 +7,6 @@ vim -o file1 file2 file3
 # -o is horizon
 # -O is vertical
 ```
-
 
 ## Windows
 
@@ -28,7 +26,6 @@ vim -o file1 file2 file3
 :h window-resize
 ```
 
-
 ## Search Files
 
 ```bash
@@ -37,5 +34,4 @@ vim -o file1 file2 file3
 :b _file_
 :ls           # buffer list
 ```
-
 
