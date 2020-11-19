@@ -4,9 +4,7 @@ description: Sheldon Learns to Dev
 
 # About
 
-{% embed url="https://sheldonl.dev" %}
+test
 
-
-
-
+{% embed url="https://sheldonl.dev" caption="" %}
 
