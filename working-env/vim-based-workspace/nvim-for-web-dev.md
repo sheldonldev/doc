@@ -87,15 +87,14 @@ Plug 'morhetz/gruvbox'
 " relative line number: https://github.com/jeffkreeftmeijer/vim-numbertoggle"
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
-" status bar: https://github.com/vim-airline/vim-airline"
-Plug 'vim-airline/vim-airline'
-
 " filetype icons, https://github.com/ryanoasis/vim-devicons"
 " require nerd-font, https://github.com/ryanoasis/nerd-fonts#font-installation"
 " then set iTerm preferences to choose this font"
 Plug 'ryanoasis/vim-devicons'
 " then you can use nerdtree with it, https://github.com/preservim/nerdtree"
 Plug 'preservim/nerdtree'
+" airline also, https://github.com/vim-airline/vim-airline"
+Plug 'vim-airline/vim-airline'
 ```
 
 * nerdtree config
