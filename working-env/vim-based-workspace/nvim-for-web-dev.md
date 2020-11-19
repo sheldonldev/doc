@@ -10,7 +10,7 @@
 
 ### Node Packages for Neovim and Web Dev
 
-{% embed url="https://dec.sheldonl.dev/working-env/toolkits/nodejs-and-npm#global-packages-for-web-dev" caption="Global Packages For Web Dev" %}
+{% embed url="https://doc.sheldonl.dev/working-env/toolkits/nodejs-and-npm#global-packages-for-web-dev" caption="Global Packages For Web Dev" %}
 
 ## Install Neovim
 
