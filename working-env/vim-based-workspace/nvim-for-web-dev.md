@@ -35,7 +35,22 @@ let g:loaded_python_provider = 0
 
 ### Integrated Terminal
 
-### Ignoring node\_modules
+```bash
+" open new split panes to right and below
+set splitright
+set splitbelow
+
+" turn terminal to normal mode with escape
+tnoremap <Esc> <C-\><C-n>
+
+" open terminal on ctrl+n
+function! OpenTerminal()
+  split term://zsh          " I use zsh "
+  resize 7
+endfunction
+nnoremap <C-n> :call OpenTerminal()<CR>
+```
+
 
 ## Install Plugin Manager
 
@@ -50,13 +65,10 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 " Append in ~/.config/nvim/init.vim "
 
 " Call plugins "
-
 call plug#begin('~/.vim/plugged')
-
 Plug 'vender1/plug1'
 Plug 'vender2/plug2'
 Plug 'morevender/moreplug'
-
 call plug#end()
 
 " You can append more settings and keymaps here following the caller "
@@ -65,27 +77,6 @@ call plug#end()
 * Run `:w :PlugInstall`/`:w :PlugUpdate`
 
 ## Neovim Plugins
-
-### Integrated Terminal
-
-```bash
-" open new split panes to right and below
-set splitright
-set splitbelow
-
-" turn terminal to normal mode with escape
-tnoremap <Esc> <C-\><C-n>
-
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-
-" open terminal on ctrl+n
-function! OpenTerminal()
-  split term://bash
-  resize 10
-endfunction
-nnoremap <C-n> :call OpenTerminal()<CR>
-```
 
 ### Visual Easier
 
@@ -98,6 +89,13 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " status bar: https://github.com/vim-airline/vim-airline"
 Plug 'vim-airline/vim-airline'
+
+" filetype icons, https://github.com/ryanoasis/vim-devicons"
+" require nerd-font, run following cmd to install "
+" brew tap homebrew/cask-fonts"
+" brew cask install font-hack-nerd-font"
+" then set iTerm preferences to choose this font"
+Plug 'ryanoasis/vim-devicons'
 ```
 
 ### Language Support
@@ -171,7 +169,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 ```bash
 " File Explorer with Icons
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 ```
 
 * config
