@@ -10,7 +10,7 @@
 
 ### Node Packages for Neovim and Web Dev
 
-* [Global Packages For Web Dev](https://dec.sheldonl.dev/toolkits/nodejs-and-npm#global-packages-for-web-dev)
+{% embed url="https://dec.sheldonl.dev/toolkits/nodejs-and-npm#global-packages-for-web-dev" caption="Global Packages For Web Dev" %}
 
 ## Install Neovim
 
@@ -31,7 +31,7 @@ let g:loaded_python_provider = 0
 :checkhealth
 ```
 
-## Awsome Settings for Neovim
+## Awesome Settings for Neovim
 
 ### Integrated Terminal
 
