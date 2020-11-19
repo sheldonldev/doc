@@ -45,8 +45,8 @@ tnoremap <Esc> <C-\><C-n>
 
 " open terminal on ctrl+n
 function! OpenTerminal()
-  split term://zsh          " I use zsh "
-  resize 7
+    split term://zsh          " I use zsh "
+    resize 7
 endfunction
 nnoremap <C-n> :call OpenTerminal()<CR>
 ```
@@ -91,16 +91,14 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'vim-airline/vim-airline'
 
 " filetype icons, https://github.com/ryanoasis/vim-devicons"
-" require nerd-font, run following cmd to install "
-" brew tap homebrew/cask-fonts"
-" brew cask install font-hack-nerd-font"
+" require nerd-font, https://github.com/ryanoasis/nerd-fonts#font-installation"
 " then set iTerm preferences to choose this font"
 Plug 'ryanoasis/vim-devicons'
-" and relize on nerdtree"
+" then you can use nerdtree with it, https://github.com/preservim/nerdtree"
 Plug 'preservim/nerdtree'
 ```
 
-- nerdtree config
+* nerdtree config
 
 ```bash
 " nerdtree "
@@ -170,7 +168,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " more: https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/
 ```
 
-* run `:CocConfig`
+* run `:CocConfig`, edit like following:
 
 ```bash
 {
@@ -180,21 +178,10 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 }
 ```
 
-### File Explorer Support
 
-```bash
-" File Explorer with Icons
-Plug 'scrooloose/nerdtree'
-```
+### Fuzzy Finder
 
-* config
-
-```bash
-```
-
-### FZF Finder
-
-* [https://github.com/junegunn/fzf/blob/master/README-VIM.md](https://github.com/junegunn/fzf/blob/master/README-VIM.md)
+* [fzf.vim](https://github.com/junegunn/fzf.vim)
 
 ```bash
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

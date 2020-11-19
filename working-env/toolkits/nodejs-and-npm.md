@@ -2,10 +2,10 @@
 
 ## Documentation
 
-* [https://nodejs.org/en/docs/guides/](https://nodejs.org/en/docs/guides/)
-* [https://nodejs.dev/learn/introduction-to-nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
-* [https://docs.npmjs.com/](https://docs.npmjs.com/)
-* [https://yarnpkg.com/](https://yarnpkg.com/)
+* [nodjs documentation](https://nodejs.org/en/docs/guides/)
+* [larn nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
+* [npm](https://npmjs.com/)
+* [yarn](https://yarnpkg.com/)
 
 ## Installation
 
