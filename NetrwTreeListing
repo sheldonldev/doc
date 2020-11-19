@@ -1,0 +1,24 @@
+../
+doc/
+| .git/
+| toolkits/
+| | unix-linux/
+| | | README.md
+| | | fundamentals.md
+| | | resources.md
+| | README.md
+| | git-and-github.md
+| | nodejs-and-npm.md
+| | regex.md
+| | vscode-no-mouse.md
+| vim-based-workspace/
+| | README.md
+| | basic-commands.md
+| | basic-keymaps.md
+| | nvim-for-web-dev.md
+| README.md
+| SUMMARY.md
+| courses.md
+| macos-workspace.md
+| playground.md
+| ubuntu-workspace.md
