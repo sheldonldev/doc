@@ -77,11 +77,11 @@ call plug#end()
 
 ## Dependencies For the Plugins
 
-The following dependencies is required:
+The following dependencies are required:
 
 - [nerd-font](https://github.com/ryanoasis/nerd-fonts#font-installation) for `vim-devicons`;
 - [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) for `fzf.vim`;
-- Run `brew install ctags` for `coc-python` extention;
+- Run `brew install ctags` for `coc-python` extension;
 
 More details will be explained as we go.
 
@@ -127,7 +127,7 @@ nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 ### Language Support
 
 ```bash
-" Language Client and Extentions "
+" Language Client and Extensions "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
 
@@ -203,7 +203,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 }
 ```
 
-- Install more coc extentions as you need and learn the usage: [Neoclide Repositories](https://github.com/neoclide/)
+- Install more coc extensions as you need and learn the usage: [Neoclide Repositories](https://github.com/neoclide/)
 
 ```bash
 let g:coc_global_extensions = [
