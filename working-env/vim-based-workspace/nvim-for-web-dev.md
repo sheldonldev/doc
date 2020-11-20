@@ -1,16 +1,13 @@
 # Nvim for Web Dev
 
-## Node
+## Install Node
 
 * An important plugin of Neovim is `coc.nvim`, which depends on NodeJS.
-
-### Install Node
+* `npm` provides a lot of tools for web development, such as `browser-sync`.
+* So let's install node as well as the global npm packages by following this link.
 
 {% embed url="https://doc.sheldonl.dev/working-env/toolkits/nodejs-and-npm#installation" caption="NodeJS Installation" %}
 
-### Node Packages for Neovim and Web Dev
-
-{% embed url="https://doc.sheldonl.dev/working-env/toolkits/nodejs-and-npm#global-packages-for-web-dev" caption="Global Packages For Web Dev" %}
 
 ## Install Neovim
 
@@ -27,30 +24,31 @@ source ~/.vimrc
 " disable python2 "
 let g:loaded_python_provider = 0
 
-" run command to show todo list "
-:checkhealth
+" append other nvim settings after "
 ```
+
+* run command `:checkhealth` to show todo list
+
 
 ## Awesome Settings for Neovim
 
-### Integrated Terminal
+- Integrated Terminal
 
 ```bash
-" open new split panes to right and below
+" open new split panes to right and below "
 set splitright
 set splitbelow
 
-" turn terminal to normal mode with escape
+" turn terminal to normal mode with escape "
 tnoremap <Esc> <C-\><C-n>
 
-" open terminal on ctrl+n
+" open terminal on ctrl+n "
 function! OpenTerminal()
     split term://zsh          " I use zsh "
-    resize 7
+    resize 5
 endfunction
 nnoremap <C-n> :call OpenTerminal()<CR>
 ```
-
 
 ## Install Plugin Manager
 
@@ -74,51 +72,66 @@ call plug#end()
 " You can append more settings and keymaps here following the caller "
 ```
 
-* Run `:w :PlugInstall`/`:w :PlugUpdate`
+* Run `:w`, `:PlugInstall`/`:PlugUpdate`/`PlugClear`
+
+
+## Dependencies For the Plugins
+
+The following dependencies is required:
+
+* [nerd-font](https://github.com/ryanoasis/nerd-fonts#font-installation") for `vim-devicons`;
+* [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) for `fzf.vim`;
+
+More details will be explained as we go.
+
 
 ## Neovim Plugins
 
 ### Visual Easier
 
 ```bash
-" color scheme: https://github.com/morhetz/gruvbox"
+" color scheme: https://github.com/morhetz/gruvbox "
 Plug 'morhetz/gruvbox'
 
-" relative line number: https://github.com/jeffkreeftmeijer/vim-numbertoggle"
+" relative line number: https://github.com/jeffkreeftmeijer/vim-numbertoggle "
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
-" filetype icons, https://github.com/ryanoasis/vim-devicons"
-" require nerd-font, https://github.com/ryanoasis/nerd-fonts#font-installation"
-" then set iTerm preferences to choose this font"
+" filetype icons, https://github.com/ryanoasis/vim-devicons "
+" it requires Nerd Font, https://github.com/ryanoasis/nerd-fonts#font-installation "
+" then, pleas set terminal preferences to choose this font for text "
 Plug 'ryanoasis/vim-devicons'
-" then you can use nerdtree with it, https://github.com/preservim/nerdtree"
+" it will generate icon for plugins such as nerdtree and airline "
+
+" nerdtree, https://github.com/preservim/nerdtree "
 Plug 'preservim/nerdtree'
-" airline also, https://github.com/vim-airline/vim-airline"
+
+" airline also, https://github.com/vim-airline/vim-airline "
 Plug 'vim-airline/vim-airline'
 ```
 
-* nerdtree config
+* NERDTree settings:
 
 ```bash
-" nerdtree "
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
-" Automaticaly close nvim if NERDTree is only thing left open
+
+" Automaticaly close nvim if NERDTree is only thing left open "
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Toggle
+
+" Toggle "
 nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 ```
 
 ### Language Support
 
 ```bash
-" Language Client and Extentions
+" Language Client and Extentions "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 
-" TypeScript Highlighting
+" TypeScript Highlighting "
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 ```
@@ -126,8 +139,8 @@ Plug 'peitalin/vim-jsx-typescript'
 * More settings for `coc.nvim`
 
 ```bash
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+" Use tab for trigger completion with characters ahead and navigate. "
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin. "
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -139,17 +152,17 @@ function! s:check_back_space() abort
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position. "
+" Coc only does snippet and additional edit on confirm. "
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" Remap keys for gotos
+" Remap keys for gotos "
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window
+" Use K to show documentation in preview window "
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
@@ -160,14 +173,14 @@ function! s:show_documentation()
     endif
 endfunction
 
-" Highlight symbol under cursor on CursorHold
+" Highlight symbol under cursor on CursorHold "
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
-" more: https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/
+" more: https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/ "
 ```
 
-* run `:CocConfig`, edit like following:
+* run `:CocConfig`, add the following config:
 
 ```bash
 {
@@ -187,7 +200,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 ```
 
-* config
+* fzf settings:
 
 ```bash
 nnoremap <C-p> :FZF<CR>
@@ -198,7 +211,7 @@ let g:fzf_action = {
   \}
 
 " Tell fzf to use silversearcher-ag: "
-" Install the_silver_searcher: https://github.com/ggreer/the_silver_searcher"
+" Install the_silver_searcher: https://github.com/ggreer/the_silver_searcher "
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 ```
 
