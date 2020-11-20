@@ -3,7 +3,7 @@
 ## Install Node
 
 * `npm` provides a lot of tools for web development, such as `browser-sync`.
-* We use a plug named `coc.nvim` which depends on NodeJS.
+* We use a plugin named `coc.nvim` which depends on NodeJS.
 * So let's install node as well as some global npm packages by following this link:
 
 {% embed url="https://doc.sheldonl.dev/working-env/toolkits/nodejs-and-npm#installation" caption="NodeJS and npm packages Installation" %}
