@@ -16,8 +16,10 @@ So let's install node as well as some global npm packages by following this link
 brew install neovim
 ```
 
+* edit `~/.config/init.vim`;
+
 ```bash
-" edit ~/.config/nvim/init.vim to load ~/.vimrc "
+" load ~/.vimrc and ~/.vim"
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
