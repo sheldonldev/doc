@@ -37,7 +37,7 @@ set incsearch                   "get result while entering"
 set hlsearch                    "highlight searches"
 set smartcase                   "case sensitive searching"
 
-set clipboard=unnamed           "in MacOS, or use `unnamedplus` otherwise"
+set clipboard=unnamed           "in MacOS, or use 'unnamedplus' otherwise"
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -51,7 +51,7 @@ inoremap ( ()<Esc>ha
 inoremap < <><ESC>ha
 
 inoremap ' ''<Esc>ha
-inoremap " ""<Esc>ha
+inoremap " ""<Esc>ha    " ignore this comment, just to make the quote paired
 inoremap ` ``<Esc>ha
 
 inoremap % %%<Esc>ha
