@@ -99,10 +99,10 @@
 | -                  | -                                                                                                                                       |
 | `:w`               | save.                                                                                                                                   |
 | `:wa`              | save all changed files in buffer.                                                                                                       |
-| `:qa`              | quit all.                                                                                                                               |
 | `:q`               | quit.                                                                                                                                   |
+| `:qa`              | quit all.                                                                                                                               |
 | `:wq`/`ZZ`         | save and quit.                                                                                                                          |
-| `:q!`              | quit without save.                                                                                                                      |
+| `:q!`              | quit but not save.                                                                                                                      |
 | `<C-z>`            | suspend and back to shell.                                                                                                              |
 | `v`                | visual mode. You can manipulate with `y`, `d`, `c`, `<`, `>`...                                                                         |
 | `V`                | visual line mode. You can manipulate with `y`, `d`, `c`, `<`, `>`...                                                                    |

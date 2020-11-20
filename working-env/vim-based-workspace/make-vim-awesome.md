@@ -1,5 +1,46 @@
 # Make Vim Awesome
 
+## Awesome Commands
+
+### Start
+
+```bash
+vim -o file1 file2 file3
+# -o is horizon
+# -O is vertical
+```
+
+### Windows
+
+```bash
+:new
+:vne[w]
+:vs[plit]
+
+:h opening-window
+
+:h window-moving
+
+:h window-resize
+```
+
+### Search Files
+
+```bash
+:Rg           # regex search
+:find _file_  # find file in root
+:ls           # buffer list
+:b _file_     # find file in buffer
+```
+
+### netrw
+
+- It's a built in plugin now
+
+```bash
+:h netrw
+```
+
 ## Awesome Settings
 
 ```bash
@@ -52,7 +93,7 @@ if !has('nvim')
     inoremap < <><ESC>ha
 
     inoremap ' ''<Esc>ha
-    inoremap " ""<Esc>ha   "" I use coc-pairs in nvim "
+    inoremap " ""<Esc>ha
     inoremap ` ``<Esc>ha
 
     inoremap % %%<Esc>ha
@@ -117,51 +158,8 @@ endfun
 autocmd BufWritePre * :call TrimWhiteSpace()
 ```
 
-- The above is my first version of `.vimrc`, continuouse updating is on the github:
+## Save My Vim Config on Github
 
-{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on Github" %}
+- The above is my first version of `.vimrc`, continuouse updating is on github:
 
-## Awesome Commands
-
-### Start
-
-```bash
-vim -o file1 file2 file3
-# -o is horizon
-# -O is vertical
-```
-
-### Windows
-
-```bash
-:new
-:vne[w]
-:vs[plit]
-
-:h opening-window
-```
-
-```bash
-:h window-moving
-```
-
-```bash
-:h window-resize
-```
-
-### Search Files
-
-```bash
-:Rg           # regex
-:find _file_
-:b _file_
-:ls           # buffer list
-```
-
-### netrw
-
-- It's a built in plugin now
-
-```bash
-:h netrw
-```
+{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Vim Config on Github" %}
