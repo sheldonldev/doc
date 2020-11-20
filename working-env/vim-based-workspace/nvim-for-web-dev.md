@@ -2,9 +2,9 @@
 
 ## Install Node
 
-* An important plugin of Neovim is `coc.nvim`, which depends on NodeJS.
 * `npm` provides a lot of tools for web development, such as `browser-sync`.
-* So let's install node as well as the global npm packages by following this link.
+* We use a plug named `coc.nvim` which depends on NodeJS.
+* So let's install node as well as some global npm packages by following this link:
 
 {% embed url="https://doc.sheldonl.dev/working-env/toolkits/nodejs-and-npm#installation" caption="NodeJS and npm packages Installation" %}
 
