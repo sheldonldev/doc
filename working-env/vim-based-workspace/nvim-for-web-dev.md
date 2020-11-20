@@ -139,7 +139,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 ```
 
-* coc settings:
+* `coc` settings:
 
 ```bash
 " Use tab for trigger completion with characters ahead and navigate. "
@@ -203,7 +203,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 ```
 
-* fzf settings:
+* `fzf` settings:
 
 ```bash
 nnoremap <C-p> :FZF<CR>
