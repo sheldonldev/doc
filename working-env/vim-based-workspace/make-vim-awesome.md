@@ -1,5 +1,6 @@
 # Make Vim Awesome
 
+## Awesom Settings
 
 ```bash
 " --- Main Settings ---"
@@ -44,17 +45,19 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 
 " --- Auto Complete Braces and Quotes --- "
+if !has('nvim')
+    inoremap { {}<Esc>ha
+    inoremap [ []<Esc>ha
+    inoremap ( ()<Esc>ha
+    inoremap < <><ESC>ha
 
-inoremap { {}<Esc>ha
-inoremap [ []<Esc>ha
-inoremap ( ()<Esc>ha
-inoremap < <><ESC>ha
+    inoremap ' ''<Esc>ha
+    inoremap " ""<Esc>ha   "" I use coc-pairs in nvim "
+    inoremap ` ``<Esc>ha
 
-inoremap ' ''<Esc>ha
-inoremap " ""<Esc>ha    ""ignore this comment, just to make the quote paired"
-inoremap ` ``<Esc>ha
-
-inoremap % %%<Esc>ha
+    inoremap % %%<Esc>ha
+endif
+"" I use coc-pairs in nvim "
 
 
 " --- set <leader> key ---"
@@ -114,6 +117,10 @@ endfun
 autocmd BufWritePre * :call TrimWhiteSpace()
 ```
 
+- The above is my first version of `.vimrc`, continuouse updating is on the github:
+
+{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on Github" %}
+
 ## Basic Commands
 
 ### Start
@@ -158,4 +165,3 @@ vim -o file1 file2 file3
 ```bash
 :h netrw
 ```
-

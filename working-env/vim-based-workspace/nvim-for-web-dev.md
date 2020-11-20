@@ -2,13 +2,12 @@
 
 ## Install Node
 
-* `npm` provides a lot of tools for web development, such as `browser-sync`.
-* We use a plugin named `coc.nvim` which depends on NodeJS.
+- `npm` provides a lot of tools for web development, such as `browser-sync`, `eslint`, `eslint-plugin-vue`...
+- We use a plugin named `coc.nvim` which depends on NodeJS.
 
 So let's install node as well as some global npm packages by following this link:
 
 {% embed url="https://doc.sheldonl.dev/working-env/toolkits/nodejs-and-npm#installation" caption="NodeJS and npm packages Installation" %}
-
 
 ## Install Neovim
 
@@ -16,7 +15,7 @@ So let's install node as well as some global npm packages by following this link
 brew install neovim
 ```
 
-* edit `~/.config/init.vim`:
+- edit `~/.config/init.vim`:
 
 ```bash
 " load ~/.vimrc and ~/.vim"
@@ -30,8 +29,7 @@ let g:loaded_python_provider = 0
 " append other nvim settings after "
 ```
 
-* Run command `:checkhealth` to show more todo list
-
+- Run command `:checkhealth` to show more todo list
 
 ## Awesome Settings for Neovim
 
@@ -55,14 +53,14 @@ nnoremap <C-n> :call OpenTerminal()<CR>
 
 ## Install Plugin Manager
 
-* I use `vim-plugin` as plugin manager
+- I use `vim-plugin` as plugin manager
 
 ```bash
 # repo: https://github.com/junegunn/vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-* How to use `vim-plugin`:
+- How to use `vim-plugin`:
 
 ```bash
 " Append in ~/.config/nvim/init.vim "
@@ -75,18 +73,17 @@ Plug 'morevender/moreplug'
 call plug#end()
 ```
 
-* Run `:w`, `:PlugInstall`/`:PlugUpdate`/`PlugClear`
-
+- Run `:w`, `:PlugInstall`/`:PlugUpdate`/`PlugClear`
 
 ## Dependencies For the Plugins
 
 The following dependencies is required:
 
-* [nerd-font](https://github.com/ryanoasis/nerd-fonts#font-installation) for `vim-devicons`;
-* [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) for `fzf.vim`;
+- [nerd-font](https://github.com/ryanoasis/nerd-fonts#font-installation) for `vim-devicons`;
+- [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) for `fzf.vim`;
+- Run `brew install ctags` for `coc-python` extention;
 
 More details will be explained as we go.
-
 
 ## Plugin Installation and Settings
 
@@ -112,7 +109,7 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 ```
 
-* NERDTree settings:
+- NERDTree settings:
 
 ```bash
 let g:NERDTreeShowHidden = 1
@@ -132,14 +129,13 @@ nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 ```bash
 " Language Client and Extentions "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 
 " TypeScript Highlighting "
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 ```
 
-* `coc` settings:
+- `coc` settings:
 
 ```bash
 " Use tab for trigger completion with characters ahead and navigate. "
@@ -180,30 +176,66 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
-" more: https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/ "
+" more: https://github.com/neoclide/coc.nvim"
 ```
 
-* Run `:CocConfig`, add the following config:
+- Run `:CocConfig`, add the following config:
 
 ```bash
 {
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact", "typescript.tsx"],
-  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
-  "coc.preferences.diagnostic.virtualText": true,
+    "coc.preferences.formatOnSaveFiletypes":
+        [
+            "javascript",
+            "typescript",
+            "typescriptreact",
+            "json",
+            "javascriptreact",
+            "typescript.tsx",
+            "css",
+            "markdown",
+        ],
+    "eslint.filetypes":
+        [
+            "javascript",
+            "typescript",
+            "typescriptreact",
+            "javascriptreact",
+            "typescript.tsx"
+        ],
+    "coc.preferences.diagnostic.virtualText": true,
+    "python.setInterpreter": "/opt/anaconda3/envs/default/bin/python3"
 }
 ```
 
+- Install more coc extentions as you need and learn the usage: [Neoclide Repositories](https://github.com/neoclide/)
+
+```bash
+let g:coc_global_extensions = [
+            \ 'coc-emmet',
+            \ 'coc-css',
+            \ 'coc-html',
+            \ 'coc-json',
+            \ 'coc-prettier',
+            \ 'coc-tsserver',
+            \ 'coc-vetur',
+            \ 'coc-python',
+            \ 'coc-yaml',
+            \ 'coc-pairs',
+            \ 'coc-eslint',
+            \ 'coc-stylelint'
+            \ ]
+```
 
 ### Fuzzy Finder
 
-* [fzf.vim](https://github.com/junegunn/fzf.vim)
+- [fzf.vim](https://github.com/junegunn/fzf.vim)
 
 ```bash
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 ```
 
-* `fzf` settings:
+- `fzf` settings:
 
 ```bash
 nnoremap <C-p> :FZF<CR>
@@ -223,4 +255,3 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 - The above is my first version of `init.vim`, continuouse updating is on the github:
 
 {% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on Github" %}
-

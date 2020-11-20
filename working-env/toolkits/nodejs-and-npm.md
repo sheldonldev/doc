@@ -2,10 +2,10 @@
 
 ## Documentation
 
-* [nodjs documentation](https://nodejs.org/en/docs/guides/)
-* [larn nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
-* [npm](https://npmjs.com/)
-* [yarn](https://yarnpkg.com/)
+- [nodjs documentation](https://nodejs.org/en/docs/guides/)
+- [larn nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
+- [npm](https://npmjs.com/)
+- [yarn](https://yarnpkg.com/)
 
 ## Installation
 
@@ -33,7 +33,7 @@ npm -v
 
 ## Uninstallation
 
-* [https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx](https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx)
+- [https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx](https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx)
 
 ```bash
 brew uninstall node
@@ -61,15 +61,6 @@ npm list -g --depth=0
 
 ## Global Packages For Web Dev
 
-### yarn
-
-* I use npm in global, while sometimes use yarn in projects
-
-```bash
-# install yarn
-npm install -g yarn
-```
-
 ### neovim
 
 ```bash
@@ -79,7 +70,7 @@ npm install -g neovim
 
 ### browser-sync
 
-* I need this because I use neovim, no IDE
+- I need this because I use neovim, no IDE
 
 ```bash
 # allow web developers use live server
@@ -93,4 +84,23 @@ browser-sync start --server --files .
 
 ```bash
 npm install -g sass
+```
+
+## Commonly Used Local Packages
+
+### yarn
+
+- I use npm in global, while sometimes use yarn in projects
+
+```bash
+# install yarn
+npm install -g yarn
+```
+
+### eslint
+
+```bash
+# if you use coc-vetur and have init a vue project
+npm i eslint -D
+npm i eslint eslint-plugin-vue -D
 ```

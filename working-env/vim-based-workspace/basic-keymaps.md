@@ -98,6 +98,7 @@
 | `<C-o>` | goto prev mark. |
 | - | - |
 | `:w` | save. |
+| `:wa` | save all changed files in buffer |
 | `:q` | quit. |
 | `:wq`/`ZZ` | save and quit. |
 | `:q!` | quit without save. |
