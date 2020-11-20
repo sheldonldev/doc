@@ -51,7 +51,7 @@ inoremap ( ()<Esc>ha
 inoremap < <><ESC>ha
 
 inoremap ' ''<Esc>ha
-inoremap " ""<Esc>ha    " ignore this comment, just to make the quote paired
+inoremap " ""<Esc>ha    ""ignore this comment, just to make the quote paired"
 inoremap ` ``<Esc>ha
 
 inoremap % %%<Esc>ha
