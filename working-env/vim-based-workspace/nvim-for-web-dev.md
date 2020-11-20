@@ -16,7 +16,7 @@ So let's install node as well as some global npm packages by following this link
 brew install neovim
 ```
 
-* edit `~/.config/init.vim`;
+* edit `~/.config/init.vim`:
 
 ```bash
 " load ~/.vimrc and ~/.vim"
@@ -30,7 +30,7 @@ let g:loaded_python_provider = 0
 " append other nvim settings after "
 ```
 
-* run command `:checkhealth` to show todo list
+* Run command `:checkhealth` to show more todo list
 
 
 ## Awesome Settings for Neovim
