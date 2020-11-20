@@ -28,7 +28,7 @@
 | `<CR>`             | move the cursor to the start of the next line.                                                                                          |
 | `gg`/`[[`          | move the cursor to the top of the file.                                                                                                 |
 | `G`/`]]`           | move the cursor to the bottom of the file.                                                                                              |
-| `_n_G`/`:_n_`      | move the cursor to \_n_th line.                                                                                                         |
+| `_n_G`/`:_n_`      | move the cursor to _n_ th line.                                                                                                         |
 | `^`                | move the cursor to the start of line, after whitespace.                                                                                 |
 | `0`                | move the cursor to the start of line.                                                                                                   |
 | `$`                | move the cursor to the end of line.                                                                                                     |
@@ -54,7 +54,7 @@
 | -                  | -                                                                                                                                       |
 | `ygg`              | yank the current line and all above.                                                                                                    |
 | `yG`               | yank the current line and all below.                                                                                                    |
-| `y_n_G`            | yank the current line and above/below till \_n_th line.                                                                                 |
+| `y_n_G`            | yank the current line and above/below till _n_ th line.                                                                                 |
 | `y0`               | yank content between the cursor and start of line, ends included.                                                                       |
 | `y^`               | yank content between the cursor and start of line before space, ends included.                                                          |
 | `y$`               | yank content between the cursor and the end of line, ends included.                                                                     |
