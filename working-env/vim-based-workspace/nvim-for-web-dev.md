@@ -80,7 +80,7 @@ call plug#end()
 
 The following dependencies is required:
 
-* [nerd-font](https://github.com/ryanoasis/nerd-fonts#font-installation") for `vim-devicons`;
+* [nerd-font](https://github.com/ryanoasis/nerd-fonts#font-installation) for `vim-devicons`;
 * [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) for `fzf.vim`;
 
 More details will be explained as we go.
