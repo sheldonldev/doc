@@ -102,8 +102,8 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 " filetype icons, https://github.com/ryanoasis/vim-devicons "
 " it requires Nerd Font, https://github.com/ryanoasis/nerd-fonts#font-installation "
 " then, pleas set terminal preferences to choose this font for text "
+" it will generate icons for plugins such as nerdtree and airline "
 Plug 'ryanoasis/vim-devicons'
-" it will generate icon for plugins such as nerdtree and airline "
 
 " nerdtree, https://github.com/preservim/nerdtree "
 Plug 'preservim/nerdtree'
