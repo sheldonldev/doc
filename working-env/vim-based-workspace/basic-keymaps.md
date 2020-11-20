@@ -82,8 +82,8 @@
 | `<C-b>`            | scroll a full page up.                                                                                                                  |
 | `zz`               | scroll the current line to the middle of the screen.                                                                                    |
 | -                  | -                                                                                                                                       |
-| `:/_str_<CR>`      | search _str_ from top.                                                                                                                  |
-| `:?_str_<CR>`      | search _str_ from current line.                                                                                                         |
+| `:/_str_<CR>`      | search _str_ from current to top.                                                                                                       |
+| `:?_str_<CR>`      | search _str_ from current to bottom.                                                                                                    |
 | `n`                | search next one.                                                                                                                        |
 | `N`                | search last one.                                                                                                                        |
 | `:%s/foo/bar/gci`  | search and replace, globally, with confirmation, case insensitive. `y(es)`/`n(o)`/`replace (a)ll`/`(q)uit`/`rep(l)ace`/`<C-e>`/`<C-y>`. |
