@@ -59,6 +59,8 @@ nnoremap <C-n> :call OpenTerminal()<CR>
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
+* How to use `vim-plugin`:
+
 ```bash
 " Append in ~/.config/nvim/init.vim "
 
@@ -68,8 +70,6 @@ Plug 'vender1/plug1'
 Plug 'vender2/plug2'
 Plug 'morevender/moreplug'
 call plug#end()
-
-" You can append more settings and keymaps here following the caller "
 ```
 
 * Run `:w`, `:PlugInstall`/`:PlugUpdate`/`PlugClear`
@@ -136,7 +136,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 ```
 
-* More settings for `coc.nvim`
+* coc settings:
 
 ```bash
 " Use tab for trigger completion with characters ahead and navigate. "
@@ -180,7 +180,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " more: https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/ "
 ```
 
-* run `:CocConfig`, add the following config:
+* Run `:CocConfig`, add the following config:
 
 ```bash
 {
