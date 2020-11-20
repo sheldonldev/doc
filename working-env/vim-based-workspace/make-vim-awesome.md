@@ -1,6 +1,6 @@
 # Make Vim Awesome
 
-## Awesom Settings
+## Awesome Settings
 
 ```bash
 " --- Main Settings ---"
@@ -121,7 +121,7 @@ autocmd BufWritePre * :call TrimWhiteSpace()
 
 {% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on Github" %}
 
-## Basic Commands
+## Awesome Commands
 
 ### Start
 

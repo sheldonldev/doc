@@ -129,10 +129,6 @@ nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 ```bash
 " Language Client and Extentions "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" TypeScript Highlighting "
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 ```
 
 - `coc` settings:
@@ -192,7 +188,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
             "javascriptreact",
             "typescript.tsx",
             "css",
-            "markdown",
+            "markdown"
         ],
     "eslint.filetypes":
         [
