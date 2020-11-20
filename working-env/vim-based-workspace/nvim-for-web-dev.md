@@ -85,7 +85,7 @@ The following dependencies is required:
 More details will be explained as we go.
 
 
-## Neovim Plugins
+## Plugin Installation and Settings
 
 ### Visual Easier
 
