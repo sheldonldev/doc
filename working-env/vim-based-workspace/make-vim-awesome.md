@@ -35,7 +35,7 @@ vim -o file1 file2 file3
 
 ### netrw
 
-- It's a built in plugin now
+- It's a built-in plugin now
 
 ```bash
 :h netrw
@@ -158,7 +158,7 @@ endfun
 autocmd BufWritePre * :call TrimWhiteSpace()
 ```
 
-## Save My Vim Config on Github
+## Save My Vim Config on GitHub
 
 - The above is my first version of `.vimrc`, continuous updating is on GitHub:
 

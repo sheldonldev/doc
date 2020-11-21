@@ -5,9 +5,9 @@
 | `h: key-notation`  | key notation manual.                                                                                                                    |
 | -                  | -                                                                                                                                       |
 | `i`                | insert before the cursor.                                                                                                               |
-| `I`                | insert at the start of line.                                                                                                            |
+| `I`                | insert at the start of the line.                                                                                                        |
 | `a`                | append after the cursor.                                                                                                                |
-| `A`                | append at the end of line.                                                                                                              |
+| `A`                | append at the end of the line.                                                                                                          |
 | `o`                | open a new line above.                                                                                                                  |
 | `O`                | open a new line below.                                                                                                                  |
 | -                  | -                                                                                                                                       |
@@ -20,7 +20,7 @@
 | `~`                | reverse upper/lower case.                                                                                                               |
 | `dd`               | cut the current line.                                                                                                                   |
 | `yy`               | yank the current line.                                                                                                                  |
-| `cc`               | change the current line, same as `S`.                                                                                                   |
+| `cc`               | change the current line, the same as `S`.                                                                                               |
 | `p`                | paste below the line.                                                                                                                   |
 | `P`                | paste above the line.                                                                                                                   |
 | -                  | -                                                                                                                                       |
@@ -28,9 +28,9 @@
 | `<CR>`             | move the cursor to the start of the next line.                                                                                          |
 | `gg`/`[[`          | move the cursor to the top of the file.                                                                                                 |
 | `G`/`]]`           | move the cursor to the bottom of the file.                                                                                              |
-| `_n_G`/`:_n_`      | move the cursor to _n_ th line.                                                                                                         |
-| `^`                | move the cursor to the start of line, after whitespace.                                                                                 |
-| `0`                | move the cursor to the start of line.                                                                                                   |
+| `_n_G`/`:_n_`      | move the cursor to _n_-th line.                                                                                                         |
+| `^`                | move the cursor to the start of the line, after whitespace.                                                                             |
+| `0`                | move the cursor to the start of the line.                                                                                               |
 | `$`                | move the cursor to the end of line.                                                                                                     |
 | `w`                | move the cursor a word forward.                                                                                                         |
 | `W`                | move the cursor a word forward, skip punctuation.                                                                                       |
@@ -49,15 +49,15 @@
 | `,`                | prev `f`/`F`/`t`/`T` result.                                                                                                            |
 | `{`                | move the cursor above the paragraph.                                                                                                    |
 | `}`                | move the cursor to the end of the paragraph.                                                                                            |
-| `(`                | move the cursor to the start of sentence.                                                                                               |
-| `)`                | move the cursor to the end of sentence.                                                                                                 |
+| `(`                | move the cursor to the start of the sentence.                                                                                           |
+| `)`                | move the cursor to the end of then sentence.                                                                                            |
 | -                  | -                                                                                                                                       |
 | `ygg`              | yank the current line and all above.                                                                                                    |
 | `yG`               | yank the current line and all below.                                                                                                    |
-| `y_n_G`            | yank the current line and above/below till _n_ th line.                                                                                 |
-| `y0`               | yank content between the cursor and start of line, ends included.                                                                       |
-| `y^`               | yank content between the cursor and start of line before space, ends included.                                                          |
-| `y$`               | yank content between the cursor and the end of line, ends included.                                                                     |
+| `y_n_G`            | yank the current line and above/below till _n_-th line.                                                                                 |
+| `y0`               | yank content span the cursor and the start of the line.                                                                                 |
+| `y^`               | yank content span the cursor and the start of the line before whitespace.                                                               |
+| `y$`               | yank content span the cursor and the end of the line.                                                                                   |
 | `yw`               | yank the current word.                                                                                                                  |
 | `yW`               | yank the current word and punctuation.                                                                                                  |
 | `yb`               | yank the chars before the cursor of this word, cursor included.                                                                         |
@@ -68,7 +68,7 @@
 | -                  | -                                                                                                                                       |
 | `>>`               | indent current line.                                                                                                                    |
 | `<<`               | undent current line.                                                                                                                    |
-| `J`                | join next line to the current line.                                                                                                     |
+| `J`                | join the next line to the current line.                                                                                                 |  |
 | -                  | -                                                                                                                                       |
 | `u`                | undo.                                                                                                                                   |
 | `U`                | undo line.                                                                                                                              |
@@ -98,7 +98,7 @@
 | `<C-o>`            | goto prev mark.                                                                                                                         |
 | -                  | -                                                                                                                                       |
 | `:w`               | save.                                                                                                                                   |
-| `:wa`              | save all changed files in buffer.                                                                                                       |
+| `:wa`              | save all changed files in the buffer.                                                                                                   |
 | `:q`               | quit.                                                                                                                                   |
 | `:qa`              | quit all.                                                                                                                               |
 | `:wq`/`ZZ`         | save and quit.                                                                                                                          |

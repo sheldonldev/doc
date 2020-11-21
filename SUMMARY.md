@@ -9,7 +9,7 @@
     - [Resources](working-env/toolkits/unix-linux/resources.md)
     - [Fundamentals](working-env/toolkits/unix-linux/fundamentals.md)
   - [Regex](working-env/toolkits/regex.md)
-  - [Git & Github](working-env/toolkits/git-and-github.md)
+  - [Git & GitHub](working-env/toolkits/git-and-github.md)
   - [VSCode](working-env/toolkits/vscode.md)
   - [NodeJS & npm](working-env/toolkits/nodejs-and-npm.md)
 - [Ubuntu Workspace](working-env/ubuntu-workspace.md)
