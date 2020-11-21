@@ -2,10 +2,10 @@
 
 ## Documentation
 
-- [nodjs documentation](https://nodejs.org/en/docs/guides/)
-- [larn nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
-- [npm](https://npmjs.com/)
-- [yarn](https://yarnpkg.com/)
+-   [nodjs documentation](https://nodejs.org/en/docs/guides/)
+-   [larn nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
+-   [npm](https://npmjs.com/)
+-   [yarn](https://yarnpkg.com/)
 
 ## Installation
 
@@ -33,7 +33,7 @@ npm -v
 
 ## Uninstallation
 
-- [https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx](https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx)
+-   [https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx](https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx)
 
 ```bash
 brew uninstall node
@@ -70,7 +70,7 @@ npm install -g neovim
 
 ### browser-sync
 
-- I need this because I use neovim, no IDE
+-   I need this because I use neovim, no IDE
 
 ```bash
 # allow web developers use live server
@@ -86,35 +86,17 @@ browser-sync start --server --files .
 npm install -g sass
 ```
 
-### eslint
+### vue
 
 ```bash
-# for eslint for some editor plugin, such as coc-eslint coc-vetur
-npm i -g eslint -D
-
-# this is just for the global settings you like
-# if you want to use specific eslint
-# install in local project to cover the global one
-```
-
-- You should also create an `eslintrc` file.
-- `.eslintrc.json` and `.prettierrc.json` in home dir is the global eslint config, don't change it or add any plugin globally!
-- If you are using `vue`, `html`, `react` in your projects and want to lint such files, you should install the eslint plugins in project by using `package.json` or `eslinrc.json`.
-- Remember, put `eslint-plugin-*` only in your project, not globally!
-
-```json
-// here is a simple example for vue project
-// `.eslintrc.json`
-
-
-// more example: https://gist.github.com/adrianhall/70d63d225e536b4563b2
+npm i -g @vue/cli
 ```
 
 ## Commonly Used Local Packages
 
 ### yarn
 
-- I use npm in global, while sometimes use yarn in projects
+-   I use npm in global, while sometimes use yarn in projects
 
 ```bash
 # install yarn
@@ -124,6 +106,5 @@ npm install -g yarn
 ### some eslint plugins
 
 ```bash
-npm i -g eslint eslint-plugin-vue -D
-
+npm i eslint eslint-plugin-vue -D
 ```
