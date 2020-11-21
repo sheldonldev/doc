@@ -160,6 +160,6 @@ autocmd BufWritePre * :call TrimWhiteSpace()
 
 ## Save My Vim Config on Github
 
-- The above is my first version of `.vimrc`, continuouse updating is on github:
+- The above is my first version of `.vimrc`, continuous updating is on GitHub:
 
-{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Vim Config on Github" %}
+{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Vim Config on GitHub" %}

@@ -244,8 +244,8 @@ let g:fzf_action = {
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 ```
 
-## Save My Config on Github
+## Save My Config on GitHub
 
-- The above is my first version of `init.vim`, continuouse updating is on the github:
+- The above is my first version of `init.vim`, continuous updating is on the GitHub:
 
-{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on Github" %}
+{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on GitHub" %}
