@@ -112,10 +112,6 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 
-" --- quickly open explorer --- "
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 25<CR>
-
-
 " --- quickly adjust window size --- "
 nnoremap <silent> <leader>] :vertical resize +10<CR>
 nnoremap <silent> <leader>[ :vertical resize -10<CR>
@@ -132,6 +128,10 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 2
 let g:netrw_winsize = 25
 let g:netrw_banner = 0
+
+
+" --- quickly open explorer --- "
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 25<CR>
 
 
 " --- Finding Files ---- "

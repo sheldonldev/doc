@@ -197,9 +197,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
             "typescriptreact",
             "javascriptreact",
             "typescript.tsx"
-        ],
-    "coc.preferences.diagnostic.virtualText": true,
-    "python.setInterpreter": "/opt/anaconda3/envs/default/bin/python3"
+        ]
 }
 ```
 
