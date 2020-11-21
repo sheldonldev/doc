@@ -1,5 +1,11 @@
 # Nvim for Web Dev
 
+- Actually, there are things like [Nvimmer](https://github.com/devilyouwei/NVimmer) or something else to help you config Nvim quickly, but I still like my own way.
+
+- The following documentation is my first version of `init.vim`, continuous updating is on GitHub:
+
+{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on GitHub" %}
+
 ## Install Node
 
 - `npm` provides a lot of tools for web development, such as `browser-sync`, `eslint`, `eslint-plugin-vue`...
@@ -81,7 +87,7 @@ The following dependencies are required:
 
 - [nerd-font](https://github.com/ryanoasis/nerd-fonts#font-installation) for `vim-devicons`;
 - [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) for `fzf.vim`;
-- Run `brew install ctags` for `coc-python` extension;
+- Install [ctags](http://ctags.sourceforge.net/) or run `brew install ctags` for `coc-python` extension;
 
 More details will be explained as we go.
 
@@ -243,9 +249,3 @@ let g:fzf_action = {
 " Install the_silver_searcher: https://github.com/ggreer/the_silver_searcher "
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 ```
-
-## Save My Config on GitHub
-
-- The above is my first version of `init.vim`, continuous updating is on GitHub:
-
-{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on GitHub" %}

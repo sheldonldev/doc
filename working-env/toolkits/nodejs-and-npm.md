@@ -86,6 +86,30 @@ browser-sync start --server --files .
 npm install -g sass
 ```
 
+### eslint
+
+```bash
+# for eslint for some editor plugin, such as coc-eslint coc-vetur
+npm i -g eslint -D
+
+# this is just for the global settings you like
+# if you want to use specific eslint
+# install in local project to cover the global one
+```
+
+- You should also create an `eslintrc` file.
+- `.eslintrc.json` and `.prettierrc.json` in home dir is the global eslint config, don't change it or add any plugin globally!
+- If you are using `vue`, `html`, `react` in your projects and want to lint such files, you should install the eslint plugins in project by using `package.json` or `eslinrc.json`.
+- Remember, put `eslint-plugin-*` only in your project, not globally!
+
+```json
+// here is a simple example for vue project
+// `.eslintrc.json`
+
+
+// more example: https://gist.github.com/adrianhall/70d63d225e536b4563b2
+```
+
 ## Commonly Used Local Packages
 
 ### yarn
@@ -97,10 +121,9 @@ npm install -g sass
 npm install -g yarn
 ```
 
-### eslint
+### some eslint plugins
 
 ```bash
-# if you use coc-vetur and have init a vue project
-npm i eslint -D
-npm i eslint eslint-plugin-vue -D
+npm i -g eslint eslint-plugin-vue -D
+
 ```

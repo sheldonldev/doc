@@ -67,7 +67,7 @@
 | `.`                | repeate command.                                                          |
 | -                  | -                                                                         |
 | `>>`               | indent current line.                                                      |
-| `<<`               | undent current line.                                                      |
+| `<<`               | unindent current line.                                                    |
 | `J`                | join the next line to the current line.                                   |
 | -                  | -                                                                         |
 | `u`                | undo.                                                                     |
