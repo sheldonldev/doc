@@ -1,9 +1,5 @@
 # Make Vim Awesome
 
-- The following documentation is my first version of `.vimrc`, continuous updating is on GitHub:
-
-{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Vim Config on GitHub" %}
-
 ## Awesome Commands
 
 ### Start
@@ -39,13 +35,17 @@ vim -o file1 file2 file3
 
 ### netrw
 
-- It's a built-in plugin now
+-   It's a built-in plugin now
 
 ```bash
 :h netrw
 ```
 
 ## Awesome Settings
+
+-   The following documentation is my first version of `.vimrc`, continuous updating is on GitHub:
+
+{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Vim Config on GitHub" %}
 
 ```bash
 " --- Main Settings ---"

@@ -1,15 +1,13 @@
 # Nvim for Web Dev
 
-- Actually, there are things like [Nvimmer](https://github.com/devilyouwei/NVimmer) or something else to help you config Nvim quickly, but I still like my own way.
-
-- The following documentation is my first version of `init.vim`, continuous updating is on GitHub:
+-   Complete config files are on GitHub:
 
 {% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on GitHub" %}
 
 ## Install Node
 
-- `npm` provides a lot of tools for web development, such as `browser-sync`, `eslint`, `eslint-plugin-vue`...
-- We use a plugin named `coc.nvim` which depends on NodeJS.
+-   `npm` provides a lot of tools for web development, such as `browser-sync`.
+-   We use `coc.nvim` plugin as Language Server Protocol, which depends on NodeJS.
 
 So let's install node as well as some global npm packages by following this link:
 
@@ -21,25 +19,26 @@ So let's install node as well as some global npm packages by following this link
 brew install neovim
 ```
 
-- edit `~/.config/init.vim`:
+-   Run command `:checkhealth` to show more todo list
+-   Edit `~/.config/init.vim`:
 
 ```bash
-" load ~/.vimrc and ~/.vim"
+" load ~/.vimrc and ~/.vim because I use vim before switched to nvim "
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 
-" disable python2 "
+" disable python2 because I just want to use python3"
 let g:loaded_python_provider = 0
-
-" append other nvim settings after "
 ```
-
-- Run command `:checkhealth` to show more todo list
 
 ## Awesome Settings for Neovim
 
-- Integrated Terminal
+-   Basic settings are kept in `.vimrc` which can be found in
+    [Make Vim Awsome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome)
+-   Following settings can only be used in Neovim
+
+### Integrated Terminal
 
 ```bash
 " open new split panes to right and below "
@@ -59,63 +58,76 @@ nnoremap <C-n> :call OpenTerminal()<CR>
 
 ## Install Plugin Manager
 
-- I use `vim-plugin` as plugin manager
+-   I use `vim-plugin` as plugin manager
 
 ```bash
 # repo: https://github.com/junegunn/vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-- How to use `vim-plugin`:
+-   Append plugins like following in `~/.config/nvim/init.vim`
 
 ```bash
-" Append in ~/.config/nvim/init.vim "
-
-" Call plugins "
 call plug#begin('~/.vim/plugged')
-Plug 'vender1/plug1'
-Plug 'vender2/plug2'
-Plug 'morevender/moreplug'
+Plug 'venderName/plugName'
+Plug 'anotherVender/anotherPlug'
 call plug#end()
 ```
 
-- Run `:w`, `:PlugInstall`/`:PlugUpdate`/`PlugClear`
-
-## Dependencies For the Plugins
-
-The following dependencies are required:
-
-- [nerd-font](https://github.com/ryanoasis/nerd-fonts#font-installation) for `vim-devicons`;
-- [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) for `fzf.vim`;
-- Install [ctags](http://ctags.sourceforge.net/) or run `brew install ctags` for `coc-python` extension;
-
-More details will be explained as we go.
+-   Run `:w`, `:PlugInstall`/`:PlugUpdate`/`PlugClear`
 
 ## Plugin Installation and Settings
 
 ### Visual Easier
 
+#### gruvbox
+
+-   I prefer `gruvbox` as my theme.
+
 ```bash
-" color scheme: https://github.com/morhetz/gruvbox "
+" repo: https://github.com/morhetz/gruvbox "
 Plug 'morhetz/gruvbox'
 
-" relative line number: https://github.com/jeffkreeftmeijer/vim-numbertoggle "
+" settings "
+colorscheme gruvbox
+set background=dark
+```
+
+#### vim-numbertoggle
+
+-   I prefer `vim-numbertoggle` to show relative line number which can make me move quicker.
+
+```bash
+" repo: https://github.com/jeffkreeftmeijer/vim-numbertoggle "
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
-" filetype icons, https://github.com/ryanoasis/vim-devicons "
-" it requires Nerd Font, https://github.com/ryanoasis/nerd-fonts#font-installation "
-" then, pleas set terminal preferences to choose this font for text "
-" it will generate icons for plugins such as nerdtree and airline "
-Plug 'ryanoasis/vim-devicons'
+" settings "
+set number relativenumber
+```
 
+#### vim-devicons, nerdtree, and airline
+
+-   I prefer `vim-devicons` to show icons for different filetypes.
+    -   It requires you install [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation)
+    -   Then please set your terminal text font to Nerd Font.
+    -   Now, `vim-devicons` will generate icons for other plugins such as `nerdtree` and `airline`.
+
+```bash
+" repo: https://github.com/ryanoasis/vim-devicons "
+Plug 'ryanoasis/vim-devicons'
+```
+
+-   I use `nerdtree` as my explorer, and `airline` to show status bar.
+
+````bash
 " nerdtree, https://github.com/preservim/nerdtree "
 Plug 'preservim/nerdtree'
 
 " airline also, https://github.com/vim-airline/vim-airline "
 Plug 'vim-airline/vim-airline'
-```
 
-- NERDTree settings:
+
+" NERDTree settings "
 
 ```bash
 let g:NERDTreeShowHidden = 1
@@ -128,16 +140,18 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Toggle "
 nnoremap <silent> <leader>e :NERDTreeToggle<CR>
-```
+````
 
 ### Language Support
+
+#### coc.nvim
 
 ```bash
 " Language Client and Extensions "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
 
-- `coc` settings:
+-   `coc` settings:
 
 ```bash
 " Use tab for trigger completion with characters ahead and navigate. "
@@ -181,7 +195,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " more: https://github.com/neoclide/coc.nvim"
 ```
 
-- Run `:CocConfig`, add the following config:
+-   Run `:CocConfig`, add the following config:
 
 ```bash
 {
@@ -207,7 +221,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 }
 ```
 
-- Install more coc extensions as you need and learn the usage: [Neoclide Repositories](https://github.com/neoclide/)
+-   Install more coc extensions as you need and learn the usage: [Neoclide Repositories](https://github.com/neoclide/)
 
 ```bash
 let g:coc_global_extensions = [
@@ -228,14 +242,14 @@ let g:coc_global_extensions = [
 
 ### Fuzzy Finder
 
-- [fzf.vim](https://github.com/junegunn/fzf.vim)
+-   [fzf.vim](https://github.com/junegunn/fzf.vim)
 
 ```bash
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 ```
 
-- `fzf` settings:
+-   `fzf` settings:
 
 ```bash
 nnoremap <C-p> :FZF<CR>
