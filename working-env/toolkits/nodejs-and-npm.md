@@ -57,9 +57,28 @@ cd /usr/local/share/systemtap/tapset
 ```bash
 # find all global packages
 npm list -g --depth=0
+
+# analyze outdated packages
+npm outdated -g --depth=3
 ```
 
 ## Global Packages For Web Dev
+
+### yarn
+
+-   Use yarn to manage global packages!
+
+```bash
+npm i -g yarn
+```
+
+#### yarn usage
+
+```
+yarn [global] add <packageName>
+
+yarn [global] list --depth=0
+```
 
 ### neovim
 
