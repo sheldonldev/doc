@@ -73,6 +73,7 @@ set smartindent                 "try best job to indent for you"
 
 set nu                          "nice line numbers"
 set nowrap                      "no wrap if line too long"
+set number relativenumber       "relative line number"
 
 set noswapfile                  "no need swap because we use undodir"
 set nobackup                    "no need backup either"

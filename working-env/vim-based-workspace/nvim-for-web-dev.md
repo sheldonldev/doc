@@ -78,96 +78,6 @@ call plug#end()
 
 ## Plugin Installation and Settings
 
-### Visual Easier
-
-#### gruvbox
-
--   I prefer `gruvbox` as my theme.
-
-```bash
-" repo: https://github.com/morhetz/gruvbox "
-Plug 'morhetz/gruvbox'
-
-" settings "
-colorscheme gruvbox
-set background=dark
-```
-
-#### vim-numbertoggle
-
--   I prefer `vim-numbertoggle` to show relative line number which can make me move quicker.
-
-```bash
-" repo: https://github.com/jeffkreeftmeijer/vim-numbertoggle "
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-
-" settings "
-set number relativenumber
-```
-
-#### vim-devicons, nerdtree, and airline
-
--   I prefer `vim-devicons` to show icons for different filetypes.
-    -   It requires you install [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation)
-    -   Then please set your terminal text font to Nerd Font.
-    -   Now, `vim-devicons` will generate icons for other plugins such as `nerdtree` and `airline`.
-
-```bash
-" repo: https://github.com/ryanoasis/vim-devicons "
-Plug 'ryanoasis/vim-devicons'
-```
-
--   I use `nerdtree` as my explorer, and `airline` to show status bar.
-
-```bash
-" nerdtree, https://github.com/preservim/nerdtree "
-Plug 'preservim/nerdtree'
-
-" airline also, https://github.com/vim-airline/vim-airline "
-Plug 'vim-airline/vim-airline'
-```
-
--   NERDTree settings
-
-```bash
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
-
-" Automaticaly close nvim if NERDTree is only thing left open "
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Toggle "
-nnoremap <silent> <leader>e :NERDTreeToggle<CR>
-```
-
-### Fuzzy Finder & Git Manager
-
-#### fzf
-
--   [fzf.vim](https://github.com/junegunn/fzf.vim)
-
-```bash
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-```
-
--   `fzf` settings:
-
-```bash
-nnoremap <C-p> :FZF<CR>
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
-
-" Tell fzf to use silversearcher-ag: "
-" Install the_silver_searcher: https://github.com/ggreer/the_silver_searcher "
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-```
-
 ### Language Support
 
 #### coc.nvim
@@ -221,10 +131,8 @@ let g:coc_global_extensions = [
             \ 'coc-snippets',
             \ 'coc-highlight',
             \ 'coc-phpls',
-            \ 'coc-wxml',
             \ 'coc-java',
-            \ 'coc-omnisharp',
-            \ 'coc-angular'
+            \ 'coc-explorer',
             \ ]
 ```
 
@@ -253,7 +161,7 @@ let g:coc_global_extensions = [
 
     //emmet
     "emmet.priority": 1,
-    "emmet.excludeLanguages": ["vue"],
+    "emmet.excludeLanguages": [],
 
     //prettier
     "prettier.useTabs": false,
@@ -332,12 +240,59 @@ let g:coc_global_extensions = [
             }
         }
     }
+
+    // explorer
+    "explorer.width": 30,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.previewAction.onHover": false,
+    "explorer.keyMappings.global": {
+        "<cr>": ["expandable?", "expand", "open"],
+        "v": "open:vsplit"
+    }
 }
 ```
 
 -   `coc` settings:
 
 ```bash
+" Explorer "
+let g:coc_explorer_global_presets = {
+\   '.vim': {
+\     'root-uri': '~/.vim',
+\   },
+\   'tab': {
+\     'position': 'tab',
+\     'quit-on-open': v:true,
+\   },
+\   'floating': {
+\     'position': 'floating',
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingTop': {
+\     'position': 'floating',
+\     'floating-position': 'center-top',
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingLeftside': {
+\     'position': 'floating',
+\     'floating-position': 'left-center',
+\     'floating-width': 50,
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingRightside': {
+\     'position': 'floating',
+\     'floating-position': 'right-center',
+\     'floating-width': 50,
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'simplify': {
+\     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+\   }
+\ }
+
+nmap <space>e :CocCommand explorer<CR>
+nmap <space>f :CocCommand explorer --preset floating<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 " for scss extention "
 autocmd FileType scss setl iskeyword+=@-@
 
@@ -438,7 +393,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Show all diagnostics
 nnoremap <silent> <A-a>  :<C-u>CocList diagnostics<cr>
 " Manage extensions
-nnoremap <silent> <A-e>  :<C-u>CocList extensions<cr>
+nnoremap <silent> <A-x>  :<C-u>CocList extensions<cr>
 " Show commands
 nnoremap <silent> <A-c>  :<C-u>CocList commands<cr>
 " Find symbol of current document
@@ -451,4 +406,105 @@ nnoremap <silent> <A-j>  :<C-u>CocNext<CR>
 nnoremap <silent> <A-k>  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <A-p>  :<C-u>CocListResume<CR>
+```
+
+### Visual Easier
+
+#### gruvbox
+
+-   I prefer `gruvbox` as my theme.
+
+```bash
+" repo: https://github.com/morhetz/gruvbox "
+Plug 'morhetz/gruvbox'
+
+" settings "
+colorscheme gruvbox
+set background=dark
+```
+
+#### polyglot
+
+-   I prefer `polyglot` to color my code.
+
+```bash
+" disable the filetypes that you don't want to be colorized by polyglot before call the plug "
+let g:polyglot_disabled = [
+            \'css',
+            \'cs',
+            \'markdown',
+            \'reactjavascript',
+            \'reacttypescript',
+            \'php'
+            \]
+
+" call plugin "
+Plug 'sheerun/vim-polyglot'
+```
+
+#### vim-devicons
+
+-   I prefer `vim-devicons` to show icons for different filetypes.
+    -   It requires you install [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation)
+    -   Then please set your terminal text font to Nerd Font.
+    -   Now, `vim-devicons` will generate icons for other plugins such as `NERDTree` and `airline`.
+
+```bash
+" repo: https://github.com/ryanoasis/vim-devicons "
+Plug 'ryanoasis/vim-devicons'
+```
+
+#### airline
+
+-   I prefer `airline` to show status line.
+
+```bash
+" airline also, https://github.com/vim-airline/vim-airline "
+Plug 'vim-airline/vim-airline'
+```
+
+#### NERDTree
+
+-   NERDTree is more beautiful if you use with devicons, but not so functional as `coc-explorer`
+
+```bash
+" nerdtree, https://github.com/preservim/nerdtree "
+Plug 'preservim/nerdtree'
+
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeIgnore = []
+let g:NERDTreeStatusline = ''
+
+" Automaticaly close nvim if NERDTree is only thing left open "
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Toggle "
+nnoremap <silent> <leader>e :NERDTreeToggle<CR>
+```
+
+### Fuzzy Finder & Git Manager
+
+#### fzf
+
+-   [fzf.vim](https://github.com/junegunn/fzf.vim)
+
+```bash
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+```
+
+-   `fzf` settings:
+
+```bash
+nnoremap <C-p> :FZF<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit'
+  \}
+
+" Tell fzf to use silversearcher-ag: "
+" Install the_silver_searcher: https://github.com/ggreer/the_silver_searcher "
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 ```
