@@ -5,15 +5,22 @@
 ## Working Env
 
 -   [Toolkits](working-env/toolkits/README.md)
+
     -   [Unix/Linux](working-env/toolkits/unix-linux/README.md)
         -   [Resources](working-env/toolkits/unix-linux/resources.md)
         -   [Fundamentals](working-env/toolkits/unix-linux/fundamentals.md)
     -   [Regex](working-env/toolkits/regex.md)
-    -   [Git & GitHub](working-env/toolkits/git-and-github.md)
+    -   [Git & GitHub](working-env/toolkits/git-and-github/README.md)
+        -   [Install and Setup Git](working-env/toolkits/git-and-github/install-and-setup-git.md)
     -   [VSCode](working-env/toolkits/vscode.md)
     -   [NodeJS & npm](working-env/toolkits/nodejs-and-npm.md)
+
 -   [Ubuntu Workspace](working-env/ubuntu-workspace.md)
--   [macOS Workspace](working-env/macos-workspace.md)
+
+-   [macOS Workspace](working-env/macos-workspace/README.md)
+
+    -   [Setup MacOS](working-env/macos-workspace/setup-macos.md)
+
 -   [Vim Based Workspace](working-env/vim-based-workspace/README.md)
     -   [Basic Keymaps](working-env/vim-based-workspace/basic-keymaps.md)
     -   [Make Vim Awesome](working-env/vim-based-workspace/make-vim-awesome.md)
