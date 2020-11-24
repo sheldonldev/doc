@@ -1,8 +1,8 @@
 # Install and Setup Git
 
--   Install [Gig](https//git-scm.com);
--   Sign up for a [GitHub](https://github.com) account if you haven't got one;
--   Associate your `Git` and `GitHub`:
+- Install [Gig](https//git-scm.com);
+- Sign up for a [GitHub](https://github.com) account if you haven't got one;
+- Associate your `Git` and `GitHub`:
 
 ```bash
 # user settings

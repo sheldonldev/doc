@@ -2,10 +2,10 @@
 
 ## Documentation
 
--   [nodjs documentation](https://nodejs.org/en/docs/guides/)
--   [larn nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
--   [npm](https://npmjs.com/)
--   [yarn](https://yarnpkg.com/)
+- [nodjs documentation](https://nodejs.org/en/docs/guides/)
+- [larn nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
+- [npm](https://npmjs.com/)
+- [yarn](https://yarnpkg.com/)
 
 ## Installation
 
@@ -33,7 +33,7 @@ npm -v
 
 ## Uninstallation
 
--   [https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx](https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx)
+- [https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx](https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx)
 
 ```bash
 brew uninstall node
@@ -66,7 +66,7 @@ npm outdated -g --depth=3
 
 ### yarn
 
--   Use yarn to manage global packages!
+- Use yarn to manage global packages!
 
 ```bash
 npm i -g yarn
@@ -89,7 +89,7 @@ npm install -g neovim
 
 ### browser-sync
 
--   I need this because I use neovim, no IDE
+- I need this because I use neovim, no IDE
 
 ```bash
 # allow web developers use live server
@@ -115,7 +115,7 @@ npm i -g @vue/cli
 
 ### yarn
 
--   I use npm in global, while sometimes use yarn in projects
+- I use npm in global, while sometimes use yarn in projects
 
 ```bash
 # install yarn
