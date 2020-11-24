@@ -1,13 +1,15 @@
 # Nvim for Web Dev
 
--   Complete config files are on GitHub:
+- References:
+  - [Chris@Machine/neovim](https://www.chrisatmachine.com/neovim)
+- Complete config files are on GitHub:
 
 {% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on GitHub" %}
 
 ## Install Node
 
--   `npm` provides a lot of tools for web development, such as `browser-sync`.
--   We use `coc.nvim` plugin as Language Server Protocol, which depends on NodeJS.
+- `npm` provides a lot of tools for web development, such as `browser-sync`.
+- We use `coc.nvim` plugin as Language Server Protocol, which depends on NodeJS.
 
 So let's install node as well as some global npm packages by following this link:
 
@@ -17,10 +19,12 @@ So let's install node as well as some global npm packages by following this link
 
 ```bash
 brew install neovim
+
+mkdir ~/.config/nvim
+touch ~/.config/nvim/init.vim
 ```
 
--   Run command `:checkhealth` to show more todo list
--   Edit `~/.config/init.vim`:
+- Edit `~/.config/init.vim`:
 
 ```bash
 " load ~/.vimrc and ~/.vim because I use vim before switched to nvim "
@@ -32,19 +36,17 @@ source ~/.vimrc
 let g:loaded_python_provider = 0
 ```
 
+- Run command `:checkhealth` to show more todo list
+
 ## Awesome Settings for Neovim
 
--   Basic settings are kept in `.vimrc` which can be found in
-    [Make Vim Awsome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome)
--   Following settings can only be used in Neovim
+- Awesome settings are kept in `.vimrc`:
+  [Make Vim Awsome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome)
+- Following settings can only be used in Neovim.
 
 ### Integrated Terminal
 
 ```bash
-" open new split panes to right and below "
-set splitright
-set splitbelow
-
 " turn terminal to normal mode with escape "
 tnoremap <Esc> <C-\><C-n>
 
@@ -58,14 +60,14 @@ nnoremap <C-n> :call OpenTerminal()<CR>
 
 ## Install Plugin Manager
 
--   I use `vim-plugin` as plugin manager
+- I use `vim-plug` as plugin manager
 
 ```bash
 # repo: https://github.com/junegunn/vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
--   Append plugins like following in `~/.config/nvim/init.vim`
+- Append plugins like following in `~/.config/nvim/init.vim`
 
 ```bash
 call plug#begin('~/.vim/plugged')
@@ -74,44 +76,44 @@ Plug 'anotherVender/anotherPlug'
 call plug#end()
 ```
 
--   Run `:w`, `:PlugInstall`/`:PlugUpdate`/`PlugClear`
+- Run `:w`and `:source %`, then run `:PlugInstall`/`:PlugUpdate`/`:PlugClean`/`:PlugStatus`/`:PlugDiff`
 
 ## Plugin Installation and Settings
 
-### Language Support
+### coc.nvim
 
-#### coc.nvim
-
--   This plugin is too featureful (bloated) to explain. Good thing is the author provided
-    [extensive documentation](https://github.com/neoclide/coc.nvim/wiki)
+- This plugin is too featureful to explain: [extensive documentation](https://github.com/neoclide/coc.nvim/wiki)
 
 ```bash
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
 
--   The config will be long, so let's keep it in a seperate file `$HOME/.config/nvim/plug-config/coc.vi` and tell
-    `init.vim` to do so.
+- The config will be long, so let's keep it in a seperate file `~/.config/nvim/coc.vi` and tell `init.vim` to do so.
 
 ```bash
-source ~/.config/nvim/plug-config/coc.vim
+source ~/.config/nvim/coc.vim
 ```
 
--   Check coc health:
+- Check coc health:
 
-    -   there should be an entry for `coc`
-    -   use `g:coc_node_path` to point to your node
-    -   run `CocInfo` to get more info.
+  - there should be an entry for `coc`
+  - use `g:coc_node_path` to point to your node
+  - run `CocInfo` to get more info.
 
--   Install more coc extensions:
-    -   To checkout all extentions: [coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions).
-    -   To manage coc extensions: `:CocList extensions`.
-    -   To find an extention command: `:CocList commands`, where fuzzy finder will help you find the command you want if
-        you have installed it. For example, you want to create `eslintrc.json`, run `:CocList commands` to checkout what
-        commands you can use, then fuzzy finder will help you
-    -   To run a command: `:CocCommand _command_`, for example, you want to create `eslintrc.json` and find out
-        `eslint.configCreate` can help you, then you just run `:CocCommand eslint.configCreate`, everything will be
-        done.
-    -   To Uninstall an enstention: `:CocUninstall: _extensionName_`.
+- Install more coc extensions:
+  - To checkout all extentions: [coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions).
+  - To manage coc extensions: `:CocList extensions`.
+  - To find an extention command: `:CocList commands`, where fuzzy finder will help you find the command you want if you
+    have installed it. For example, you want to create `eslintrc.json`, run `:CocList commands` to checkout what
+    commands you can use, then fuzzy finder will help you
+  - To run a command: `:CocCommand _command_`, for example, you want to create `eslintrc.json` and find out
+    `eslint.configCreate` can help you, then you just run `:CocCommand eslint.configCreate`, everything will be done.
+  - To Uninstall an enstention: `:CocUninstall: _extensionName_`.
+  - To show all diagnostics: `:CocList diagnostics`.
+  - Find symbol of current document: `:CocList outline`.
+  - Search workspace symbols: `:CocList -I symbols`.
+  - Do default action to next or prev: `:CocNext`, `:CocPrev`.
+  - Resume latest CocList: `CocListResume`.
 
 ```bash
 " Install by adding this config or by running `:CocInstall _extensionName_`"
@@ -133,13 +135,14 @@ let g:coc_global_extensions = [
             \ 'coc-phpls',
             \ 'coc-java',
             \ 'coc-explorer',
+            \ 'coc-marketplace'
             \ ]
 ```
 
--   Language Server Configuration:
-    -   Run `:CocConfig` will open `~/.config/nvim/coc-settings.json`.
-    -   Here you can add [language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-    -   Read more [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
+- Language Server Configuration:
+  - Run `:CocConfig` will open `~/.config/nvim/coc-settings.json`.
+  - Here you can add [language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+  - Read more [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
 
 ```json
 {
@@ -249,50 +252,35 @@ let g:coc_global_extensions = [
         "<cr>": ["expandable?", "expand", "open"],
         "v": "open:vsplit"
     }
+
+    // snippets
+    "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 }
 ```
 
--   `coc` settings:
+- `coc` settings:
 
 ```bash
-" Explorer "
+" Explorer preset"
 let g:coc_explorer_global_presets = {
 \   '.vim': {
 \     'root-uri': '~/.vim',
-\   },
-\   'tab': {
-\     'position': 'tab',
-\     'quit-on-open': v:true,
 \   },
 \   'floating': {
 \     'position': 'floating',
 \     'open-action-strategy': 'sourceWindow',
 \   },
-\   'floatingTop': {
-\     'position': 'floating',
-\     'floating-position': 'center-top',
-\     'open-action-strategy': 'sourceWindow',
-\   },
-\   'floatingLeftside': {
-\     'position': 'floating',
-\     'floating-position': 'left-center',
-\     'floating-width': 50,
-\     'open-action-strategy': 'sourceWindow',
-\   },
-\   'floatingRightside': {
-\     'position': 'floating',
-\     'floating-position': 'right-center',
-\     'floating-width': 50,
-\     'open-action-strategy': 'sourceWindow',
-\   },
-\   'simplify': {
-\     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
-\   }
 \ }
 
-nmap <space>e :CocCommand explorer<CR>
-nmap <space>f :CocCommand explorer --preset floating<CR>
+" Explorer "
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+nmap <C-e> :CocCommand explorer<CR>
+
+" Use preset argument to open it "
+nmap <C-f> :CocCommand explorer --preset floating<CR>
+nmap <leader>ev :CocCommand explorer --preset .vim<CR>
+
+
 " for scss extention "
 autocmd FileType scss setl iskeyword+=@-@
 
@@ -303,9 +291,10 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " Prettier range format only support languageId including: "
 " javascript, javascriptreact, typescript, typescriptreact, json and graphql. "
 
-" for python extention "
-set statusline^=%{coc#status()}
-" if you need lint: `pip3 install pylint`"
+" if you need lint for py3: `pip3 install pylint`"
+
+" Add status line support, for integration with other plugin, checkout `:h coc-status`
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -351,10 +340,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
-" Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
 augroup mygroup
     autocmd!
     " Setup formatexpr specified filetype(s).
@@ -386,33 +371,41 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
-" Add status line support, for integration with other plugin, checkout `:h coc-status`
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" Using CocList
-" Show all diagnostics
-nnoremap <silent> <A-a>  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <A-x>  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <A-c>  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <A-o>  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <A-s>  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <A-j>  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <A-k>  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <A-p>  :<C-u>CocListResume<CR>
 ```
 
-### Visual Easier
+#### Dependencies for Coc Extensions
 
-#### gruvbox
+- `coc-explorer` requires [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation), please set your
+  terminal text font to Nerd Font.
+- `coc-snippets` can work together with `vim-snippets` or can use user snippets directory:
 
--   I prefer `gruvbox` as my theme.
+```bash
+Plug 'honza/vim-snippets'
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+```
+
+```json
+// coc-settings.json
+"snippets.userSnippetsDirectory": "~/.config/nvim/snips"
+```
+
+### gruvbox
+
+- I prefer `gruvbox` as my theme.
 
 ```bash
 " repo: https://github.com/morhetz/gruvbox "
@@ -423,9 +416,9 @@ colorscheme gruvbox
 set background=dark
 ```
 
-#### polyglot
+### polyglot
 
--   I prefer `polyglot` to color my code.
+- I prefer `polyglot` to color my code.
 
 ```bash
 " disable the filetypes that you don't want to be colorized by polyglot before call the plug "
@@ -442,59 +435,47 @@ let g:polyglot_disabled = [
 Plug 'sheerun/vim-polyglot'
 ```
 
-#### vim-devicons
+### airline
 
--   I prefer `vim-devicons` to show icons for different filetypes.
-    -   It requires you install [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation)
-    -   Then please set your terminal text font to Nerd Font.
-    -   Now, `vim-devicons` will generate icons for other plugins such as `NERDTree` and `airline`.
-
-```bash
-" repo: https://github.com/ryanoasis/vim-devicons "
-Plug 'ryanoasis/vim-devicons'
-```
-
-#### airline
-
--   I prefer `airline` to show status line.
+- I prefer `airline` to show status line.
 
 ```bash
 " airline also, https://github.com/vim-airline/vim-airline "
 Plug 'vim-airline/vim-airline'
 ```
 
-#### NERDTree
-
--   NERDTree is more beautiful if you use with devicons, but not so functional as `coc-explorer`
+### vim-commentary
 
 ```bash
-" nerdtree, https://github.com/preservim/nerdtree "
-Plug 'preservim/nerdtree'
+Plug 'tpope/vim-commentary'
 
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
-
-" Automaticaly close nvim if NERDTree is only thing left open "
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Toggle "
-nnoremap <silent> <leader>e :NERDTreeToggle<CR>
+nnoremap <C-/> :Commentary<CR>
+vnoremap <C-/> :Commentary<CR>
 ```
 
-### Fuzzy Finder & Git Manager
+### vim-rainbow
 
-#### fzf
+```bash
+Plug 'frazrepo/vim-rainbow'
 
--   [fzf.vim](https://github.com/junegunn/fzf.vim)
+let g:rainbow_active = 1
+let g:rainbow_load_separately = [
+    \ [ '*.json', [['\[', '\]'], ['{', '}']] ],
+    \ [ '*.{c,cpp,java,js,ts,py,php,sh,css,scss}' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.{html,htm,vue,jsx}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+    \ ]
+```
+
+### Fuzzy Finder
+
+- [fzf.vim](https://github.com/junegunn/fzf.vim)
 
 ```bash
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 ```
 
--   `fzf` settings:
+- `fzf` settings:
 
 ```bash
 nnoremap <C-p> :FZF<CR>
