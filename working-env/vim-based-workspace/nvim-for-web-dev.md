@@ -254,12 +254,6 @@ nmap <leader>e :CocCommand explorer<CR>
 
 " Explorer preset "
 let g:coc_explorer_global_presets = {
-\   '.config/nvim': {
-\     'root-uri': '~/.config/nvim',
-\   },
-\   'hub/doc': {
-\     'root-uri': '~/Documents/hub/doc'
-\   },
 \   'floating': {
 \     'position': 'floating',
 \     'open-action-strategy': 'sourceWindow',
@@ -268,8 +262,8 @@ let g:coc_explorer_global_presets = {
 
 " Use preset argument to open it "
 nmap <leader>ef :CocCommand explorer --preset floating<CR>
-nmap <leader>ev :CocCommand explorer --preset .config/nvim<CR>
-nmap <leader>ed :CocCommand explorer --preset hub/doc<CR>
+nmap <leader>ev :CocCommand explorer --preset floating ~/.config/nvim<CR>
+nmap <leader>ed :CocCommand explorer --preset floating ~/Documents/hub/doc<CR>
 
 " List all presets "
 nmap <leader>el :CocList explPresets
