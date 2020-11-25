@@ -88,7 +88,7 @@ call plug#end()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
 
-- The config will be long, so let's keep it in a seperate file `~/.config/nvim/coc.vi` and tell `init.vim` to do so.
+- The config will be long, so let's keep it in a separate file `~/.config/nvim/coc.vi` and tell `init.vim` to do so.
 
 ```bash
 source ~/.config/nvim/coc.vim
@@ -101,16 +101,16 @@ source ~/.config/nvim/coc.vim
   - run `CocInfo` to get more info.
 
 - Install more coc extensions:
-  - To checkout all extentions: [coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions).
+  - To check out all extensions: [coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions).
   - To manage coc extensions: `:CocList extensions`.
-  - To find an extention command: `:CocList commands`, where fuzzy finder will help you find the command you want if you
-    have installed it. For example, you want to create `eslintrc.json`, run `:CocList commands` to checkout what
+  - To find an extension command: `:CocList commands`, where fuzzy finder will help you find the command you want if you
+    have installed it. For example, you want to create `eslintrc.json`, run `:CocList commands` to check out what
     commands you can use, then fuzzy finder will help you
   - To run a command: `:CocCommand _command_`, for example, you want to create `eslintrc.json` and find out
     `eslint.configCreate` can help you, then you just run `:CocCommand eslint.configCreate`, everything will be done.
-  - To Uninstall an enstention: `:CocUninstall: _extensionName_`.
+  - To Uninstall an extension: `:CocUninstall: _extensionName_`.
   - To show all diagnostics: `:CocList diagnostics`.
-  - Find symbol of current document: `:CocList outline`.
+  - Find symbols of current document: `:CocList outline`.
   - Search workspace symbols: `:CocList -I symbols`.
   - Do default action to next or prev: `:CocNext`, `:CocPrev`.
   - Resume latest CocList: `CocListResume`.
@@ -281,10 +281,10 @@ nmap <C-f> :CocCommand explorer --preset floating<CR>
 nmap <leader>ev :CocCommand explorer --preset .vim<CR>
 
 
-" for scss extention "
+" for scss extension "
 autocmd FileType scss setl iskeyword+=@-@
 
-" for prettier extention "
+" for prettier extension "
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
@@ -293,7 +293,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 
 " if you need lint for py3: `pip3 install pylint`"
 
-" Add status line support, for integration with other plugin, checkout `:h coc-status`
+" Add status line support, for integration with other plugin, check out `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -334,7 +334,7 @@ function! s:show_documentation()
     endif
 endfunction
 
-" Highlight symbol under cursor on CursorHold
+" Highlight symbols under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
@@ -405,7 +405,7 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 ### gruvbox
 
-- I prefer `gruvbox` as my theme.
+- I prefer `gruvbox` as theme.
 
 ```bash
 " repo: https://github.com/morhetz/gruvbox "
@@ -418,7 +418,7 @@ set background=dark
 
 ### polyglot
 
-- I prefer `polyglot` to color my code.
+- I prefer `polyglot` to color code.
 
 ```bash
 " disable the filetypes that you don't want to be colorized by polyglot before call the plug "
@@ -437,7 +437,7 @@ Plug 'sheerun/vim-polyglot'
 
 ### airline
 
-- I prefer `airline` to show status line.
+- I prefer `airline` to show the status line.
 
 ```bash
 " airline also, https://github.com/vim-airline/vim-airline "
@@ -453,19 +453,6 @@ nnoremap <C-/> :Commentary<CR>
 vnoremap <C-/> :Commentary<CR>
 ```
 
-### vim-rainbow
-
-```bash
-Plug 'frazrepo/vim-rainbow'
-
-let g:rainbow_active = 1
-let g:rainbow_load_separately = [
-    \ [ '*.json', [['\[', '\]'], ['{', '}']] ],
-    \ [ '*.{c,cpp,java,js,ts,py,php,sh,css,scss}' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-    \ [ '*.{html,htm,vue,jsx}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
-    \ ]
-```
-
 ### Fuzzy Finder
 
 - [fzf.vim](https://github.com/junegunn/fzf.vim)
@@ -478,14 +465,79 @@ Plug 'junegunn/fzf.vim'
 - `fzf` settings:
 
 ```bash
-nnoremap <C-p> :FZF<CR>
+"" This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
+  \ 'ctrl-v': 'vsplit' }
 
-" Tell fzf to use silversearcher-ag: "
-" Install the_silver_searcher: https://github.com/ggreer/the_silver_searcher "
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+"" Enable per-command history.
+"" CTRL-N and CTRL-P will be automatically bound to next-history and
+"" previous-history instead of down and up. If you don't like the change,
+"" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+map <C-f> :Files<CR>
+map <leader>b :Buffers<CR>
+nnoremap <leader>g :Rg<CR>
+nnoremap <leader>t :Tags<CR>
+nnoremap <leader>m :Marks<CR>
+
+
+let g:fzf_tags_command = 'ctags -R'
+"" Border color
+let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
+
+let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
+
+"" Tell fzf to use ripgrep to show files including the hidden,
+"" it will ignore rules in .gitignore by default, and
+"" we add the rule of ignorering the git
+let $FZF_DEFAULT_COMMAND = "rg --files --hidden --require-git"
+
+"" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+"" Get Files
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
+
+
+"" Get text in files with Rg
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+"" Ripgrep advanced
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
+"" Git grep
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep(
+  \   'git grep --line-number '.shellescape(<q-args>), 0,
+  \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 ```
+
+- [Extra Keybindings (Optional)](https://wiki.archlinux.org/index.php/Fzf)
