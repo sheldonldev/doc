@@ -1,7 +1,5 @@
 # Nvim for Web Dev
 
-- References:
-  - [Chris@Machine/neovim](https://www.chrisatmachine.com/neovim)
 - Complete config files are on GitHub:
 
 {% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on GitHub" %}
@@ -17,8 +15,10 @@ So let's install node as well as some global npm packages by following this link
 
 ## Install Neovim
 
+- [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+
 ```bash
-brew install neovim
+brew install --HEAD neovim
 
 mkdir ~/.config/nvim
 touch ~/.config/nvim/init.vim
@@ -41,7 +41,7 @@ let g:loaded_python_provider = 0
 ## Awesome Settings for Neovim
 
 - Awesome settings are kept in `.vimrc`:
-  [Make Vim Awsome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome)
+  [Make Vim Awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome)
 - Following settings can only be used in Neovim.
 
 ### Integrated Terminal
@@ -58,16 +58,19 @@ endfunction
 nnoremap <C-n> :call OpenTerminal()<CR>
 ```
 
-## Install Plugin Manager
+### Plugin Manager
 
-- I use `vim-plug` as plugin manager
+- I use `vim-plug` as plugin manager, following script will install it automatically.
 
 ```bash
-# repo: https://github.com/junegunn/vim-plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" auto-install vim-plug "
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
 ```
 
-- Append plugins like following in `~/.config/nvim/init.vim`
+- To use plugin, append plugins like following in `~/.config/nvim/init.vim`
 
 ```bash
 call plug#begin('~/.vim/plugged')
@@ -88,7 +91,7 @@ call plug#end()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
 
-- The config will be long, so let's keep it in a separate file `~/.config/nvim/coc.vi` and tell `init.vim` to do so.
+- The config will be long, so let's keep it in a separate file `~/.config/nvim/coc.vim` and tell `init.vim` to source.
 
 ```bash
 source ~/.config/nvim/coc.vim
@@ -101,22 +104,8 @@ source ~/.config/nvim/coc.vim
   - run `CocInfo` to get more info.
 
 - Install more coc extensions:
-  - To check out all extensions: [coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions).
-  - To manage coc extensions: `:CocList extensions`.
-  - To find an extension command: `:CocList commands`, where fuzzy finder will help you find the command you want if you
-    have installed it. For example, you want to create `eslintrc.json`, run `:CocList commands` to check out what
-    commands you can use, then fuzzy finder will help you
-  - To run a command: `:CocCommand _command_`, for example, you want to create `eslintrc.json` and find out
-    `eslint.configCreate` can help you, then you just run `:CocCommand eslint.configCreate`, everything will be done.
-  - To Uninstall an extension: `:CocUninstall: _extensionName_`.
-  - To show all diagnostics: `:CocList diagnostics`.
-  - Find symbols of current document: `:CocList outline`.
-  - Search workspace symbols: `:CocList -I symbols`.
-  - Do default action to next or prev: `:CocNext`, `:CocPrev`.
-  - Resume latest CocList: `CocListResume`.
 
 ```bash
-" Install by adding this config or by running `:CocInstall _extensionName_`"
 let g:coc_global_extensions = [
             \ 'coc-emmet',
             \ 'coc-css',
@@ -127,7 +116,6 @@ let g:coc_global_extensions = [
             \ 'coc-vetur',
             \ 'coc-python',
             \ 'coc-yaml',
-            \ 'coc-pairs',
             \ 'coc-eslint',
             \ 'coc-stylelint',
             \ 'coc-snippets',
@@ -141,8 +129,8 @@ let g:coc_global_extensions = [
 
 - Language Server Configuration:
   - Run `:CocConfig` will open `~/.config/nvim/coc-settings.json`.
-  - Here you can add [language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-  - Read more [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
+  - Here you can add settings for [language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+  - Read more: [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
 
 ```json
 {
@@ -258,7 +246,7 @@ let g:coc_global_extensions = [
 }
 ```
 
-- `coc` settings:
+- settings for `coc`:
 
 ```bash
 " Explorer preset"
@@ -373,35 +361,166 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 ```
 
-#### Dependencies for Coc Extensions
+#### More Support for Coc Extensions
 
 - `coc-explorer` requires [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation), please set your
   terminal text font to Nerd Font.
 - `coc-snippets` can work together with `vim-snippets` or can use user snippets directory:
 
+  ```bash
+  Plug 'honza/vim-snippets'
+
+  " Use <C-l> for trigger snippet expand.
+  imap <C-l> <Plug>(coc-snippets-expand)
+
+  " Use <C-j> for select text for visual placeholder of snippet.
+  vmap <C-j> <Plug>(coc-snippets-select)
+
+  " Use <C-j> for jump to next placeholder, it's default of coc.nvim
+  let g:coc_snippet_next = '<c-j>'
+
+  " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+  let g:coc_snippet_prev = '<c-k>'
+
+  " Use <C-j> for both expand and jump (make expand higher priority.)
+  imap <C-j> <Plug>(coc-snippets-expand-jump)
+  ```
+
+  ```json
+  // coc-settings.json
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
+  ```
+
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) can build a concrete syntax tree for a source
+  file. It's written in [scheme](https://en.wikipedia.org/wiki/Scheme_%28programming_language%29) and
+  [lua](https://www.lua.org/start.html).
+
+  - NOTE: nvim version >= 0.5.0
+  - `Plug 'nvim-treesitter/nvim-treesitter'`
+  - Add settings to `init.vim`:
+
+  ```bash
+  lua <<EOF
+  require'nvim-treesitter.configs'.setup {
+    ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    highlight = {
+      enable = true,              -- false will disable the whole extension
+      disable = { "c", "rust" },  -- list of language that will be disabled
+    },
+  }
+  EOF
+  ```
+
+#### More About Coc Extensions
+
+- To check out all extensions: [coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions). Or run
+  `:CocList marketplace`.
+- To manage coc extensions: `:CocList extensions`.
+- To find an extension command: `:CocList commands`. For example, you want to create `eslintrc.json`, run
+  `:CocList commands` to check out what commands you can use, then fuzzy finder will help you.
+- To run a command: `:CocCommand _command_`, for example, you want to create `eslintrc.json` and find out
+  `eslint.configCreate` can help you, so you run `:CocCommand eslint.configCreate`.
+- To uninstall an extension: `:CocUninstall: _extensionName_`.
+
+#### More About Coc Language Suport Commands
+
 ```bash
-Plug 'honza/vim-snippets'
-
-" Use <C-l> for trigger snippet expand.
-imap <C-l> <Plug>(coc-snippets-expand)
-
-" Use <C-j> for select text for visual placeholder of snippet.
-vmap <C-j> <Plug>(coc-snippets-select)
-
-" Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
-
-" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
-
-" Use <C-j> for both expand and jump (make expand higher priority.)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
+<Plug>(coc-codeaction)              " line action
+<Plug>(coc-definition)              " definition
+<Plug>(coc-references)              " references
+<Plug>(coc-type-definition)         " type definition
+<Plug>(coc-rename)                  " rename
+<Plug>(coc-declaration)             " declaration
+<Plug>(coc-implementation)          " implementation
+<Plug>(coc-format)                  " format
+<Plug>(coc-fix-current)             " quickfix
+<Plug>(coc-codelens-action)         " code lens
+<Plug>(coc-diagnostic-next)         " next diagnostic
+<Plug>(coc-diagnostic-next-error)   " next error
+:CocList diagnostics                " diagnostics
+:CocList outline                    " search outline
+:CocList -I symbols                 " references
+:CocUpdate                          " update CoC
+:CocDisable                         " disable CoC
+:CocEnable                          " enable CoC
 ```
 
-```json
-// coc-settings.json
-"snippets.userSnippetsDirectory": "~/.config/nvim/snips"
+#### More Support for Java
+
+- Install [JDK](https://www.oracle.com/java/technologies/javase-downloads.html);
+
+- Lombok:
+
+```bash
+sudo mkdir /usr/local/share/lombok
+sudo wget https://projectlombok.org/downloads/lombok.jar -O /usr/local/share/lombok/lombok.jar
 ```
+
+- `coc-settings.json`:
+
+```bash
+// codelens
+"codeLens.enable": true,
+"java.referencesCodeLens.enabled": true,
+"java.jdt.ls.vmargs": "-javaagent:/usr/local/share/lombok.jar",
+```
+
+#### More Support for C/C++
+
+- Install `brew install ccls` for C/C++.
+
+- To set up a C/C++ project:
+
+  - generate `compile_commands.json` and put it to your project root. In macOS, you can use one of the following
+    methods;
+    1. Intercepting the system calls and extracting the arguments passed to the compiler by dynamic library injection
+       (e.g. Bear, scan-build):
+       - pros: works for hard-coded compiler path;
+       - cons: macOS prohibits dynamic library injection for security reasons if the the program to be injected is
+         system software (e.g. clang from Xcode).
+    2. Using a compiler wrapper (e.g. scan-build):
+       - pros: doesn’t violate security policies;
+       - cons: the compiler path must not be hard-coded.
+  - place `.ccls` to your project root. It is a text file, in which each line is a command line argument passed to the
+    compiler. Here is an example of .ccls:
+
+    ```text
+    -I
+    ../include
+    -I
+    ../vendor/include
+    -std=c++14
+    -stdlib=libc++
+    -fPIC
+    ```
+
+- If ccls cannot find your system headers…
+
+  - If you are using macOS, then chances are ccls cannot find system headers and as a result reports a bunch of errors.
+  - This is because new macOS systems moves system headers into the macOS SDK directory and no longer places them in
+    `/usr/include`. And the reason why ccls can find the system headers previously is that `/usr/include` is hard-coded
+    into ccls during compilation.
+  - To solve this problem, you can manually adding the path of the system headers to `.ccls`. Here is how to get the
+    path:
+
+    - Run `g++ -E -x c++ - -v < /dev/null` in your terminal and you’ll see a list of include paths that the compiler
+      searches. They are between `#include <...> search starts here:` and End of search list..
+    - Now put them into your `.ccls` file as `-isystem` options (unlike `-I`, the errors and warnings in the header
+      files found in `-isystem` paths are ignored by the syntax checker).
+    - After manually adding these system header paths, the `.ccls` file might look like this:
+
+      ```text
+      -isystem
+      /usr/local/include
+      -isystem
+      /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1
+      -isystem
+      /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include
+      -isystem
+      /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+      -isystem
+      /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include
+      ```
 
 ### gruvbox
 
@@ -455,7 +574,28 @@ vnoremap <C-/> :Commentary<CR>
 
 ### Fuzzy Finder
 
-- [fzf.vim](https://github.com/junegunn/fzf.vim)
+#### Awesome tools to help you search stuff
+
+- [FZF](https://github.com/junegunn/fzf.vim)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [universal-ctags](https://github.com/universal-ctags/ctags)
+
+You can install them in macOS with following command:
+
+```bash
+brew install fzf
+
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+
+brew install ripgrep
+
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+```
+
+#### Nvim settings for fzf and ripgrep
+
+- Plug [fzf.vim](https://github.com/junegunn/fzf.vim)
 
 ```bash
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -540,4 +680,11 @@ command! -bang -nargs=* GGrep
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 ```
 
-- [Extra Keybindings (Optional)](https://wiki.archlinux.org/index.php/Fzf)
+- [Note foe Extra Keybindings (Optional)](https://wiki.archlinux.org/index.php/Fzf)
+
+## References
+
+- [Chris@Machine/neovim](https://www.chrisatmachine.com/neovim)
+- [devilyouwei/Vimmer](https://github.com/devilyouwei/Vimmer)
+- [Configure coc.nvim for C/C++ Development](https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/)
+- [ThePrimeagen - Your first VimRC: How to setup your vim's vimrc](https://www.youtube.com/watch?v=n9k9scbTuvQ)
