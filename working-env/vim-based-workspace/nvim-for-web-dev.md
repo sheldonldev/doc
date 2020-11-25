@@ -33,8 +33,7 @@ let g:loaded_python_provider = 0
 
 ## Awesome Settings for Neovim
 
-- Awesome settings are kept in `.vimrc`: [Make Vim Awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome).
-- Following settings can only be used in Neovim.
+- Based on `.vimrc`: [Make Vim Awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome).
 
 ### Integrated Terminal
 
