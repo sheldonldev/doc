@@ -7,7 +7,7 @@
 ## Install Node
 
 - `npm` provides a lot of tools for web development, such as `browser-sync`.
-- We use `coc.nvim` plugin as Language Server Protocol, which depends on NodeJS.
+- We use `coc.nvim` plugin as Language Server, which depends on NodeJS.
 
 So let's install node as well as some global npm packages by following this link:
 
@@ -32,7 +32,7 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 
-" disable python2 because I just want to use python3"
+" disable python2 because I just want to use python3 "
 let g:loaded_python_provider = 0
 ```
 
@@ -40,8 +40,7 @@ let g:loaded_python_provider = 0
 
 ## Awesome Settings for Neovim
 
-- Awesome settings are kept in `.vimrc`:
-  [Make Vim Awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome)
+- Awesome settings are kept in `.vimrc`: [Make Vim Awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome)
 - Following settings can only be used in Neovim.
 
 ### Integrated Terminal
@@ -70,7 +69,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 ```
 
-- To use plugin, append plugins like following in `~/.config/nvim/init.vim`
+- Append plugins like following in `~/.config/nvim/init.vim`.
 
 ```bash
 call plug#begin('~/.vim/plugged')
@@ -79,7 +78,7 @@ Plug 'anotherVender/anotherPlug'
 call plug#end()
 ```
 
-- Run `:w`and `:source %`, then run `:PlugInstall`/`:PlugUpdate`/`:PlugClean`/`:PlugStatus`/`:PlugDiff`
+- Run `:w`and `:source %`, then run `:PlugInstall`/`:PlugUpdate`/`:PlugClean`/`:PlugStatus`/`:PlugDiff`.
 
 ## Plugin Installation and Settings
 
@@ -134,125 +133,140 @@ let g:coc_global_extensions = [
 
 ```json
 {
-    //eslint,js
-    "eslint.trace.server": "verbose",
-    "eslint.packageManager": "yarn",
-    "prettier.eslintIntegration": true,
-    "eslint.autoFix": true,
-    "eslint.autoFixOnSave": true,
-    "eslint.filetypes": ["vue", "typescript.tsx", "javascript", "javascriptreact", "typescriptreact", "typescript"],
-    "eslint.run": "onSave",
+  //eslint,js
+  "eslint.trace.server": "verbose",
+  "eslint.packageManager": "yarn",
+  "prettier.eslintIntegration": true,
+  "eslint.autoFix": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "vue",
+    "typescript.tsx",
+    "javascript",
+    "javascriptreact",
+    "typescriptreact",
+    "typescript"
+  ],
+  "eslint.run": "onSave",
 
-    //tsserver
-    //use eslint to check js and ts
-    "tsserver.trace.server": "verbose",
-    "javascript.validate.enable": false,
-    "typescript.validate.enable": false,
-    "eslint.options": { "configFile": ".eslintrc.json" },
+  //tsserver
+  //use eslint to check js and ts
+  "tsserver.trace.server": "verbose",
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "eslint.options": { "configFile": ".eslintrc.json" },
 
-    //emmet
-    "emmet.priority": 1,
-    "emmet.excludeLanguages": [],
+  //emmet
+  "emmet.priority": 1,
+  "emmet.excludeLanguages": [],
 
-    //prettier
-    "prettier.useTabs": false,
-    "prettier.tabWidth": 4,
-    "prettier.semi": false,
-    "prettier.singleQuote": true,
-    "prettier.jsxBracketSameLine": true,
-    "prettier.printWidth": 120,
-    "prettier.jsxSingleQuote": false,
-    "prettier.bracketSpacing": true,
-    "prettier.trailingComma": "none",
-    "prettier.arrowParens": "avoid",
-    "prettier.htmlWhitespaceSensitivity": "ignore",
-    "prettier.proseWrap": "always",
-    "coc.preferences.formatOnSaveFiletypes": [
-        "javascript",
-        "typescript",
-        "typescriptreact",
-        "json",
-        "javascriptreact",
-        "typescript.tsx",
-        "css",
-        "markdown"
-    ],
+  //prettier
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.jsxBracketSameLine": true,
+  "prettier.jsxSingleQuote": false,
+  "prettier.bracketSpacing": true,
+  "prettier.trailingComma": "none",
+  "prettier.arrowParens": "avoid",
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "css",
+    "markdown"
+  ],
 
-    //json
-    "json.format.enable": false,
+  //json
+  "json.format.enable": true,
 
-    //html
-    "html.trace.server": "verbose",
-    "html.enable": true,
-    "html.format.enable": true,
-    "html.validate.html": true,
-    "html.validate.styles": true,
-    "html.validate.scripts": true,
-    "html.format.wrapLineLength": 100,
-    "html.format.endWithNewline": false,
-    "html.format.wrapAttributes": "auto",
+  //html
+  "html.trace.server": "verbose",
+  "html.enable": true,
+  "html.format.enable": true,
+  "html.validate.html": true,
+  "html.validate.styles": true,
+  "html.validate.scripts": true,
+  "html.format.endWithNewline": false,
+  "html.format.wrapAttributes": "auto",
 
-    //vue
-    "vetur.trace.server": "verbose",
-    "vetur.format.enable": true,
-    "vetur.validation.style": true,
-    "vetur.validation.script": true,
-    "vetur.validation.template": true,
-    "vetur.format.defaultFormatterOptions": {
-        "prettyhtml": {
-            "sortAttributes": true,
-            "singleQuote": false,
-            "printWidth": 120
-        }
-    },
-    "vetur.format.defaultFormatter.js": "prettier-eslint",
-    "vetur.format.defaultFormatter.html": "prettier",
-    "vetur.format.defaultFormatter.css": "prettier",
-    "vetur.format.defaultFormatter.less": "prettier",
-    "vetur.format.defaultFormatter.scss": "prettier",
-    "vetur.format.defaultFormatter.ts": "prettier-tslint",
-    "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
-    "vetur.format.defaultFormatter.postcss": "prettier",
-
-    // java
-    "java.trace.server": "verbose",
-    "java.errors.incompleteClasspath.severity": "ignore",
-
-    // c/c++
-    "languageserver": {
-        "ccls": {
-            "command": "ccls",
-            "filetypes": ["c", "cpp", "objc", "objcpp"],
-            "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-            "initializationOptions": {
-                "cache": {
-                    "directory": "/tmp/ccls"
-                }
-            }
-        }
+  //vue
+  "vetur.trace.server": "verbose",
+  "vetur.format.enable": true,
+  "vetur.validation.style": true,
+  "vetur.validation.script": true,
+  "vetur.validation.template": true,
+  "vetur.format.defaultFormatterOptions": {
+    "prettyhtml": {
+      "sortAttributes": true,
+      "singleQuote": false
     }
+  },
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.less": "prettier",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.ts": "prettier-tslint",
+  "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+  "vetur.format.defaultFormatter.postcss": "prettier",
 
-    // explorer
-    "explorer.width": 30,
-    "explorer.icon.enableNerdfont": true,
-    "explorer.previewAction.onHover": false,
-    "explorer.keyMappings.global": {
-        "<cr>": ["expandable?", "expand", "open"],
-        "v": "open:vsplit"
+  // java
+  "java.trace.server": "verbose",
+  "java.errors.incompleteClasspath.severity": "ignore",
+
+  // c/c++
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
     }
+  },
 
-    // snippets
-    "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+  // explorer
+  "explorer.width": 25,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.file.showHiddenFiles": true,
+  "explorer.keyMappings.global": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
+  }
 }
 ```
 
 - settings for `coc`:
 
 ```bash
-" Explorer preset"
+" === Explorer === "
+
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+nmap <C-e> :CocCommand explorer<CR>
+
+" Explorer preset "
 let g:coc_explorer_global_presets = {
-\   '.vim': {
-\     'root-uri': '~/.vim',
+\   '.config/nvim': {
+\     'root-uri': '~/.config/nvim',
+\   },
+\   'hub/doc': {
+\     'root-uri': '~/Documents/hub/doc'
 \   },
 \   'floating': {
 \     'position': 'floating',
@@ -260,32 +274,31 @@ let g:coc_explorer_global_presets = {
 \   },
 \ }
 
-" Explorer "
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-nmap <C-e> :CocCommand explorer<CR>
-
 " Use preset argument to open it "
-nmap <C-f> :CocCommand explorer --preset floating<CR>
-nmap <leader>ev :CocCommand explorer --preset .vim<CR>
+nmap <leader>ef :CocCommand explorer --preset floating<CR>
+nmap <leader>ev :CocCommand explorer --preset .config/nvim<CR>
+nmap <leader>ed :CocCommand explorer --preset hub/doc<CR>
+
+" List all presets "
+nmap <leader>el :CocList explPresets
 
 
-" for scss extension "
+" === for scss extention === "
 autocmd FileType scss setl iskeyword+=@-@
 
-" for prettier extension "
+
+" === for prettier extention === "
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-" Prettier range format only support languageId including: "
-" javascript, javascriptreact, typescript, typescriptreact, json and graphql. "
 
-" if you need lint for py3: `pip3 install pylint`"
 
-" Add status line support, for integration with other plugin, check out `:h coc-status`
+" === for other === "
+" Add status line support, for integration with other plugin, checkout `:h coc-status` "
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+" Use tab for trigger completion with characters ahead and navigate. "
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin. "
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -297,21 +310,21 @@ function! s:check_back_space() abort
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <CR> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
+" Use <CR> to confirm completion, `<C-g>u` means break undo chain at current position. "
+" Coc only does snippet and additional edit on confirm. "
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" Use `[c` and `]c` to navigate diagnostics
+" Use `[c` and `]c` to navigate diagnostics "
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
-" Remap keys for gotos
+" Remap keys for gotos "
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window
+" Use K to show documentation in preview window "
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
@@ -322,81 +335,78 @@ function! s:show_documentation()
     endif
 endfunction
 
-" Highlight symbols under cursor on CursorHold
+" Highlight symbol under cursor on CursorHold "
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Remap for rename current word
+" Remap for rename current word "
 nmap <leader>rn <Plug>(coc-rename)
 
 augroup mygroup
     autocmd!
-    " Setup formatexpr specified filetype(s).
+    " Setup formatexpr specified filetype(s). "
     autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-    " Update signature help on jump placeholder
+    " Update signature help on jump placeholder "
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph "
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
-" Remap for do codeAction of current line
+" Remap for do codeAction of current line "
 nmap <leader>ac  <Plug>(coc-codeaction)
-" Fix autofix problem of current line
+" Fix autofix problem of current line "
 nmap <leader>qf  <Plug>(coc-fix-current)
 
-" Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
+" Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python "
 nmap <silent> <TAB> <Plug>(coc-range-select)
 xmap <silent> <TAB> <Plug>(coc-range-select)
 xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
 
-" Use `:Format` to format current buffer
+" Use `:Format` to format current buffer "
 command! -nargs=0 Format :call CocAction('format')
 
-" Use `:Fold` to fold current buffer
+" Use `:Fold` to fold current buffer "
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
-" use `:OR` for organize import of current buffer
+" use `:OR` for organize import of current buffer "
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
 ```
 
-#### More Support for Coc Extensions
+#### Support for Coc Extensions
 
-- `coc-explorer` requires [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation), please set your
-  terminal text font to Nerd Font.
-- `coc-snippets` can work together with `vim-snippets` or can use user snippets directory:
+- `coc-explorer` requires [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation).
+- Set your terminal text font to Nerd Font.
+- `coc-snippets` can work together with `vim-snippets`, and can use user snippets directory:
 
   ```bash
   Plug 'honza/vim-snippets'
 
-  " Use <C-l> for trigger snippet expand.
+  " trigger snippet expand. "
   imap <C-l> <Plug>(coc-snippets-expand)
 
-  " Use <C-j> for select text for visual placeholder of snippet.
+  " select text for visual placeholder of snippet. "
   vmap <C-j> <Plug>(coc-snippets-select)
 
-  " Use <C-j> for jump to next placeholder, it's default of coc.nvim
+  " jump to next placeholder, it's default of coc.nvim "
   let g:coc_snippet_next = '<c-j>'
 
-  " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+  " jump to previous placeholder, it's default of coc.nvim "
   let g:coc_snippet_prev = '<c-k>'
 
-  " Use <C-j> for both expand and jump (make expand higher priority.)
+  " expand and jump (make expand higher priority.) "
   imap <C-j> <Plug>(coc-snippets-expand-jump)
   ```
 
   ```json
-  // coc-settings.json
+  // add in coc-settings.json to enable user directory
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
   ```
 
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) can build a concrete syntax tree for a source
-  file. It's written in [scheme](https://en.wikipedia.org/wiki/Scheme_%28programming_language%29) and
-  [lua](https://www.lua.org/start.html).
+- Extensions like `coc-java` can work with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 
   - NOTE: nvim version >= 0.5.0
-  - `Plug 'nvim-treesitter/nvim-treesitter'`
+  - Add `Plug 'nvim-treesitter/nvim-treesitter'`
   - Add settings to `init.vim`:
 
   ```bash
@@ -423,6 +433,8 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 - To uninstall an extension: `:CocUninstall: _extensionName_`.
 
 #### More About Coc Language Suport Commands
+
+- Following is the commonly used commands:
 
 ```bash
 <Plug>(coc-codeaction)              " line action
@@ -465,24 +477,22 @@ sudo wget https://projectlombok.org/downloads/lombok.jar -O /usr/local/share/lom
 "java.jdt.ls.vmargs": "-javaagent:/usr/local/share/lombok.jar",
 ```
 
+- But still difficult to emplement debugging, find details here: [Java in Neovim](https://www.chrisatmachine.com/Neovim/24-neovim-and-java/)
+
 #### More Support for C/C++
 
-- Install `brew install ccls` for C/C++.
+- MacOS run `brew install ccls`.
 
 - To set up a C/C++ project:
 
-  - generate `compile_commands.json` and put it to your project root. In macOS, you can use one of the following
-    methods;
-    1. Intercepting the system calls and extracting the arguments passed to the compiler by dynamic library injection
-       (e.g. Bear, scan-build):
+  - generate `compile_commands.json` in project root. In macOS, you can use one of the following methods:
+    1. Intercepting the system calls and extracting the arguments passed to the compiler by dynamic library injection (e.g. Bear, scan-build):
        - pros: works for hard-coded compiler path;
-       - cons: macOS prohibits dynamic library injection for security reasons if the the program to be injected is
-         system software (e.g. clang from Xcode).
+       - cons: macOS prohibits dynamic library injection for security reasons if the the program to be injected is system software (e.g. clang from Xcode).
     2. Using a compiler wrapper (e.g. scan-build):
        - pros: doesn’t violate security policies;
        - cons: the compiler path must not be hard-coded.
-  - place `.ccls` to your project root. It is a text file, in which each line is a command line argument passed to the
-    compiler. Here is an example of .ccls:
+  - place `.ccls` in project root. It is a text file, in which each line is a command line argument passed to the compiler. Here is an example:
 
     ```text
     -I
@@ -494,19 +504,16 @@ sudo wget https://projectlombok.org/downloads/lombok.jar -O /usr/local/share/lom
     -fPIC
     ```
 
-- If ccls cannot find your system headers…
+- If `ccls` cannot find your system headers…
 
-  - If you are using macOS, then chances are ccls cannot find system headers and as a result reports a bunch of errors.
-  - This is because new macOS systems moves system headers into the macOS SDK directory and no longer places them in
-    `/usr/include`. And the reason why ccls can find the system headers previously is that `/usr/include` is hard-coded
-    into ccls during compilation.
-  - To solve this problem, you can manually adding the path of the system headers to `.ccls`. Here is how to get the
-    path:
+  - If you are using macOS, then chances are `ccls` cannot find system headers and as a result reports a bunch of errors.
+  - This is because new macOS systems moves system headers into the macOS SDK directory and no longer places them in `/usr/include`.
+  - To solve this problem, you can manually adding the path of the system headers to `.ccls`:
 
-    - Run `g++ -E -x c++ - -v < /dev/null` in your terminal and you’ll see a list of include paths that the compiler
-      searches. They are between `#include <...> search starts here:` and End of search list..
-    - Now put them into your `.ccls` file as `-isystem` options (unlike `-I`, the errors and warnings in the header
-      files found in `-isystem` paths are ignored by the syntax checker).
+    - Run `g++ -E -x c++ - -v < /dev/null` in your terminal and you’ll see a list of include paths that the compiler searches.
+    - They are between `#include <...> search starts here:` and End of search list..
+    - Now put them into your `.ccls` file as `-isystem` options:
+      - unlike `-I`, the errors and warnings in the header files found in `-isystem` paths are ignored by the syntax checker.
     - After manually adding these system header paths, the `.ccls` file might look like this:
 
       ```text
@@ -600,21 +607,18 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 ```bash
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-```
 
-- `fzf` settings:
 
-```bash
-"" This is the default extra key bindings
+" This is the default extra key bindings "
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-"" Enable per-command history.
-"" CTRL-N and CTRL-P will be automatically bound to next-history and
-"" previous-history instead of down and up. If you don't like the change,
-"" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+" Enable per-command history. "
+" CTRL-N and CTRL-P will be automatically bound to next-history and "
+" previous-history instead of down and up. If you don't like the change, "
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS. "
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 map <C-f> :Files<CR>
@@ -625,17 +629,16 @@ nnoremap <leader>m :Marks<CR>
 
 
 let g:fzf_tags_command = 'ctags -R'
-"" Border color
+" Border color "
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 
-"" Tell fzf to use ripgrep to show files including the hidden,
-"" it will ignore rules in .gitignore by default, and
-"" we add the rule of ignorering the git
-let $FZF_DEFAULT_COMMAND = "rg --files --hidden --require-git"
+" Tell fzf to use ripgrep to show files including the hidden, "
+" it will ignore rules in .gitignore by default "
+let $FZF_DEFAULT_COMMAND = "rg --files --hidden"
 
-"" Customize fzf colors to match your color scheme
+" Customize fzf colors to match your color scheme "
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
@@ -651,18 +654,17 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-"" Get Files
+" Get Files "
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
 
-
-"" Get text in files with Rg
+" Get text in files with Rg "
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
 
-"" Ripgrep advanced
+" Ripgrep advanced "
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
   let initial_command = printf(command_fmt, shellescape(a:query))
@@ -673,7 +675,7 @@ endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
-"" Git grep
+" Git grep "
 command! -bang -nargs=* GGrep
   \ call fzf#vim#grep(
   \   'git grep --line-number '.shellescape(<q-args>), 0,
