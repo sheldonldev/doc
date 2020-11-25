@@ -614,7 +614,9 @@ nnoremap <leader>g :Rg<CR>
 nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 
+" Tell fzf to use Ctags "
 let g:fzf_tags_command = 'ctags -R'
+
 " Border color "
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 
@@ -668,7 +670,7 @@ command! -bang -nargs=* GGrep
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 ```
 
-- [Note foe Extra Keybindings (Optional)](https://wiki.archlinux.org/index.php/Fzf)
+- [Note for Extra Keybindings (Optional)](https://wiki.archlinux.org/index.php/Fzf)
 
 ## References
 
