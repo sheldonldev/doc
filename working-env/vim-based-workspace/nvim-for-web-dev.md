@@ -15,16 +15,9 @@ So let's install node as well as some global npm packages by following this link
 
 ## Install Neovim
 
-- [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+- [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) (HEAD Version is recommended)
 
-```bash
-brew install --HEAD neovim
-
-mkdir ~/.config/nvim
-touch ~/.config/nvim/init.vim
-```
-
-- Edit `~/.config/init.vim`:
+- Edit `~/.config/nvim/init.vim`:
 
 ```bash
 " load ~/.vimrc and ~/.vim because I use vim before switched to nvim "
@@ -40,7 +33,7 @@ let g:loaded_python_provider = 0
 
 ## Awesome Settings for Neovim
 
-- Awesome settings are kept in `.vimrc`: [Make Vim Awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome)
+- Awesome settings are kept in `.vimrc`: [Make Vim Awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome).
 - Following settings can only be used in Neovim.
 
 ### Integrated Terminal
@@ -84,7 +77,7 @@ call plug#end()
 
 ### coc.nvim
 
-- This plugin is too featureful to explain: [extensive documentation](https://github.com/neoclide/coc.nvim/wiki)
+- This plugin is too featureful to explain: [extensive documentation](https://github.com/neoclide/coc.nvim/wiki).
 
 ```bash
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -98,8 +91,8 @@ source ~/.config/nvim/coc.vim
 
 - Check coc health:
 
-  - there should be an entry for `coc`
-  - use `g:coc_node_path` to point to your node
+  - there should be an entry for `coc`;
+  - use `g:coc_node_path` to point to your node;
   - run `CocInfo` to get more info.
 
 - Install more coc extensions:
@@ -405,8 +398,8 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 - Extensions like `coc-java` can work with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 
-  - NOTE: nvim version >= 0.5.0
-  - Add `Plug 'nvim-treesitter/nvim-treesitter'`
+  - NOTE: nvim version >= 0.5.0;
+  - Add `Plug 'nvim-treesitter/nvim-treesitter'`;
   - Add settings to `init.vim`:
 
   ```bash
@@ -423,13 +416,10 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 #### More About Coc Extensions
 
-- To check out all extensions: [coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions). Or run
-  `:CocList marketplace`.
+- To check out all extensions: [coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions). Or run `:CocList marketplace`.
 - To manage coc extensions: `:CocList extensions`.
-- To find an extension command: `:CocList commands`. For example, you want to create `eslintrc.json`, run
-  `:CocList commands` to check out what commands you can use, then fuzzy finder will help you.
-- To run a command: `:CocCommand _command_`, for example, you want to create `eslintrc.json` and find out
-  `eslint.configCreate` can help you, so you run `:CocCommand eslint.configCreate`.
+- To find an extension command: `:CocList commands`. For example, you want to create `eslintrc.json`, run `:CocList commands` to check out what commands you can use, then fuzzy finder will help you.
+- To run a command: `:CocCommand _command_`, for example, you want to create `eslintrc.json` and find out `eslint.configCreate` can help you, so you run `:CocCommand eslint.configCreate`.
 - To uninstall an extension: `:CocUninstall: _extensionName_`.
 
 #### More About Coc Language Suport Commands
@@ -602,12 +592,9 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 #### Nvim settings for fzf and ripgrep
 
-- Plug [fzf.vim](https://github.com/junegunn/fzf.vim)
-
 ```bash
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
 
 " This is the default extra key bindings "
 let g:fzf_action = {
@@ -626,7 +613,6 @@ map <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
 nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>
-
 
 let g:fzf_tags_command = 'ctags -R'
 " Border color "
