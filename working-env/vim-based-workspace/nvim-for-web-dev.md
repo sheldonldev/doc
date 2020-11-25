@@ -577,7 +577,7 @@ vnoremap <C-/> :Commentary<CR>
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [universal-ctags](https://github.com/universal-ctags/ctags)
 
-You can install them in macOS with following command:
+You can install them in macOS with following commands:
 
 ```bash
 brew install fzf
