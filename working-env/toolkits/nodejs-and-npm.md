@@ -62,17 +62,12 @@ npm list -g --depth=0
 npm outdated -g --depth=3
 ```
 
-## Global Packages For Web Dev
-
-### yarn
-
-- Use yarn to manage global packages!
+## yarn
 
 ```bash
-npm i -g yarn
+# install yarn
+brew install yarn
 ```
-
-#### yarn usage
 
 ```
 yarn [global] add <packageName>
@@ -80,50 +75,44 @@ yarn [global] add <packageName>
 yarn [global] list --depth=0
 ```
 
+## Global Packages For Web Dev
+
 ### neovim
 
 ```bash
 # if use neovim as editor
-npm install -g neovim
+yarn global add neovim
 ```
 
-### browser-sync
+### live-server
 
 - I need this because I use neovim, no IDE
 
 ```bash
 # allow web developers use live server
-npm install -g browser-sync
+yarn global add live-server
 
 # usage
-browser-sync start --server --files .
+live-server file-name.html
+live-server some-directory/
 ```
 
 ### sass
 
 ```bash
-npm install -g sass
+yarn global add sass
 ```
 
 ### vue
 
 ```bash
-npm i -g @vue/cli
+yarn global add @vue/cli
 ```
 
 ## Commonly Used Local Packages
 
-### yarn
-
-- I use npm in global, while sometimes use yarn in projects
+### tailwindcss
 
 ```bash
-# install yarn
-npm install -g yarn
-```
-
-### some eslint plugins
-
-```bash
-npm i eslint eslint-plugin-vue -D
+yarn add tailwindcss
 ```

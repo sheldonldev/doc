@@ -31,6 +31,7 @@ vim -o file1 file2 file3
 :find _file_  # find file in root
 :ls           # buffer list
 :b _file_     # find file in buffer
+:b _n_        # goto nth buffer
 ```
 
 ### netrw
