@@ -46,11 +46,13 @@ endfunction
 nnoremap <C-n> :call OpenTerminal()<CR>
 ```
 
-## Plugin Manager and Some Simple Plugins
+## Simple Plugins for Startup
 
-### Before Set Up Plugins
+### Nerd Font
 
-- Some plugins requires [Nerd Font](https://github.com/ryanoasis/nerd-fonts) to show icons.
+- Some plugins require [Nerd Font](https://github.com/ryanoasis/nerd-fonts) to show icons.
+
+### Plugin Manager
 
 - Install plugin manager: [vim-plug](https://github.com/junegunn/vim-plug).
 
@@ -64,7 +66,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 ```
 
-- Now you can append plugins like following to `init.vim`. Plugin name is the name of its git repository:
+### Install Some Simple Plugins
+
+- Now you can append plugins like the following to `init.vim`. the plugins' names are the names of their git repositories:
 
 ```bash
 call plug#begin('~/.vim/plugged')
@@ -77,9 +81,13 @@ Plug 'tpope/fugitive'                   " git "
 call plug#end()
 ```
 
-- Now you should read documentations in plugin repositories to set up your plugins like following.
+- Run `:w`and `:source %`, then run `:PlugInstall`/`:PlugUpdate`/`:PlugClean`/`:PlugStatus`/`:PlugDiff`.
 
-### vim-polyglot
+- Now you should read the documentation in the repositories to set up your plugins.Following are examples.
+
+### Example Settings
+
+#### vim-polyglot
 
 - [sheerun/vim-polyglot](https://github.com/sheerun/polyglot)
 
@@ -97,7 +105,7 @@ let g:polyglot_disabled = [
   \ ]
 ```
 
-### gruvbox
+#### gruvbox
 
 - [morhetz/gruvbox](https://github.com/morhetz/gruvbox):
 
@@ -106,7 +114,7 @@ colorscheme gruvbox
 set background=dark
 ```
 
-### vim-airline
+#### vim-airline
 
 - [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline):
 
@@ -122,7 +130,7 @@ set showtabline=2       " Always show tabs "
 set noshowmode          " We don't need to see things like -- INSERT -- anymore "
 ```
 
-### vim-commentary
+#### vim-commentary
 
 - [tpope/vim-commentary](https://github.com/tpope/vim-commentary):
 
@@ -131,7 +139,7 @@ nnoremap <leader>/ :Commentary<CR>
 vnoremap <leader>/ :Commentary<CR>
 ```
 
-### nvim-treesitter
+#### nvim-treesitter
 
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter):
 
@@ -162,17 +170,13 @@ EOF
 
 - Run `:h nvim-treesitter` to checkout the usage.
 
-### fugitive
+#### fugitive
 
 - [tpope/fugitive](https//github.com/tpope/fugitive)
   - can show git branch in status line;
   - can use commands to manipulate git;
 
-### After Plugin Installed and Setup
-
-- Run `:w`and `:source %`, then run `:PlugInstall`/`:PlugUpdate`/`:PlugClean`/`:PlugStatus`/`:PlugDiff`.
-
-## More Powerful Plugins
+## More Complex Plugins
 
 ### Fuzzy Finder
 
@@ -320,8 +324,7 @@ let g:coc_global_extensions = [
 
 - Language Server Configuration:
   - Run `:CocConfig` will open `~/.config/nvim/coc-settings.json`.
-  - Add settings for [language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-  - Read more: [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
+  - Add settings for [language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers) and other plugins
 
 ```json
 {
@@ -401,6 +404,8 @@ let g:coc_global_extensions = [
   "vetur.format.defaultFormatter.ts": "prettier-tslint"
 }
 ```
+
+> Read more: [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
 
 - settings for `coc`:
 
@@ -550,11 +555,11 @@ augroup end
 :CocEnable                          " enable CoC "
 ```
 
-#### More Support for Java
+### More Support for Java
 
 - [Java in Neovim](https://www.chrisatmachine.com/Neovim/24-neovim-and-java/)
 
-#### More Support for C/C++
+### More Support for C/C++
 
 - [Configure coc.nvim for C/C++ Development](https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/)
 
