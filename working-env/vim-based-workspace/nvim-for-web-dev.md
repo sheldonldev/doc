@@ -48,9 +48,13 @@ nnoremap <C-n> :call OpenTerminal()<CR>
 
 ## Plugin Manager and Some Simple Plugins
 
-### Before Set up Plugins
+### Before Set Up Plugins
 
-- I use `vim-plug` as plugin manager. Add following script to `init.vim` and run `:w`and `:source %` will help you install it automatically.
+- Some plugins requires [Nerd Font](https://github.com/ryanoasis/nerd-fonts) to show icons.
+
+- Install plugin manager: [vim-plug](https://github.com/junegunn/vim-plug).
+
+> Add following script to `init.vim` and run `:w`and `:source %` will help you install it automatically.
 
 ```bash
 " auto-install vim-plug "
@@ -69,24 +73,27 @@ Plug 'vim-airline/vim-airline'          " status line "
 Plug 'tpope/vim-commentary'             " commentary "
 Plug 'nvim-treesitter/nvim-treesitter'  " basic language support for a lot of languages "
 Plug 'sheerun/vim-polyglot'             " support more filetypes than treesitter, but not so well colorized "
+Plug 'tpope/fugitive'                   " git "
 call plug#end()
 ```
 
 - Now you should read documentations in plugin repositories to set up your plugins like following.
 
-### polyglot
+### vim-polyglot
 
 - [sheerun/vim-polyglot](https://github.com/sheerun/polyglot)
 
 ```bash
-" --- disable some languages that already well colorized --- "
+" --- disable some languages that already well been colorized --- "
 " should call before plugin caller "
 let g:polyglot_disabled = [
   \ 'markdown',
+  \ 'html',
   \ 'css',
-  \ 'reactjavascript',
-  \ 'reacttypescript',
-  \ 'php'
+  \ 'java',
+  \ 'c/c++',
+  \ 'php',
+  \ 'python',
   \ ]
 ```
 
@@ -106,10 +113,10 @@ set background=dark
 ```bash
 " enable tabline "
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#right_sep = ' '
+let g:airline#extensions#tabline#right_alt_sep = '|'
 
 set showtabline=2       " Always show tabs "
 set noshowmode          " We don't need to see things like -- INSERT -- anymore "
@@ -128,25 +135,44 @@ vnoremap <leader>/ :Commentary<CR>
 
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter):
 
-- Embed following `lua` script to `init.vim` to enable all moduals:
-
 ```bash
 lua <<EOF
-require 'nvim-treesitter.configs'.setup {
+require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   highlight = {
     enable = true,        -- false will disable the whole extension
     disable = {"json"},         -- list of language that will be disabled
   },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+    },
+  },
+  indent = {
+    enable = true
+  },
+  textobjects = { enable = true },
 }
 EOF
 ```
+
+- Run `:h nvim-treesitter` to checkout the usage.
+
+### fugitive
+
+- [tpope/fugitive](https//github.com/tpope/fugitive)
+  - can show git branch in status line;
+  - can use commands to manipulate git;
 
 ### After Plugin Installed and Setup
 
 - Run `:w`and `:source %`, then run `:PlugInstall`/`:PlugUpdate`/`:PlugClean`/`:PlugStatus`/`:PlugDiff`.
 
-## More Plugins
+## More Powerful Plugins
 
 ### Fuzzy Finder
 
@@ -286,7 +312,7 @@ let g:coc_global_extensions = [
             \ 'coc-vetur',
             \ 'coc-eslint',
             \ 'coc-prettier',
-            \ 'coc-python',
+            \ 'coc-jedi',
             \ 'coc-yaml',
             \ 'coc-phpls',
             \ ]
@@ -326,7 +352,6 @@ let g:coc_global_extensions = [
   "eslint.options": { "configFile": ".eslintrc.json" },
 
   //prettier
-  "prettier.requireConfig": false,
   "prettier.eslintIntegration": true,
   "prettier.tslintIntegration": true,
   "prettier.trailingComma": "all",
@@ -493,10 +518,6 @@ augroup mygroup
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 ```
-
-#### Support for Coc Extensions
-
-- `coc-explorer` requires [Nerd Font](https://github.com/ryanoasis/nerd-fonts).
 
 #### More About Coc Extensions
 
