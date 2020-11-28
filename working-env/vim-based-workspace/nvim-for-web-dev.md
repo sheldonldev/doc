@@ -83,7 +83,7 @@ call plug#end()
 
 - Run `:w`and `:source %`, then run `:PlugInstall`/`:PlugUpdate`/`:PlugClean`/`:PlugStatus`/`:PlugDiff`.
 
-- Now you should read the documentation in the repositories to set up your plugins.Following are examples.
+- Now you should read the documentation in the repositories to set up your plugins. The following are examples.
 
 ### Example Settings
 
