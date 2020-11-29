@@ -1,4 +1,4 @@
-# VCS
+# Global Settings
 
 ## Global .gitconfig
 

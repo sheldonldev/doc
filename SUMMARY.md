@@ -4,14 +4,11 @@
 
 ## Working Env
 
-- [Toolkits](working-env/toolkits/README.md)
-  - [Unix/Linux](working-env/toolkits/unix-linux/README.md)
-    - [Resources](working-env/toolkits/unix-linux/resources.md)
-    - [Fundamentals](working-env/toolkits/unix-linux/fundamentals.md)
-  - [Regex](working-env/toolkits/regex.md)
-  - [npm & yarn](working-env/toolkits/npm-and-yarn.md)
 - [Git & GitHub](working-env/git-and-github/README.md)
   - [Install and Set Up Git](working-env/git-and-github/install-and-set-up-git.md)
+  - [Global Settings](working-env/git-and-github/global-settings.md)
+  - [Git Commands](working-env/git-and-github/git-commands.md)
+  - [GH-Pages](working-env/git-and-github/gh-pages.md)
 - [Ubuntu Workspace](working-env/ubuntu-workspace.md)
 - [macOS Workspace](working-env/macos-workspace/README.md)
   - [Set Up MacOS](working-env/macos-workspace/set-up-macos.md)
@@ -19,6 +16,8 @@
   - [Basic Keymaps](working-env/vim-based-workspace/basic-keymaps.md)
   - [Make Vim Awesome](working-env/vim-based-workspace/make-vim-awesome.md)
   - [Nvim for Web Dev](working-env/vim-based-workspace/nvim-for-web-dev.md)
+- [Toolkits](working-env/toolkits/README.md)
+  - [npm & yarn](working-env/toolkits/npm-and-yarn.md)
 
 ## Learning Path
 
