@@ -23,7 +23,7 @@
 
 ### Git
 
-- [Install and Setup Git](https://doc.sheldonl.dev/working-env/toolkits/git-and-github/install-and-setup-git.md);
+{% embed url="https://doc.sheldonl.dev/working-env/git-and-github/install-and-set-up-git.md" caption="First-Time Git Setup" %}
 
 ### Optimize Terminal
 
