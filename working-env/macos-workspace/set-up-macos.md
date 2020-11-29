@@ -1,6 +1,10 @@
-# Setup MacOS
+# Set Up MacOS
 
 ## Basic Tools for Programming
+
+### Git
+
+{% embed url="https://doc.sheldonl.dev/working-env/git-and-github/install-and-set-up-git" caption="First-Time Git Setup" %}
 
 ### Homebrew
 
@@ -20,10 +24,6 @@
 
 - Install `XCode` from AppleStore;
 - Add it to `$PATH`;
-
-### Git
-
-{% embed url="https://doc.sheldonl.dev/working-env/git-and-github/install-and-set-up-git" caption="First-Time Git Setup" %}
 
 ### Optimize Terminal
 
@@ -55,3 +55,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 vim ~/.zshrc
 # add 'source path/to/zsh-autosuggestions/zsh-autosuggestions.zsh'
 ```
+
+## For JS/TS
+
+## For PHP
+
+## For Python
