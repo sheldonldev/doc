@@ -1,4 +1,4 @@
-# NodeJS & npm
+# npm & yarn
 
 ## Documentation
 
@@ -64,16 +64,25 @@ npm outdated -g --depth=3
 
 ## yarn
 
+> I feel that yarn is much better for managing npm packages globally.
+
+- It is recommended to install an independent yarn with `homebrew`;
+
 ```bash
-# install yarn
 brew install yarn
 ```
 
-```
+- Usage
+
+```bash
 yarn [global] add <packageName>
 
 yarn [global] list --depth=0
 ```
+
+- Path: `~/.config/yarn`, I init as a git repo:
+
+{% embed url="https://github.com/sheldonldev/yarn_config" caption="My Global Yarnpkg" %}
 
 ## Global Packages For Web Dev
 

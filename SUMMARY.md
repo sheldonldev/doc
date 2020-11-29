@@ -12,7 +12,7 @@
   - [Regex](working-env/toolkits/regex.md)
   - [Git & GitHub](working-env/toolkits/git-and-github/README.md)
     - [Install and Setup Git](working-env/toolkits/git-and-github/install-and-setup-git.md)
-  - [NodeJS & npm](working-env/toolkits/nodejs-and-npm.md)
+  - [npm & yarn](working-env/toolkits/npm-and-yarn.md)
 
 - [Ubuntu Workspace](working-env/ubuntu-workspace.md)
 
