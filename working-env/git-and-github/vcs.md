@@ -1,39 +1,34 @@
 # VCS
 
-## .gitconfig
+## Global .gitconfig
 
 ```bash
 cat ~/.gitconfig
 ```
 
-## .gitignore
+## Global .gitignore
 
 ```bash
 touch ~/.gitignore_global
 ```
 
 ```bash
-# my ~/.gitignore_global
-.git
-.DS_Store
-node_modules
-/dist
+**/.git
+**/.DS_Store
+**/node_modules
+**//dist
 
+**/.env
+**/.env.local
+**/.env.*.local
 
-# local env files
-.env
-.env.local
-.env.*.local
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
 
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Editor directories and files
-.idea
-.vscode
+**/.idea
+**/.vscode
 ```
 
 ```bash
