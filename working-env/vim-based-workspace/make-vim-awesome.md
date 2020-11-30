@@ -131,7 +131,7 @@ set wildmenu
 " and use :b with incomplete match by just entering <CR> "
 
 
-" --- Auto Complete Braces and Quotes --- "
+" --- Auto Complete Braces and Quotes ---
 
 inoremap { {}<Esc>ha
 inoremap [ []<Esc>ha
