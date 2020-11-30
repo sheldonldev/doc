@@ -392,7 +392,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 - To run a command: `:CocCommand _command_`, for example, you want to create `eslintrc.json` and find out `eslint.configCreate` can help you, so you run `:CocCommand eslint.configCreate`.
 - To uninstall an extension: `:CocUninstall: _extensionName_`.
 
-#### More About Coc Language Suport Commands
+#### More About Coc Language Support Commands
 
 ```bash
 <Plug>(coc-codeaction)              " line action "
@@ -419,13 +419,13 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter):
 
-- This is a basic language support for a lot of languages, the syntax highlight is much beautiful than vim-polyglot, but some languages are not perfect because its still developing.
+- This is a basic language support for a lot of languages, the syntax highlight is much beautiful than vim-polyglot, but some languages are not perfect because it is still developing.
 
 ```bash
 Plug 'nvim-treesitter/nvim-treesitter'
 ```
 
-- The settings is a little different because it is written in `lua`.
+- The settings are a little different because it is written in `lua`.
 
   - `~/.config/nvim/lua/treesitter.lua`
 
