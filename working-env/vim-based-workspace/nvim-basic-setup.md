@@ -7,7 +7,7 @@
 
 > You can install node and some global npm packages by following this instruction:
 
-{% embed url="https://doc.sheldonl.dev/working-env/toolkits/nodejs-and-npm" caption="NodeJS and npm" %}
+{% embed url="https://doc.sheldonl.dev/working-env/toolkits/npm-and-yarn" caption="npm and yarn" %}
 
 ## Install Neovim
 
