@@ -1,9 +1,5 @@
 # Nvim Basic Setup
 
-- Complete configurations and features are kept on GitHub:
-
-{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on GitHub" %}
-
 ## Install Node
 
 - `npm` provides a lot of tools for web development, such as `live-server`.
