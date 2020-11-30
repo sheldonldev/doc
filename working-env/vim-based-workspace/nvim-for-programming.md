@@ -1,6 +1,6 @@
 # Nvim for Programming
 
-- All the settings in this artical based on [Nvim Basic Setup](https://doc.sheldonl.dev/working-env/vim-based-workspace/nvim-basic-setup);
+- All the settings in this article based on [Nvim Basic Setup](https://doc.sheldonl.dev/working-env/vim-based-workspace/nvim-basic-setup);
 
 - Complete configurations and features are kept on GitHub:
 
