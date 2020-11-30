@@ -15,11 +15,20 @@
 - [Vim Based Workspace](working-env/vim-based-workspace/README.md)
   - [Basic Keymaps](working-env/vim-based-workspace/basic-keymaps.md)
   - [Make Vim Awesome](working-env/vim-based-workspace/make-vim-awesome.md)
-  - [Nvim for Web Dev](working-env/vim-based-workspace/nvim-for-web-dev.md)
+  - [Nvim Basic Setup](working-env/vim-based-workspace/nvim-basic-setup.md)
+  - [Nvim for Programming](working-env/vim-based-workspace/nvim-for-programming.md)
 - [Toolkits](working-env/toolkits/README.md)
   - [npm & yarn](working-env/toolkits/npm-and-yarn.md)
+  - [VSCode](working-env/toolkits/vscode.md)
 
 ## Learning Path
 
 - [Courses](learning-path/courses.md)
 - [Playground](learning-path/playground.md)
+
+## Blog
+
+- [Classified](blog/classified/README.md)
+  - [Cookbook](blog/classified/cookbook.md)
+- [Daily Reflection](blog/daily-reflection/README.md)
+  - [2020](blog/daily-reflection/2020.md)

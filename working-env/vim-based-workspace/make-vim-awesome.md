@@ -56,13 +56,11 @@ set pumheight=10        " Makes popup menu smaller "
 
 set ruler               " Ruler in status line "
 set laststatus=2        " Always display the status line "
-set showtabline=2       " Always show tabs "
 set showmatch
-set noshowmode          " We don't need to see things like -- INSERT -- anymore "
 
-set hidden              " Required to keep multiple buffers open multiple buffers "
+set hidden              " Required to keep multiple buffers "
 
-set encoding=UTF-8      " the encoding displayed"
+set encoding=UTF-8      " the encoding displayed "
 set termencoding=UTF-8
 set fileencoding=UTF-8  " The encoding written to file "
 
@@ -73,8 +71,6 @@ set nowritebackup       " This is recommended by coc "
 set updatetime=300      " Fast completion "
 set timeoutlen=500      " Default is 1000 "
 set shortmess+=c
-set iskeyword+=-        " treat dash separated words as a word text object"
-set signcolumn=yes
 
 set confirm             " raise an asking dialog instead of failling command when saving files "
 set visualbell          " use visual bell instead of error beeping "
@@ -107,7 +103,14 @@ set t_Co=256                    " Support 256 colors "
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+set signcolumn=yes
 set conceallevel=0              " So that I can see `` in markdown files "
+
+set iskeyword+=-        " treat dash separated words as a word text object"
+set iskeyword+=@        " vue-on and css "
+
+set termguicolors
+
 
 " --- blink bar ---"
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
@@ -174,9 +177,7 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 
 " --- netrw sidewindow --- "
-let g:netrw_preview   = 0
-let g:netrw_alto      = 0
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 1
 let g:netrw_browse_split = 2
 let g:netrw_winsize = 25
 "" let g:netrw_banner = 0
@@ -197,3 +198,9 @@ endfun
 autocmd BufWritePre * :call TrimWhiteSpace()
 
 ```
+
+## References
+
+- [Neovim Setting up the basics](https://www.chrisatmachine.com/Neovim/02-vim-general-settings/)
+- [devilyouwei/Vimmer](https://github.com/devilyouwei/Vimmer)
+- [ThePrimeagen - Your first VimRC: How to setup your vim's vimrc](https://www.youtube.com/watch?v=n9k9scbTuvQ)

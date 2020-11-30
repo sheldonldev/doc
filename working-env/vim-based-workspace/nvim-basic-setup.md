@@ -1,4 +1,4 @@
-# Nvim for Web Dev
+# Nvim Basic Setup
 
 - Complete configurations and features are kept on GitHub:
 
@@ -48,7 +48,7 @@ nnoremap <C-n> :call OpenTerminal()<CR>
 
 ## Simple Plugins for Startup
 
-### Nerd Font
+### Tools Some Plugins May Depends On
 
 - Some plugins require [Nerd Font](https://github.com/ryanoasis/nerd-fonts) to show icons.
 
@@ -72,12 +72,15 @@ endif
 
 ```bash
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'                  " a theme plugin "
-Plug 'vim-airline/vim-airline'          " status line "
-Plug 'tpope/vim-commentary'             " commentary "
-Plug 'nvim-treesitter/nvim-treesitter'  " basic language support for a lot of languages "
-Plug 'sheerun/vim-polyglot'             " support more filetypes than treesitter, but not so well colorized "
-Plug 'tpope/fugitive'                   " git "
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+
+Plug 'sheerun/vim-polyglot'
+
+Plug 'tpope/vim-fugitive'
 call plug#end()
 ```
 
@@ -96,12 +99,6 @@ call plug#end()
 " should call before plugin caller "
 let g:polyglot_disabled = [
   \ 'markdown',
-  \ 'html',
-  \ 'css',
-  \ 'java',
-  \ 'c/c++',
-  \ 'php',
-  \ 'python',
   \ ]
 ```
 
@@ -139,42 +136,18 @@ nnoremap <leader>/ :Commentary<CR>
 vnoremap <leader>/ :Commentary<CR>
 ```
 
-#### nvim-treesitter
-
-- [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter):
-
-```bash
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,        -- false will disable the whole extension
-    disable = {"json"},         -- list of language that will be disabled
-  },
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = "gnn",
-      node_incremental = "grn",
-      scope_incremental = "grc",
-      node_decremental = "grm",
-    },
-  },
-  indent = {
-    enable = true
-  },
-  textobjects = { enable = true },
-}
-EOF
-```
-
-- Run `:h nvim-treesitter` to checkout the usage.
-
 #### fugitive
 
-- [tpope/fugitive](https//github.com/tpope/fugitive)
+- [tpope/fugitive](https//github.com/tpope/fugitive):
   - can show git branch in status line;
   - can use commands to manipulate git;
+  - `h: fugitive`
+
+#### vim-surround
+
+- [tpope/vim-surround](https://github.com/tpope/vim-surround):
+  - quickly change surrounding pairs or tags;
+  - `h: surround`
 
 ## More Complex Plugins
 
@@ -290,10 +263,10 @@ command! -bang -nargs=* GGrep
 
 - Install: `Plug 'neoclide/coc.nvim', {'branch': 'release'}`
 
-- The config will be long, so let's keep it in a separate file `~/.config/nvim/treesitter.vim` and tell `init.vim` to source.
+- The config will be long, so let's keep it in a separate file `~/.config/nvim/coc.vim` and tell `init.vim` to source.
 
 ```bash
-source ~/.config/nvim/treesitter.vim
+source ~/.config/nvim/coc.vim
 ```
 
 - Check coc health:
@@ -308,17 +281,6 @@ source ~/.config/nvim/treesitter.vim
 let g:coc_global_extensions = [
             \ 'coc-marketplace',
             \ 'coc-explorer',
-            \ 'coc-emmet',
-            \ 'coc-css',
-            \ 'coc-tailwindcss',
-            \ 'coc-json',
-            \ 'coc-tsserver',
-            \ 'coc-vetur',
-            \ 'coc-eslint',
-            \ 'coc-prettier',
-            \ 'coc-jedi',
-            \ 'coc-yaml',
-            \ 'coc-phpls',
             \ ]
 ```
 
@@ -336,72 +298,7 @@ let g:coc_global_extensions = [
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
-  },
-
-  //eslint
-  "eslint.trace.server": "verbose",
-  "eslint.packageManager": "yarn",
-  "eslint.autoFix": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.filetypes": [
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact",
-    "typescript.tsx",
-    "vue"
-  ],
-  "eslint.run": "onSave",
-  "eslint.options": { "configFile": ".eslintrc.json" },
-
-  //prettier
-  "prettier.eslintIntegration": true,
-  "prettier.tslintIntegration": true,
-  "prettier.trailingComma": "all",
-  "prettier.arrowParens": "avoid",
-  "prettier.htmlWhitespaceSensitivity": "ignore",
-  "prettier.disableLanguages": [],
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact",
-    "typescript.tsx",
-    "json",
-    "css",
-    "markdown",
-    "html",
-    "vue"
-  ],
-
-  //js and ts
-  "tsserver.trace.server": "verbose",
-  "javascript.validate.enable": false,
-  "typescript.validate.enable": false,
-
-  //emmet
-  "emmet.excludeLanguages": [],
-  "emmet.includeLanguages": {
-    "vue-html": "html",
-    "javascript": "javascriptreact"
-  },
-
-  //css
-  "css.trace.server": "verbose",
-  "css.lint.unknownAtRules": "ignore",
-
-  //json
-  "json.format.enable": true,
-
-  //vue
-  "vetur.trace.server": "verbose",
-  "vetur.format.defaultFormatterOptions": {
-    "prettyhtml": {
-      "sortAttributes": true
-    }
-  },
-  "vetur.format.defaultFormatter.js": "prettier-eslint",
-  "vetur.format.defaultFormatter.ts": "prettier-tslint"
+  }
 }
 ```
 
@@ -432,17 +329,6 @@ nmap <leader>ed :CocCommand explorer --preset floating ~/Documents/hub/doc<CR>
 " List all presets "
 nmap <leader>el :CocList explPresets
 
-
-" === for scss === "
-autocmd FileType scss setl iskeyword+=@-@
-
-" === for prettier extention === "
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-" === Highlight symbol under cursor on CursorHold === "
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " === Remaps === "
 
@@ -509,19 +395,6 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " use `:OR` for organize import of current buffer "
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-
-" === for other === "
-" Add status line support, for integration with other plugin, checkout `:h coc-status` "
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-augroup mygroup
-    autocmd!
-    " Setup formatexpr specified filetype(s). "
-    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-    " Update signature help on jump placeholder "
-    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
 ```
 
 #### More About Coc Extensions
@@ -555,13 +428,37 @@ augroup end
 :CocEnable                          " enable CoC "
 ```
 
-### More Support for Java
+### nvim-treesitter
 
-- [Java in Neovim](https://www.chrisatmachine.com/Neovim/24-neovim-and-java/)
+- [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter):
 
-### More Support for C/C++
+- This is a basic language support for a lot of languages, the syntax highlight is much beautiful than vim-polyglot, but some languages are not perfect because its still developing.
 
-- [Configure coc.nvim for C/C++ Development](https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/)
+```bash
+Plug 'nvim-treesitter/nvim-treesitter'
+```
+
+- The settings is a little different because it is written in `lua`.
+
+  - `~/.config/nvim/lua/treesitter.lua`
+
+  ```lua
+  require'nvim-treesitter.configs'.setup {
+    ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    highlight = {
+      enable = true,        -- false will disable the whole extension
+      disable = {},         -- list of language that will be disabled
+    },
+  }
+  ```
+
+  - source config in `init.vim`:
+
+  ```bash
+  lua require'treesitter'
+  ```
+
+- Run `:h nvim-treesitter` to checkout the usage.
 
 ## References
 
