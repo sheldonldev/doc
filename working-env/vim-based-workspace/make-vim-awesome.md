@@ -104,7 +104,7 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 set signcolumn=yes
-set conceallevel=0              " So that I can see `` in markdown files "
+set conceallevel=0              " So that I can see ` ` in markdown files "
 
 set iskeyword+=-        " treat dash separated words as a word text object"
 set iskeyword+=@        " vue-on and css "
