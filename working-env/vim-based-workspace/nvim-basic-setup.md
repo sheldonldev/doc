@@ -48,7 +48,7 @@ nnoremap <C-n> :call OpenTerminal()<CR>
 
 ## Simple Plugins for Startup
 
-### Tools Some Plugins May Depend On
+### Tools Plugins May Depend On
 
 - Some plugins require [Nerd Font](https://github.com/ryanoasis/nerd-fonts) to show icons.
 
@@ -455,4 +455,3 @@ Plug 'nvim-treesitter/nvim-treesitter'
 
 - [Chris@Machine/neovim](https://www.chrisatmachine.com/neovim)
 - [devilyouwei/Vimmer](https://github.com/devilyouwei/Vimmer)
-- [ThePrimeagen - Your first VimRC: How to setup your vim's vimrc](https://www.youtube.com/watch?v=n9k9scbTuvQ)

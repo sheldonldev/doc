@@ -53,5 +53,3 @@
 ## References
 
 - [Chris@Machine/neovim](https://www.chrisatmachine.com/neovim)
-- [devilyouwei/Vimmer](https://github.com/devilyouwei/Vimmer)
-- [ThePrimeagen - Your first VimRC: How to setup your vim's vimrc](https://www.youtube.com/watch?v=n9k9scbTuvQ)
