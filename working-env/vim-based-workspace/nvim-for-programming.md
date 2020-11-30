@@ -14,6 +14,10 @@
 - `coc-json`
 - `coc-emoji`
 
+## For Git
+
+- `tpope/fugitive`
+
 ## For Html
 
 - `coc-html`

@@ -79,8 +79,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
 Plug 'sheerun/vim-polyglot'
-
-Plug 'tpope/vim-fugitive'
 call plug#end()
 ```
 
@@ -135,13 +133,6 @@ set noshowmode          " We don't need to see things like -- INSERT -- anymore 
 nnoremap <leader>/ :Commentary<CR>
 vnoremap <leader>/ :Commentary<CR>
 ```
-
-#### fugitive
-
-- [tpope/fugitive](https//github.com/tpope/fugitive):
-  - can show git branch in status line;
-  - can use commands to manipulate git;
-  - `h: fugitive`
 
 #### vim-surround
 
