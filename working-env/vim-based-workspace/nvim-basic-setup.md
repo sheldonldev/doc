@@ -48,7 +48,7 @@ nnoremap <C-n> :call OpenTerminal()<CR>
 
 ## Simple Plugins for Startup
 
-### Tools Some Plugins May Depends On
+### Tools Some Plugins May Depend On
 
 - Some plugins require [Nerd Font](https://github.com/ryanoasis/nerd-fonts) to show icons.
 
