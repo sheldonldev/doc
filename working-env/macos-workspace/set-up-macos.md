@@ -56,6 +56,8 @@ vim ~/.zshrc
 # add 'source path/to/zsh-autosuggestions/zsh-autosuggestions.zsh'
 ```
 
+- Open `Profile` section in settings, open `keys` tag, set `Left Option (Alt) Key` to `Esc+`;
+
 ## For JS/TS
 
 ## For PHP

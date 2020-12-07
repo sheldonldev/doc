@@ -11,9 +11,15 @@
 
 ## Install Neovim
 
-- [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) (HEAD Version is recommended)
+- Install [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) (HEAD Version is recommended)
+- Run command `:checkhealth` to show more todo list.
 
-- Edit `~/.config/nvim/init.vim`:
+## Awesome Settings for Neovim
+
+- You can use Neovim like Vim by loading `.vimrc` in `~/.config/nvim/init.vim`.
+> Read [basic keymaps](https://doc.sheldonl.dev/working-env/vim-based-workspace/basic-keymaps) to learn basic vim motion;
+> Read [make vim awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome) to set up your `.vimrc`.
+> Check out [quickref](https://neovim.io/doc/user/quickref.html#quickref) to get complete info.
 
 ```bash
 " load ~/.vimrc and ~/.vim because I use vim before switched to nvim "
@@ -22,31 +28,7 @@ let &packpath = &runtimepath
 source ~/.vimrc
 ```
 
-- Run command `:checkhealth` to show more todo list.
-
-## Awesome Settings for Neovim
-
-- Based on `.vimrc`: [Make Vim Awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome).
-
-### Integrated Terminal
-
-```bash
-" turn terminal to normal mode with escape "
-tnoremap <Esc> <C-\><C-n>
-
-" open terminal on ctrl+n "
-function! OpenTerminal()
-    split term://zsh          " I use zsh "
-    resize 5
-endfunction
-nnoremap <C-n> :call OpenTerminal()<CR>
-```
-
 ## Simple Plugins for Startup
-
-### Tools Plugins May Depend On
-
-- Some plugins require [Nerd Font](https://github.com/ryanoasis/nerd-fonts) to show icons.
 
 ### Plugin Manager
 
@@ -64,30 +46,40 @@ endif
 
 ### Install Some Simple Plugins
 
-- Now you can append plugins like the following to `init.vim`. the plugins' names are the names of their git repositories:
+- Now you can append plugins like the following in `init.vim`. the plugins' names are the names of their git repositories:
+> Remember, only single quote is recognizable in vim script, double quote is for commentary.
 
 ```bash
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-
+Plug 'sheldonldev/gruvbox'
 Plug 'sheerun/vim-polyglot'
+Plug 'psliwka/vim-smoothie'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 ```
 
 - Run `:w`and `:source %`, then run `:PlugInstall`/`:PlugUpdate`/`:PlugClean`/`:PlugStatus`/`:PlugDiff`.
+- Now you should read the documentation in the repositories to set up your plugins. 
+- For simple plugin settings, it is OK to add configuations in `init.vim`. The followings are some examples.
 
-- Now you should read the documentation in the repositories to set up your plugins. The following are examples.
+#### gruvbox 
 
-### Example Settings
+- `gruvbox` is one of the most welcome editor theme.
+- [My gruvbox](https://github.com/sheldonldev/gruvbox) is forked from [morhetz/gruvbox](https://github.com/morhetz/gruvbox):
+  - just slightly increase some contrast;
+  - only optimized for hard contrast of dark background;
+- Add following configuations to `init.vim`:
+
+```bash
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
+set background=dark
+```
 
 #### vim-polyglot
 
-- [sheerun/vim-polyglot](https://github.com/sheerun/polyglot)
-
+- [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot): syntax and indentation support.
+- Add following configuations to `init.vim`, and it should insert before the plugin caller:
 ```bash
 " --- disable some languages that already well been colorized --- "
 " should call before plugin caller "
@@ -96,18 +88,37 @@ let g:polyglot_disabled = [
   \ ]
 ```
 
-#### gruvbox
+#### Others
 
-- [morhetz/gruvbox](https://github.com/morhetz/gruvbox):
+- [vim-smoothie](https://github.com/psliwka/vim-smoothie) helps you chatch up the cursor when moving with `<C-d>` and `<C-u>`;
+- [indentLine](https://github.com/Yggdroot/indentLine) helps you read the indentation.
+
+## More Functional Plugins ans Settings
+
+### Git
 
 ```bash
-colorscheme gruvbox
-set background=dark
+Plug 'tpope/vim-fugitive'
 ```
+
+- [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) allows you interactive with git in vim command mode without terminal.
+- It also helps you recoganize if the current file belongs to a git project and which branch it belongs to if you use statusline like following.
+
+### Statusline and Tabline
+
+- I use `vim-devicons` and `vim-airline` to set up my statusline and tabline.
+
+#### vim-devicons
+
+- [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons): support a lot of tools to show beautiful icons. It works as long as:
+  - [Nerd Font](https://github.com/ryanoasis/nerd-fonts) is installed and has been set as your terminal text font.
 
 #### vim-airline
 
-- [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline):
+- [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline): statusline and tabline
+- It works with a lot of other plugins, such as `gruvbox`, `vim-devicons`, `fugitive`...
+
+- You can use buffer tabs by setting like this:
 
 ```bash
 " enable tabline "
@@ -116,27 +127,105 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#right_sep = ' '
 let g:airline#extensions#tabline#right_alt_sep = '|'
-
 set showtabline=2       " Always show tabs "
 set noshowmode          " We don't need to see things like -- INSERT -- anymore "
+" next buffer "
+nnoremap  <silent> <S-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+" previous buffer "
+nnoremap  <silent> <A-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+" quit current buffer "
+nnoremap  <silent> <A-q>    :bd<CR>
 ```
 
-#### vim-commentary
+### Terminal
 
-- [tpope/vim-commentary](https://github.com/tpope/vim-commentary):
+- Neovim has integrated terminal, you can set like following:
 
 ```bash
-nnoremap <leader>/ :Commentary<CR>
-vnoremap <leader>/ :Commentary<CR>
+tnoremap <Esc> <C-\><C-n>
+nnoremap <A-v> :vsplit term://zsh<CR>
+nnoremap <A-b> :split term://zsh <bar>resize 5<CR>
+```
+> remember to replace `zsh` to match your shell.
+
+- However, sometimes I'd like to use [vim-floaterm](https://github.com/voldikss/vim-floaterm).
+
+```bash
+Plug 'voldikss/vim-floaterm'
+
+let g:floaterm_complete_options = {'shortcut': 'floaterm', 'priority': 0, 'filter_length': [5, 20]}
+nnoremap   <silent>   <F1>    :FloatermNew<CR>
+tnoremap   <silent>   <F1>    <C-\><C-n>:FloatermNew<CR>
+nnoremap   <silent>   <F7>    :FloatermPrev<CR>
+tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermPrev<CR>
+nnoremap   <silent>   <F9>    :FloatermNext<CR>
+tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
+nnoremap   <silent>   <F12>   :FloatermToggle<CR>
+tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
 ```
 
-#### vim-surround
+### Explorer
 
-- [tpope/vim-surround](https://github.com/tpope/vim-surround):
-  - quickly change surrounding pairs or tags;
-  - `h: surround`
+- There are a lot explorer tools: `coc-explorer`, `netrw`, `nerd-tree`... While I prefer [defx](https://github.com/shougo/defx.nvim) along with its helpers:
 
-## More Complex Plugins
+```bash
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kristijanhusak/defx-icons'
+Plug 'kristijanhusak/defx-git'
+```
+
+- To easily manage your plugins, it is recommended to write configuations in a seperated file, `defx.vim` in this case. I set up like following:
+
+```bash
+nnoremap <silent> <Leader>e
+  \ :<C-U>:Defx -show-ignored-files -resume -split=floating<CR>
+
+autocmd FileType defx call s:defx_my_settings()
+function! s:defx_my_settings() abort
+  " Define mappings
+  nnoremap <silent><buffer><expr> <CR>
+  \ defx#is_directory() ?
+  \ defx#do_action('open_tree', 'recursive:2') :
+  \ defx#do_action('multi', ['drop', 'quit'])
+  nnoremap <silent><buffer><expr> v
+  \ defx#is_directory() ? 0 : defx#do_action('open', 'vsplit')
+  nnoremap <silent><buffer><expr> s
+  \ defx#is_directory() ? 0 : defx#do_action('open', 'split')
+  nnoremap <silent><buffer><expr> o
+  \ match(bufname('%'), 'explorer') >= 0 ?
+  \ (defx#is_directory() ? 0 : defx#do_action('drop', 'vsplit')) :
+  \ (defx#is_directory() ? 0 : defx#do_action('multi', ['open', 'quit']))
+  nnoremap <silent><buffer><expr> l
+  \ defx#is_directory() ? defx#do_action('open') : 0
+  nnoremap <silent><buffer><expr> h
+  \ defx#do_action('cd', ['..'])
+  nnoremap <silent><buffer><expr> A
+  \ defx#do_action('new_directory')
+  nnoremap <silent><buffer><expr> a
+  \ defx#do_action('new_file')
+  nnoremap <silent><buffer><expr> d
+  \ defx#do_action('remove')
+  nnoremap <silent><buffer><expr> r
+  \ defx#do_action('rename')
+  nnoremap <silent><buffer><expr> q
+  \ defx#do_action('quit')
+endfunction
+
+call defx#custom#option('_', {
+  \ 'wincol':&columns / 6,
+  \ 'winrow':&lines / 8,
+  \ 'winwidth': &columns / 3 * 2,
+  \ 'winheight': &lines / 4 * 3,
+  \ 'toggle': 1,
+  \ 'columns': 'mark:indent:git:icons:filename:type:size:space:time',
+  \ })
+```
+
+- Don't forget to source int in `init.vim` like following:
+
+```bash
+source `~/.config/nvim/defx.vim`
+```
 
 ### Fuzzy Finder
 
@@ -244,210 +333,3 @@ command! -bang -nargs=* GGrep
 
 - [Note for Extra Keybindings (Optional)](https://wiki.archlinux.org/index.php/Fzf)
 
-### coc.nvim
-
-- This plugin is too featureful to explain: [extensive documentation](https://github.com/neoclide/coc.nvim/wiki).
-
-- Install: `Plug 'neoclide/coc.nvim', {'branch': 'release'}`
-
-- The config will be long, so let's keep it in a separate file `~/.config/nvim/coc.vim` and tell `init.vim` to source.
-
-```bash
-source ~/.config/nvim/coc.vim
-```
-
-- Check coc health:
-
-  - there should be an entry for `coc`;
-  - use `g:coc_node_path` to point to your node;
-  - run `CocInfo` to get more info.
-
-- Install more coc extensions:
-
-```bash
-let g:coc_global_extensions = [
-            \ 'coc-marketplace',
-            \ 'coc-explorer',
-            \ ]
-```
-
-- Language Server Configuration:
-  - Run `:CocConfig` will open `~/.config/nvim/coc-settings.json`.
-  - Add settings for [language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers) and other plugins
-
-```json
-{
-  // explorer
-  "explorer.width": 25,
-  "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false,
-  "explorer.file.showHiddenFiles": true,
-  "explorer.keyMappings.global": {
-    "<cr>": ["expandable?", "expand", "open"],
-    "v": "open:vsplit"
-  }
-}
-```
-
-> Read more: [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
-
-- settings for `coc`:
-
-```bash
-" === Explorer === "
-
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-nmap <leader>e :CocCommand explorer<CR>
-
-" Explorer preset "
-let g:coc_explorer_global_presets = {
-\   'floating': {
-\     'position': 'floating',
-\     'open-action-strategy': 'sourceWindow',
-\     'floating-width': -50
-\   },
-\ }
-
-" Use preset argument to open it "
-nmap <leader>ef :CocCommand explorer --preset floating<CR>
-nmap <leader>ev :CocCommand explorer --preset floating ~/.config/nvim<CR>
-nmap <leader>ed :CocCommand explorer --preset floating ~/Documents/hub/doc<CR>
-
-" List all presets "
-nmap <leader>el :CocList explPresets
-
-
-" === Remaps === "
-
-" Use tab for trigger completion with characters ahead and navigate. "
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin. "
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <CR> to confirm completion, `<C-g>u` means break undo chain at current position. "
-" Coc only does snippet and additional edit on confirm. "
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Use `[c` and `]c` to navigate diagnostics "
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
-
-" Remap keys for gotos "
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window "
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-    else
-        call CocAction('doHover')
-    endif
-endfunction
-
-" Remap for rename current word "
-nmap <leader>rn <Plug>(coc-rename)
-
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph "
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap for do codeAction of current line "
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Fix autofix problem of current line "
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-" Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python "
-nmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
-
-" Use `:Format` to format current buffer "
-command! -nargs=0 Format :call CocAction('format')
-
-" Use `:Fold` to fold current buffer "
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" use `:OR` for organize import of current buffer "
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-```
-
-#### More About Coc Extensions
-
-- To check out all extensions: [coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions). Or run `:CocList marketplace`.
-- To manage coc extensions: `:CocList extensions`.
-- To find an extension command: `:CocList commands`. For example, you want to create `eslintrc.json`, run `:CocList commands` to check out what commands you can use, then fuzzy finder will help you.
-- To run a command: `:CocCommand _command_`, for example, you want to create `eslintrc.json` and find out `eslint.configCreate` can help you, so you run `:CocCommand eslint.configCreate`.
-- To uninstall an extension: `:CocUninstall: _extensionName_`.
-
-#### More About Coc Language Support Commands
-
-```bash
-<Plug>(coc-codeaction)              " line action "
-<Plug>(coc-definition)              " definition "
-<Plug>(coc-references)              " references "
-<Plug>(coc-type-definition)         " type definition "
-<Plug>(coc-rename)                  " rename "
-<Plug>(coc-declaration)             " declaration "
-<Plug>(coc-implementation)          " implementation "
-<Plug>(coc-format)                  " format "
-<Plug>(coc-fix-current)             " quickfix "
-<Plug>(coc-codelens-action)         " code lens "
-<Plug>(coc-diagnostic-next)         " next diagnostic "
-<Plug>(coc-diagnostic-next-error)   " next error "
-:CocList diagnostics                " diagnostics "
-:CocList outline                    " search outline "
-:CocList -I symbols                 " references "
-:CocUpdate                          " update CoC "
-:CocDisable                         " disable CoC "
-:CocEnable                          " enable CoC "
-```
-
-### nvim-treesitter
-
-- [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter):
-
-- This is a basic language support for a lot of languages, the syntax highlight is much beautiful than vim-polyglot, but some languages are not perfect because it is still developing.
-
-```bash
-Plug 'nvim-treesitter/nvim-treesitter'
-```
-
-- The settings are a little different because it is written in `lua`.
-
-  - `~/.config/nvim/lua/treesitter.lua`
-
-  ```lua
-  require'nvim-treesitter.configs'.setup {
-    ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-    highlight = {
-      enable = true,        -- false will disable the whole extension
-      disable = {},         -- list of language that will be disabled
-    },
-  }
-  ```
-
-  - source config in `init.vim`:
-
-  ```bash
-  lua require'treesitter'
-  ```
-
-- Run `:h nvim-treesitter` to checkout the usage.
-
-## References
-
-- [Chris@Machine/neovim](https://www.chrisatmachine.com/neovim)
-- [devilyouwei/Vimmer](https://github.com/devilyouwei/Vimmer)

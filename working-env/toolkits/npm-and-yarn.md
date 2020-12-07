@@ -120,8 +120,29 @@ yarn global add @vue/cli
 
 ## Commonly Used Local Packages
 
+### Linters and Prettier
+
+
+#### Prettier
+- [Prettier](https://prettier.io/docs/en/install.html)
+
+```bash
+# Note: It’s important to install Prettier locally in every project, so each project gets the correct Prettier version.
+yarn add --dev --exact prettier
+echo {} > .prettierrc.json
+cp .gitignore .prettierignore
+yarn prettier --check .
+yarn prettier --write .
+```
+
+- Editor integration
+
+- Linters integration
+- Git hooks
+
 ### tailwindcss
 
 ```bash
 yarn add tailwindcss
 ```
+

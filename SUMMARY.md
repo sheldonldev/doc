@@ -16,7 +16,7 @@
   - [Basic Keymaps](working-env/vim-based-workspace/basic-keymaps.md)
   - [Make Vim Awesome](working-env/vim-based-workspace/make-vim-awesome.md)
   - [Nvim Basic Setup](working-env/vim-based-workspace/nvim-basic-setup.md)
-  - [Nvim for Programming](working-env/vim-based-workspace/nvim-for-programming.md)
+  - [Nvim for Coding](working-env/vim-based-workspace/nvim-for-coding.md)
 - [Toolkits](working-env/toolkits/README.md)
   - [npm & yarn](working-env/toolkits/npm-and-yarn.md)
   - [VSCode](working-env/toolkits/vscode.md)

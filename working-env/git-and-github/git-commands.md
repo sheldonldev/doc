@@ -32,4 +32,26 @@
 
 ## Deal With Large Files
 
-- [Large File Storage](https://packagecloud.io/github/git-lfs/install)
+- [Git Large File Storage](https://git-lfs.github.com/)
+
+## Keeping a Fork Up To Date
+
+- To sync changes you make in a fork with the original repository, you must configure a remote that points to the upstream repository in Git.
+
+```bash
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+```
+
+- You can check if it was succesful with: `git remote -v`;
+
+- Then fetch it to update your project:
+
+```bash
+git fetch upstream
+```
+
+- Merge the changes from upstream/master into your local master branch:
+
+```bash
+git merge upstream/master
+```
