@@ -2,15 +2,11 @@
 
 # Basics
 
-- [x] Internet History
-
-  [Coursera | Online Courses & Credentials From Top Educators. Join for Free | Coursera](https://www.coursera.org/learn/internet-history/home/welcome)
+- [x] [Coursera | Online Courses & Credentials From Top Educators. Join for Free | Coursera](https://www.coursera.org/learn/internet-history/home/welcome)
 
   > This is the first course I took when I wondering where I should begin. [Dr. Chuck](https://online.dr-chuck.com/) is the one who opened my door to be a programmer.
 
-- [ ] FreeCodeCamp
-
-  [freeCodeCamp.org](https://www.freecodecamp.org/)
+- [ ] [freeCodeCamp.org](https://www.freecodecamp.org/)
 
   > It gives me such a wide vision as a web developer.
 
@@ -18,27 +14,17 @@
 
   - [x] [Python for Everybody Specialization](https://www.coursera.org/specializations/python)
 
-    [Python for Everybody](https://www.coursera.org/specializations/python)
-
-- [x] IBM Data Science Professional Certificate
-
-  [IBM Data Science](https://www.coursera.org/professional-certificates/ibm-data-science)
+- [x] [IBM Data Science Professional Certificate](https://www.coursera.org/professional-certificates/ibm-data-science)
 
   > After taking this course, I began my career: I Independently finished a data annalistic and visualization task: [Meat Atlas of China](https://meatatlas.github.io/).
 
-- [ ] IT Automation with Python
+- [ ] [Google IT Automation with Python](https://www.coursera.org/professional-certificates/google-it-automation)
 
-  [Google IT Automation with Python](https://www.coursera.org/professional-certificates/google-it-automation)
-
-- [x] Introduction to Linux
-
-  [Introduction to Linux (LFS101) - Linux Foundation - Training](https://training.linuxfoundation.org/training/introduction-to-linux/)
+- [x] [Introduction to Linux (LFS101x)](https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS101x+1T2020/course/)
 
   > I think Linux is the best operating system to learn CS when macOS is still not affordable for me. You can get it and nearly all its applications for free. The first machine for me to learn dev was a 5-year-old Windows. Nearly half years later, I installed Ubuntu on it to turn it into a dual-system machine. Then I fell in love with Linux. So I learn more about it through this course.
 
-- [x] CS50 - Introduction to Computer Science
-
-  [CS50](https://cs50.harvard.edu/)
+- [x] [CS50 - Introduction to Computer Science](https://cs50.harvard.edu/)
 
   > Thanks, Dr. David, who brings me a lot of passionate. This course introduced nearly every thing you should know to get you prepared for your development career and help you think algorithmically.
 
@@ -74,25 +60,25 @@ Im still learning in this part
 
 - [ ] Algorithms
 
-[Algorithms: Design and Analysis, Part 1](https://www.edx.org/course/algorithms-design-and-analysis)
+  [Algorithms: Design and Analysis, Part 1](https://www.edx.org/course/algorithms-design-and-analysis)
 
-[Algorithms: Design and Analysis, Part 2](https://www.edx.org/course/algorithms-design-and-analysis-part-2-2)
+  [Algorithms: Design and Analysis, Part 2](https://www.edx.org/course/algorithms-design-and-analysis-part-2-2)
 
 - [ ] Compilers
 
-[Compilers](https://www.edx.org/course/compilers)
+  [Compilers](https://www.edx.org/course/compilers)
 
 - [ ] Database
 
-[Databases: Modeling and Theory](https://www.edx.org/course/modeling-and-theory)
+  [Databases: Modeling and Theory](https://www.edx.org/course/modeling-and-theory)
 
-[Databases: Semistructured Data](https://www.edx.org/course/semistructured-data)
+  [Databases: Semistructured Data](https://www.edx.org/course/semistructured-data)
 
-[Databases: Relational Databases and SQL](https://www.edx.org/course/databases-5-sql)
+  [Databases: Relational Databases and SQL](https://www.edx.org/course/databases-5-sql)
 
-[Databases: Advanced Topics in SQL](https://www.edx.org/course/advanced-topics-in-sql)
+  [Databases: Advanced Topics in SQL](https://www.edx.org/course/advanced-topics-in-sql)
 
-[Databases: OLAP and Recursion](https://www.edx.org/course/olap-and-recursion)
+  [Databases: OLAP and Recursion](https://www.edx.org/course/olap-and-recursion)
 
 - [ ] CS51 - Abstraction and Design in Computation
 
@@ -142,13 +128,11 @@ Fundamentals of computer systems programming, machine organization, and performa
 
 ## Systems/DevOps/Open Source/Cloud
 
-- [Google IT Automation with Python Professional Certificate](https://www.coursera.org/professional-certificates/google-it-automation)
 - [Introduction to Site Reliability Engineering and DevOps](https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS162x+3T2019/course/)
-- [Introduction to Linux (LFS101x)](https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS101x+1T2020/course/)
 - [A BEGINNER�S GUIDE TO OPEN SOURCE SOFTWARE DEVELOPMENT (LFD102)](https://trainingportal.linuxfoundation.org/learn/course/a-beginners-guide-to-open-source-software-development-lfc102/course-introduction/course-information)
 - [Open Source Licensing Basics for Software Developers (LFC191)](https://training.linuxfoundation.org/training/open-source-licensing-basics-for-software-developers/)
 - [Fundamentals of Professional Open Source Management (LFC210)](https://training.linuxfoundation.org/training/fundamentals-of-professional-open-source-management/)
-- [A BEGINNER�S GUIDE TO LINUX KERNEL DEVELOPMENT (LFD103)](https://trainingportal.linuxfoundation.org/learn/course/a-beginners-guide-to-linux-kernel-development-lfd103/course-introduction/course-information)
+- [A BEGINNERS GUIDE TO LINUX KERNEL DEVELOPMENT (LFD103)](https://trainingportal.linuxfoundation.org/learn/course/a-beginners-guide-to-linux-kernel-development-lfd103/course-introduction/course-information)
 - [Introduction to Kubernetes (LFS158)](https://training.linuxfoundation.org/training/introduction-to-kubernetes/)
 - [IaC Infrastructure as Code (LFS162x)](https://www.edx.org/course/infrastructure-as-code)
 - [Introduction to ONAP: Complete Network Automation (LFS163)](https://training.linuxfoundation.org/training/introduction-to-onap-complete-network-automation/)
