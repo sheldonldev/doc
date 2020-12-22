@@ -30,5 +30,3 @@
 
 - [Classified](blog/classified/README.md)
   - [Cookbook](blog/classified/cookbook.md)
-- [Daily Reflection](blog/daily-reflection/README.md)
-  - [2020](blog/daily-reflection/2020.md)

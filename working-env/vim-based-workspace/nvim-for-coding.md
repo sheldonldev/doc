@@ -2,9 +2,9 @@
 
 - Based on [Nvim Basic Setup](https://doc.sheldonl.dev/working-env/vim-based-workspace/nvim-basic-setup);
 - Complete configurations and features are kept on GitHub:
-{% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on GitHub" %}
+  {% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on GitHub" %}
 
-> I have to say, everyone should have their own settings, while I'll be glad if some of my settings can inspare you. 
+> I have to say, everyone should have their own settings, while I'll be glad if some of my settings can inspare you.
 
 ## Auto-Completion and Snipptes
 
@@ -39,13 +39,11 @@ EOF
 
 
 " === ultisnips === "
-" Trigger configuration. You need to change this to something other than <tab>
+" Trigger configuration. You need to change this to something other than <tab> "
 let g:UltiSnipsExpandTrigger="<A-l>"
 let g:UltiSnipsJumpForwardTrigger="<A-j>"
 let g:UltiSnipsJumpBackwardTrigger="<A-k>"
 ```
-
-
 
 ## Prettier and Linters
 
@@ -53,10 +51,7 @@ let g:UltiSnipsJumpBackwardTrigger="<A-k>"
 Plug 'sbdchd/neoformat'
 ```
 
-
-
 ## Debugger
-
 
 ## Others
 
@@ -65,4 +60,3 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'norcalli/nvim-colorizer.lua'
 ```
-

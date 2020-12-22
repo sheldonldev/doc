@@ -17,9 +17,9 @@
 ## Awesome Settings for Neovim
 
 - You can use Neovim like Vim by loading `.vimrc` in `~/.config/nvim/init.vim`.
-> Read [basic keymaps](https://doc.sheldonl.dev/working-env/vim-based-workspace/basic-keymaps) to learn basic vim motion;
-> Read [make vim awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome) to set up your `.vimrc`.
-> Check out [quickref](https://neovim.io/doc/user/quickref.html#quickref) to get complete info.
+  > Read [basic keymaps](https://doc.sheldonl.dev/working-env/vim-based-workspace/basic-keymaps) to learn basic vim motion;
+  > Read [make vim awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome) to set up your `.vimrc`.
+  > Check out [quickref](https://neovim.io/doc/user/quickref.html#quickref) to get complete info.
 
 ```bash
 " load ~/.vimrc and ~/.vim because I use vim before switched to nvim "
@@ -47,7 +47,7 @@ endif
 ### Install Some Simple Plugins
 
 - Now you can append plugins like the following in `init.vim`. the plugins' names are the names of their git repositories:
-> Remember, only single quote is recognizable in vim script, double quote is for commentary.
+  > Remember, only single quote is recognizable in vim script, double quote is for commentary.
 
 ```bash
 call plug#begin('~/.vim/plugged')
@@ -59,10 +59,10 @@ call plug#end()
 ```
 
 - Run `:w`and `:source %`, then run `:PlugInstall`/`:PlugUpdate`/`:PlugClean`/`:PlugStatus`/`:PlugDiff`.
-- Now you should read the documentation in the repositories to set up your plugins. 
+- Now you should read the documentation in the repositories to set up your plugins.
 - For simple plugin settings, it is OK to add configuations in `init.vim`. The followings are some examples.
 
-#### gruvbox 
+#### gruvbox
 
 - `gruvbox` is one of the most welcome editor theme.
 - [My gruvbox](https://github.com/sheldonldev/gruvbox) is forked from [morhetz/gruvbox](https://github.com/morhetz/gruvbox):
@@ -80,6 +80,7 @@ set background=dark
 
 - [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot): syntax and indentation support.
 - Add following configuations to `init.vim`, and it should insert before the plugin caller:
+
 ```bash
 " --- disable some languages that already well been colorized --- "
 " should call before plugin caller "
@@ -146,6 +147,7 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <A-v> :vsplit term://zsh<CR>
 nnoremap <A-b> :split term://zsh <bar>resize 5<CR>
 ```
+
 > remember to replace `zsh` to match your shell.
 
 - However, sometimes I'd like to use [vim-floaterm](https://github.com/voldikss/vim-floaterm).
@@ -332,4 +334,3 @@ command! -bang -nargs=* GGrep
 ```
 
 - [Note for Extra Keybindings (Optional)](https://wiki.archlinux.org/index.php/Fzf)
-

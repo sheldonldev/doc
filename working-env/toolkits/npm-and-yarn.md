@@ -3,14 +3,14 @@
 ## Documentation
 
 - [nodjs documentation](https://nodejs.org/en/docs/guides/)
-- [larn nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
+- [learn nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
 - [npm](https://npmjs.com/)
 - [yarn](https://yarnpkg.com/)
+- [nvm](https://github.com/nvm-sh/nvm)
 
-## Installation
+## Install node
 
-```bash
-# install nodejs and npm
+```zsh
 brew install node
 
 # set path for installing global packages
@@ -20,15 +20,47 @@ npm config get prefix
 npm config set prefix /usr/local
 ```
 
+## Install multi-version node with nvm
+
+- Install `nvm`
+
+```zsh
+cd ~ && git clone https://github.com/nvm-sh/nvm.git .nvm
+git checkout v0.37.2  # check out latest version
+```
+
+```zsh
+# ~/.zshrc
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# restart zsh and check
+nvm -v
+```
+
+- Install and run `node.js`
+
+```zsh
+# list all versions
+nvm ls-remote
+
+# install LTS version
+nvm install --lts  # the first version you install will become the default
+
+nvm use node  # use default, or use specific version:
+nvm exec 14.5.3 node --version  # or:
+# if you also use node installed with prefix configured in /usr/local
+nvm use --delete-prefix v14.15.3
+```
+
+
 ## Update
 
 ```bash
 # with homebrew
 brew upgrade node
 npm install -g npm
-
-node -v
-npm -v
 ```
 
 ## Uninstallation
@@ -116,6 +148,12 @@ yarn global add sass
 
 ```bash
 yarn global add @vue/cli
+```
+
+### intelephense
+
+```bash
+yarn global add intelephense
 ```
 
 ## Commonly Used Local Packages

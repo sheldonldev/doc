@@ -2,33 +2,33 @@
 
 ## Pull & Push
 
-- How to push a local project to github
+### How to push a local project to github
 
-  - init local project as a git repo:
+- init local project as a git repo:
 
-  ```bash
-  git init
-  git add .
-  git commit -m 'some commentary'
-  ```
+```bash
+git init
+git add .
+git commit -m 'some commentary'
+```
 
-  - create an empty repo in github, then an insturction will appear, just follow it.
+- create an empty repo in github, then an insturction will appear, just follow it.
 
-- How to pull from remote
+### How to pull from remote
 
-  - if remote is more updated than localgit push:
+- if remote is more updated than localgit push:
 
-  ```bash
-  git pull
-  ```
+```bash
+git pull
+```
 
-  - if local is more updated than remote
+- if local is more updated than remote
 
-  ```bash
-  git stash
-  git pull
-  git stash apply    # or follow the error tips if something went wrong
-  ```
+```bash
+git stash
+git pull
+git stash apply    # or follow the error tips if something went wrong
+```
 
 ## Deal With Large Files
 

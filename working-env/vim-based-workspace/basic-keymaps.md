@@ -106,3 +106,7 @@
 | `V`                | visual line mode. You can manipulate with `y`, `d`, `c`, `<`, `>`...      |
 | `<C-v>`            | visual block mode. You can edit multi-lines in this mode!                 |
 | `<Esc>`/`<C-c>`    | exit current mode.                                                        |
+
+## Read More
+
+- [How to Use VIM as An IDE without Plugins](https://blog.yongcong.wang/2020/06/01/tools/How-To-Use-VIM-As-An-IDE-Without-Plugins/)
