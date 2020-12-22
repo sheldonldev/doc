@@ -1,9 +1,5 @@
 # Courses
 
-## Computer Networking
-
-https://www.coursera.org/professional-certificates/google-it-automation
-
 # Basics
 
 - [x] Internet History
@@ -28,7 +24,11 @@ https://www.coursera.org/professional-certificates/google-it-automation
 
   [IBM Data Science](https://www.coursera.org/professional-certificates/ibm-data-science)
 
-  > After taking this course, I began my career: I Independently finished a data annalistic and visualization task: [Chinese Meat Atlas](https://meatatlas.github.io/).
+  > After taking this course, I began my career: I Independently finished a data annalistic and visualization task: [Meat Atlas of China](https://meatatlas.github.io/).
+
+- [ ] IT Automation with Python
+
+  [Google IT Automation with Python](https://www.coursera.org/professional-certificates/google-it-automation)
 
 - [x] Introduction to Linux
 
