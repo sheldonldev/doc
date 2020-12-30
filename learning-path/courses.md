@@ -99,9 +99,9 @@ Fundamentals of computer systems programming, machine organization, and performa
 
 ### A+
 
-[x] [Complete A+ Guide to IT Hardware and Software AA CompTIA A+ Core 1 (220-1001) CompTIA A+ Core 2 (220-1002)](https://b-ok.org/book/5335606/c82531')
-[ ] [Complete A+ Guide to IT Hardware and Software AA CompTIA A+ Core 1 (220-1001) CompTIA A+ Core 2 (220-1002) Lab Manual](https://b-ok.org/book/5335605/511775')
-[ ] [CompTIA A+ Core 1 (220-1001) and Core 2 (220-1002) Exam Cram](https://b-ok.org/book/5302885/54e001')
+- [x] [Complete A+ Guide to IT Hardware and Software AA CompTIA A+ Core 1 (220-1001) CompTIA A+ Core 2 (220-1002)](https://b-ok.org/book/5335606/c82531')
+- [ ] [Complete A+ Guide to IT Hardware and Software AA CompTIA A+ Core 1 (220-1001) CompTIA A+ Core 2 (220-1002) Lab Manual](https://b-ok.org/book/5335605/511775')
+- [ ] [CompTIA A+ Core 1 (220-1001) and Core 2 (220-1002) Exam Cram](https://b-ok.org/book/5302885/54e001')
 
 ### Security+
 
@@ -109,34 +109,34 @@ Fundamentals of computer systems programming, machine organization, and performa
 
 ## Programming Languages
 
-[x] [Java Programming and Software Engineering Fundamentals Specialization](https://www.coursera.org/specializations/java-programming)
-[x] [Object Oriented Java Programming: Data Structures and Beyond Specialization](https://www.coursera.org/specializations/java-object-oriented)
-[ ] [Computer programming language](https://www.britannica.com/technology/computer-programming-language)
-[ ] [CS-Fundamentals](https://cs-fundamentals.com/)
-[ ] [Computer Science: An Interdisciplinary Approach](https://introcs.cs.princeton.edu/java/home/)
-[ ] [Algorithms](https://algs4.cs.princeton.edu/)
-[ ] [Web Development - W3schools](https://www.w3schools.com/)
+- [x] [Java Programming and Software Engineering Fundamentals Specialization](https://www.coursera.org/specializations/java-programming)
+- [x] [Object Oriented Java Programming: Data Structures and Beyond Specialization](https://www.coursera.org/specializations/java-object-oriented)
+- [ ] [Computer programming language](https://www.britannica.com/technology/computer-programming-language)
+- [ ] [CS-Fundamentals](https://cs-fundamentals.com/)
+- [ ] [Computer Science: An Interdisciplinary Approach](https://introcs.cs.princeton.edu/java/home/)
+- [ ] [Algorithms](https://algs4.cs.princeton.edu/)
+- [ ] [Web Development - W3schools](https://www.w3schools.com/)
 
 ## DS/DL/ML/AI
 
-[x] [Ethics in AI and Big Data (LFS112)](https://training.linuxfoundation.org/training/ethics-in-ai-and-big-data-lfs112/)
-[ ] [Python Data Science Handbook](https://github.com/sheldonldev/PythonDataScienceHandbook)
-[ ] [COVID19 Data Analysis Using Python](https://www.coursera.org/projects/covid19-data-analysis-using-python)
+- [x] [Ethics in AI and Big Data (LFS112)](https://training.linuxfoundation.org/training/ethics-in-ai-and-big-data-lfs112/)
+- [ ] [Python Data Science Handbook](https://github.com/sheldonldev/PythonDataScienceHandbook)
+- [ ] [COVID19 Data Analysis Using Python](https://www.coursera.org/projects/covid19-data-analysis-using-python)
 
 ## Systems/DevOps/Open Source/Cloud
 
-[x] [Introduction to Site Reliability Engineering and DevOps](https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS162x+3T2019/course/)
-[ ] [A BEGINNERS GUIDE TO OPEN SOURCE SOFTWARE DEVELOPMENT (LFD102)](https://trainingportal.linuxfoundation.org/learn/course/a-beginners-guide-to-open-source-software-development-lfc102/course-introduction/course-information)
-[ ] [Open Source Licensing Basics for Software Developers (LFC191)](https://training.linuxfoundation.org/training/open-source-licensing-basics-for-software-developers/)
-[ ] [Fundamentals of Professional Open Source Management (LFC210)](https://training.linuxfoundation.org/training/fundamentals-of-professional-open-source-management/)
-[ ] [A BEGINNERS GUIDE TO LINUX KERNEL DEVELOPMENT (LFD103)](https://trainingportal.linuxfoundation.org/learn/course/a-beginners-guide-to-linux-kernel-development-lfd103/course-introduction/course-information)
-[ ] [Introduction to Kubernetes (LFS158)](https://training.linuxfoundation.org/training/introduction-to-kubernetes/)
-[ ] [IaC Infrastructure as Code (LFS162x)](https://www.edx.org/course/infrastructure-as-code)
-[ ] [Introduction to ONAP: Complete Network Automation (LFS163)](https://training.linuxfoundation.org/training/introduction-to-onap-complete-network-automation/)
-[ ] [Inclusive Speaker Orientation (LFC101)](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/)
-[ ] [Introduction to Cloud Foundry and Cloud Native Software Architecture (LFS132)](https://training.linuxfoundation.org/training/introduction-to-cloud-foundry-and-cloud-native-software-architecture/)
-[ ] [Introduction to Cloud Infrastructure Technologies (LFS151)](https://training.linuxfoundation.org/training/introduction-to-cloud-infrastructure-technologies/)
-[ ] [Exploring GraphQL: A Query Language for APIs (LFS141)](https://training.linuxfoundation.org/training/exploring-graphql-a-query-language-for-apis-lfs141/)
+- [x] [Introduction to Site Reliability Engineering and DevOps](https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS162x+3T2019/course/)
+- [ ] [A BEGINNERS GUIDE TO OPEN SOURCE SOFTWARE DEVELOPMENT (LFD102)](https://trainingportal.linuxfoundation.org/learn/course/a-beginners-guide-to-open-source-software-development-lfc102/course-introduction/course-information)
+- [ ] [Open Source Licensing Basics for Software Developers (LFC191)](https://training.linuxfoundation.org/training/open-source-licensing-basics-for-software-developers/)
+- [ ] [Fundamentals of Professional Open Source Management (LFC210)](https://training.linuxfoundation.org/training/fundamentals-of-professional-open-source-management/)
+- [ ] [A BEGINNERS GUIDE TO LINUX KERNEL DEVELOPMENT (LFD103)](https://trainingportal.linuxfoundation.org/learn/course/a-beginners-guide-to-linux-kernel-development-lfd103/course-introduction/course-information)
+- [ ] [Introduction to Kubernetes (LFS158)](https://training.linuxfoundation.org/training/introduction-to-kubernetes/)
+- [ ] [IaC Infrastructure as Code (LFS162x)](https://www.edx.org/course/infrastructure-as-code)
+- [ ] [Introduction to ONAP: Complete Network Automation (LFS163)](https://training.linuxfoundation.org/training/introduction-to-onap-complete-network-automation/)
+- [ ] [Inclusive Speaker Orientation (LFC101)](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/)
+- [ ] [Introduction to Cloud Foundry and Cloud Native Software Architecture (LFS132)](https://training.linuxfoundation.org/training/introduction-to-cloud-foundry-and-cloud-native-software-architecture/)
+- [ ] [Introduction to Cloud Infrastructure Technologies (LFS151)](https://training.linuxfoundation.org/training/introduction-to-cloud-infrastructure-technologies/)
+- [ ] [Exploring GraphQL: A Query Language for APIs (LFS141)](https://training.linuxfoundation.org/training/exploring-graphql-a-query-language-for-apis-lfs141/)
 
 ## Security
 
