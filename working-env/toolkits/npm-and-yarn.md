@@ -57,7 +57,7 @@ nvm use --delete-prefix v14.15.3
 
 ## Update
 
-```bash
+```zsh
 # with homebrew
 brew upgrade node
 npm install -g npm
@@ -67,7 +67,7 @@ npm install -g npm
 
 - [https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx](https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx)
 
-```bash
+```zsh
 brew uninstall node
 
 # check all these dir, remove *node* and *npm*
@@ -86,7 +86,7 @@ cd /usr/local/share/systemtap/tapset
 
 ## Usage
 
-```bash
+```zsh
 # find all global packages
 npm list -g --depth=0
 
@@ -100,13 +100,13 @@ npm outdated -g --depth=3
 
 - It is recommended to install an independent yarn with `homebrew`;
 
-```bash
+```zsh
 brew install yarn
 ```
 
 - Usage
 
-```bash
+```zsh
 yarn [global] add <packageName>
 
 yarn [global] list --depth=0
@@ -120,7 +120,7 @@ yarn [global] list --depth=0
 
 ### neovim
 
-```bash
+```zsh
 # if use neovim as editor
 yarn global add neovim
 ```
@@ -129,7 +129,7 @@ yarn global add neovim
 
 - I need this because I use neovim, no IDE
 
-```bash
+```zsh
 # allow web developers use live server
 yarn global add live-server
 
@@ -140,19 +140,20 @@ live-server some-directory/
 
 ### sass
 
-```bash
+```zsh
 yarn global add sass
 ```
 
 ### vue
 
-```bash
+```zsh
 yarn global add @vue/cli
 ```
 
+
 ### intelephense
 
-```bash
+```zsh
 yarn global add intelephense
 ```
 
@@ -160,11 +161,18 @@ yarn global add intelephense
 
 ### Linters and Prettier
 
+- Some project builder such as @vue/cli has its own lint, see its README:
+
+```zsh
+yarn lint
+```
+
+- In a JS project, Prettier and Eslint is commonly used.
 
 #### Prettier
 - [Prettier](https://prettier.io/docs/en/install.html)
 
-```bash
+```zsh
 # Note: It’s important to install Prettier locally in every project, so each project gets the correct Prettier version.
 yarn add --dev --exact prettier
 echo {} > .prettierrc.json
@@ -173,14 +181,18 @@ yarn prettier --check .
 yarn prettier --write .
 ```
 
-- Editor integration
+#### Eslint
 
-- Linters integration
-- Git hooks
+```zsh
+yarn add --dev eslint   # and some other eslint plugins
+yarn run eslint --init
+yarn run eslint FileName.js
+yarn eslint --fix
+```
 
 ### tailwindcss
 
-```bash
+```zsh
 yarn add tailwindcss
 ```
 
