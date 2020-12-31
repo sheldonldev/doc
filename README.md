@@ -17,7 +17,7 @@ Gradually, I leave my old job and start taking up some projects such as data vis
 - Web Development
 - IT Support
 
-## Tools & Techs  I Familiar With
+## Tools & Techs I Familiar With
 
 - Python, Flask, Django
 - HTML/CSS/JS, Vue, React
