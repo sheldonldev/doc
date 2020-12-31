@@ -17,7 +17,7 @@ Gradually, I leave my old job and start taking up some projects such as data vis
 - Web Development
 - IT Support
 
-## Tools and Techs  I Familiar With
+## Tools & Techs  I Familiar With
 
 - Python, Flask, Django
 - HTML/CSS/JS, Vue, React
@@ -27,12 +27,11 @@ Gradually, I leave my old job and start taking up some projects such as data vis
 
 # Contact
 
-- :envelop: info@sheldonl.dev
-- :telephone_reciever: +852 67321170
-- :link:
-  - Blog: <https://doc.sheldonl.dev>
-  - GitHub: <https://github.com/sheldonldev>
-  - LinkedIn: <https://linkedin.com/in/sheldonldev>
+- 📨 info@sheldonl.dev
+- 📞 +852 67321170
+- 🔗 Blog: <https://doc.sheldonl.dev>
+- 🔗 GitHub: <https://github.com/sheldonldev>
+- 🔗 LinkedIn: <https://linkedin.com/in/sheldonldev>
 
 
 
