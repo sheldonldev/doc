@@ -8,7 +8,7 @@ Previously, I majored in Animal Science and I've got my master's degree. I'm goo
 
 After graduating from university, my curiosity drives me to learn more. I found my way to learn Computer Science through a lot of MOOCs such as Coursera, edX, Linux Foundation, FreeCodeCamp, etc... Everything I learn from those MOOCs refreshes my view of seeing the world and take my breath away, as a Chinese girl. 
 
-Gradually, I leave my old job and start taking up some projects such as data visualization and web development, and I also participate in some open source communities. I'm keen to join in more projects and hope I can contribute more.
+Gradually, I leave my old job and start taking up some projects of data visualization and web development, and I also participate in some open source communities. I'm keen to join in more projects and hope I can contribute more.
 
 
 ## What I Can Do
