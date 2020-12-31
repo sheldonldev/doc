@@ -24,6 +24,7 @@ Gradually, I leave my old job and start taking up some projects such as data vis
 - PHP, Laravel
 - SQL
 - Git
+- Vim
 
 # Contact
 
