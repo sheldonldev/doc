@@ -13,7 +13,7 @@ Gradually, I leave my old job and start taking up some projects of data visualiz
 
 ## What I Can Do
 
-- Data Visualization
+- Data Science 
 - Web Development
 - IT Support
 
@@ -26,7 +26,7 @@ Gradually, I leave my old job and start taking up some projects of data visualiz
 - Git
 - Vim
 
-# Contact
+## Contact
 
 📨 info@sheldonl.dev
 
