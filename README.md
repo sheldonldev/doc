@@ -1,5 +1,5 @@
 ---
-description: Sheldon Learns to Dev
+description: Sheldon Loves Dev
 ---
 
 # About
