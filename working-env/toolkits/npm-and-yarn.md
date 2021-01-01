@@ -116,6 +116,25 @@ yarn [global] list --depth=0
 
 {% embed url="https://github.com/sheldonldev/yarn_config" caption="My Global Yarnpkg" %}
 
+## SemVer
+
+- Semantic Versioning
+
+```zsh
+"dependencies": {
+  "packageName": "prefixMAJOR.MINOR.PATCH"
+  "express": "^4.4.14"
+}
+
+# MAJOR: increment when make incompatible API changes
+# MINOR: increment when add a backwards-compatible functionality
+# PATCH: increment when fix a backwards-compatible bug
+
+# prefix (optional)
+  # ~ : till the latest PATCH release
+  # ^ : till the latest MINOR release
+```
+
 ## Global Packages For Web Dev
 
 ### neovim
