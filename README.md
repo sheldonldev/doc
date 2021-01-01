@@ -28,11 +28,15 @@ Gradually, I leave my old job and start taking up some projects of data visualiz
 
 # Contact
 
-- 📨 info@sheldonl.dev
-- 📞 +852 67321170
-- 🔗 Blog: <https://doc.sheldonl.dev>
-- 🔗 GitHub: <https://github.com/sheldonldev>
-- 🔗 LinkedIn: <https://linkedin.com/in/sheldonldev>
+📨 info@sheldonl.dev
+
+📞 +852 67321170
+
+🔗 Blog: <https://doc.sheldonl.dev>
+
+🔗 GitHub: <https://github.com/sheldonldev>
+
+🔗 LinkedIn: <https://linkedin.com/in/sheldonldev>
 
 
 
