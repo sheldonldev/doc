@@ -32,7 +32,7 @@ Gradually, I leave my old job and start taking up some projects of data visualiz
 
 📞 +852 67321170
 
-🔗 Blog: <https://docs.sheldonl.dev>
+🔗 Blog: [https://docs.sheldonl.dev](https://sheldonldev.gitbook.io/sheldon-loves-dev)
 
 🔗 GitHub: <https://github.com/sheldonldev>
 
