@@ -31,5 +31,5 @@
 - [Archived](blog/archived/README.md)
   - [Cookbook](blog/archived/cookbook.md)
 - [Daily](blog/daily/README.md)
-  - [2020](blog/daily/2020.md)
   - [2021](blog/daily/2021.md)
+  - [2020](blog/daily/2020.md)
