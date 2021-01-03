@@ -2,9 +2,10 @@
 
 # Basics
 
-- [x] [Coursera | Online Courses & Credentials From Top Educators. Join for Free | Coursera](https://www.coursera.org/learn/internet-history/home/welcome)
+- [x] [Internet History, Technology, and Security](https://www.coursera.org/learn/internet-history/home/welcome)
 
   > This is the first course I took when I wondering where I should begin. [Dr. Chuck](https://online.dr-chuck.com/) is the one who opened my door to be a programmer.
+
 
 - [x] [freeCodeCamp.org](https://www.freecodecamp.org/)
 
@@ -14,19 +15,24 @@
 
   - [x] [Python for Everybody Specialization](https://www.coursera.org/specializations/python)
 
+
 - [x] [IBM Data Science Professional Certificate](https://www.coursera.org/professional-certificates/ibm-data-science)
 
   > After taking this course, I began my career: I Independently finished a data annalistic and visualization task: [Meat Atlas of China](https://meatatlas.github.io/).
 
+
 - [x] [Google IT Automation with Python](https://www.coursera.org/professional-certificates/google-it-automation)
+
 
 - [x] [Introduction to Linux (LFS101x)](https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS101x+1T2020/course/)
 
   > I think Linux is the best operating system to learn CS when macOS is still not affordable for me. You can get it and nearly all its applications for free. The first machine for me to learn dev was a 5-year-old Windows. Nearly half years later, I installed Ubuntu on it to turn it into a dual-system machine. Then I fell in love with Linux. So I learn more about it through this course.
 
+
 - [x] [CS50 - Introduction to Computer Science](https://cs50.harvard.edu/)
 
-  > Thanks, Dr. David, who brings me a lot of passionate. This course introduced nearly every thing you should know to get you prepared for your development career and help you think algorithmically.
+  > Thanks to Dr. David, who brings me a lot of passionate. This course introduced nearly every thing you should know to get you prepared for your development career and help you think algorithmically.
+
 
 - [x] CCNA
 
