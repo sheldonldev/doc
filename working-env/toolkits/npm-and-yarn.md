@@ -141,7 +141,7 @@ yarn [global] list --depth=0
 
 - I need this because I use neovim, no IDE
 
-```zsh
+```bash
 # allow web developers use live server
 yarn global add live-server
 
@@ -152,7 +152,7 @@ live-server some-directory/
 
 ### sass
 
-```zsh
+```bash
 yarn global add sass
 ```
 
