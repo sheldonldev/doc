@@ -137,13 +137,6 @@ yarn [global] list --depth=0
 
 ## Global Packages For Web Dev
 
-### neovim
-
-```zsh
-# if use neovim as editor
-yarn global add neovim
-```
-
 ### live-server
 
 - I need this because I use neovim, no IDE
