@@ -18,8 +18,9 @@
   - [Nvim Basic Setup](working-env/vim-based-workspace/nvim-basic-setup.md)
   - [Nvim for Coding](working-env/vim-based-workspace/nvim-for-coding.md)
 - [Toolkits](working-env/toolkits/README.md)
-  - [npm & yarn](working-env/toolkits/npm-and-yarn.md)
   - [VSCode](working-env/toolkits/vscode.md)
+  - [npm & yarn](working-env/toolkits/npm-and-yarn.md)
+  - [python scrapy](working-env/toolkits/python-scrapy.md)
 
 ## Learning Path
 

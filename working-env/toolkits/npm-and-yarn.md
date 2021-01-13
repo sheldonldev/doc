@@ -10,7 +10,7 @@
 
 ## Install node
 
-```zsh
+```bash
 brew install node
 
 # set path for installing global packages
@@ -24,24 +24,24 @@ npm config set prefix /usr/local
 
 - Install `nvm`
 
-```zsh
+```bash
 cd ~ && git clone https://github.com/nvm-sh/nvm.git .nvm
 git checkout v0.37.2  # check out latest version
 ```
 
-```zsh
-# ~/.zshrc
+```bash
+# ~/.bashrc
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# restart zsh and check
+# restart bash and check
 nvm -v
 ```
 
 - Install and run `node.js`
 
-```zsh
+```bash
 # list all versions
 nvm ls-remote
 
@@ -57,7 +57,7 @@ nvm use --delete-prefix v14.15.3
 
 ## Update
 
-```zsh
+```bash
 # with homebrew
 brew upgrade node
 npm install -g npm
@@ -67,7 +67,7 @@ npm install -g npm
 
 - [https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx](https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx)
 
-```zsh
+```bash
 brew uninstall node
 
 # check all these dir, remove *node* and *npm*
@@ -86,7 +86,7 @@ cd /usr/local/share/systemtap/tapset
 
 ## Usage
 
-```zsh
+```bash
 # find all global packages
 npm list -g --depth=0
 
@@ -100,13 +100,13 @@ npm outdated -g --depth=3
 
 - It is recommended to install an independent yarn with `homebrew`;
 
-```zsh
+```bash
 brew install yarn
 ```
 
 - Usage
 
-```zsh
+```bash
 yarn [global] add <packageName>
 
 yarn [global] list --depth=0
@@ -120,7 +120,7 @@ yarn [global] list --depth=0
 
 - Semantic Versioning
 
-```zsh
+```bash
 "dependencies": {
   "packageName": "prefixMAJOR.MINOR.PATCH"
   "express": "^4.4.14"
@@ -156,17 +156,28 @@ live-server some-directory/
 yarn global add sass
 ```
 
-### vue
-
-```zsh
-yarn global add @vue/cli
-```
-
-
 ### intelephense
 
-```zsh
+```bash
 yarn global add intelephense
+```
+
+## Create Projects
+
+### Vue
+
+```bash
+npx create-vite-app my-project
+cd my-project
+
+yarn install
+```
+
+### React
+
+```bash
+npx create-react-app my-project
+cd my-project
 ```
 
 ## Commonly Used Local Packages
@@ -175,7 +186,7 @@ yarn global add intelephense
 
 - Some project builder such as @vue/cli has its own lint, see its README:
 
-```zsh
+```bash
 yarn lint
 ```
 
@@ -184,7 +195,7 @@ yarn lint
 #### Prettier
 - [Prettier](https://prettier.io/docs/en/install.html)
 
-```zsh
+```bash
 # Note: It’s important to install Prettier locally in every project, so each project gets the correct Prettier version.
 yarn add --dev --exact prettier
 echo {} > .prettierrc.json
@@ -195,7 +206,7 @@ yarn prettier --write .
 
 #### Eslint
 
-```zsh
+```bash
 yarn add --dev eslint   # and some other eslint plugins
 yarn run eslint --init
 yarn run eslint FileName.js
@@ -204,7 +215,4 @@ yarn eslint --fix
 
 ### tailwindcss
 
-```zsh
-yarn add tailwindcss
-```
-
+<https://tailwindcss.com>

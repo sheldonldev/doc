@@ -253,7 +253,6 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 #### Settings for fzf
 
 ```bash
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 ```
