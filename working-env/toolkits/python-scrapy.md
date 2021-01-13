@@ -1,8 +1,6 @@
 ---
-description: Python Scrapy
 > published_at: 2021-01-13
 > updated_at: 2021-01-13
-
 ---
 
 # Python Scrapy
