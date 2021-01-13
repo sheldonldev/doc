@@ -1,6 +1,5 @@
 ---
-> published_at: 2021-01-13
-> updated_at: 2021-01-13
+description: published: 2021-01-13; updated: 2021-01-13
 ---
 
 # Python Scrapy
