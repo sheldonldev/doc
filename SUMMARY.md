@@ -20,7 +20,7 @@
 - [Toolkits](working-env/toolkits/README.md)
   - [VSCode](working-env/toolkits/vscode.md)
   - [npm & yarn](working-env/toolkits/npm-and-yarn.md)
-  - [python scrapy](working-env/toolkits/python-scrapy.md)
+  - [python](working-env/toolkits/python.md)
 
 ## Learning Path
 
