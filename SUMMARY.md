@@ -21,6 +21,7 @@
   - [VSCode](working-env/toolkits/vscode.md)
   - [npm & yarn](working-env/toolkits/npm-and-yarn.md)
   - [python](working-env/toolkits/python.md)
+  - [selenium](working-env/toolkits/selenium.md)
 
 ## Learning Path
 
