@@ -22,6 +22,7 @@
   - [npm & yarn](working-env/toolkits/npm-and-yarn.md)
   - [python](working-env/toolkits/python.md)
   - [selenium](working-env/toolkits/selenium.md)
+  - [serverless](working-env/toolkits/serverless.md)
 
 ## Learning Path
 
