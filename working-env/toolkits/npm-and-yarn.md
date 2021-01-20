@@ -162,24 +162,6 @@ yarn global add sass
 yarn global add intelephense
 ```
 
-## Create Projects
-
-### Vue
-
-```bash
-npx create-vite-app my-project
-cd my-project
-
-yarn install
-```
-
-### React
-
-```bash
-npx create-react-app my-project
-cd my-project
-```
-
 ## Commonly Used Local Packages
 
 ### Linters and Prettier
@@ -213,6 +195,11 @@ yarn run eslint FileName.js
 yarn eslint --fix
 ```
 
+## Start a Front End Project
+
 ### tailwindcss
 
-<https://tailwindcss.com>
+- <https://tailwindcss.com>
+
+
+

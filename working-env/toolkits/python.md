@@ -32,7 +32,7 @@ export all_proxy=socks5://127.0.0.1:1080  # replace with your own protocol and p
 ```bash
 # Each project should work in an independent virtual environment
 conda search "^python$"   # search a python distribution
-conda create --name my_env python=3.?  # select a python distribution
+conda create --name my_env python=3.9.1  # select a python distribution
 
 # Activate
 source activate my_env

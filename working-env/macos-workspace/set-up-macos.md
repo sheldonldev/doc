@@ -10,6 +10,28 @@
 
 - Install [homebrew](https://brew.sh);
 
+```bash
+# no auto-update
+export HOMEBREW_NO_AUTO_UPDATE=true
+```
+- In China, you have to change to the mirror
+
+```bash
+# 中科大镜像源
+cd "$(brew --repo)" && git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core" && git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-cask" && git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
+brew update
+
+# reset
+cd "$(brew --repo)" && git remote set-url origin https://github.com/Homebrew/brew.git
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core" && git remote set-url origin https://github.com/Homebrew/homebrew-core.git
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-cask" && git remote set-url origin https://github.com/Homebrew/homebrew-cask.git
+# export HOMEBREW_BOTTLE_DOMAIN=xxxxxxxxx // comment this line in .zshrc
+brew update
+```
+
 ### VSCode
 
 - Install [VSCode](https://code.visualstudio.com/);
@@ -58,8 +80,3 @@ vim ~/.zshrc
 
 - Open `Profile` section in settings, open `keys` tag, set `Left Option (Alt) Key` to `Esc+`;
 
-## For JS/TS
-
-## For PHP
-
-## For Python
