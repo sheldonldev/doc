@@ -7,6 +7,7 @@
 - [Git & GitHub](working-env/git-and-github/README.md)
   - [Install and Set Up Git](working-env/git-and-github/install-and-set-up-git.md)
   - [Global Settings](working-env/git-and-github/global-settings.md)
+  - [Accelerate Git in China](working-env/git-and-github/accelerate-git-in-china.md)
   - [Git Commands](working-env/git-and-github/git-commands.md)
   - [GH-Pages](working-env/git-and-github/gh-pages.md)
 - [Ubuntu Workspace](working-env/ubuntu-workspace.md)
