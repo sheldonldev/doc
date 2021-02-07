@@ -4,7 +4,7 @@
 
 ### Git
 
-{% embed url="https://doc.sheldonl.dev/working-env/git-and-github/install-and-set-up-git" caption="First-Time Git Setup" %}
+- See my posts.
 
 ### Homebrew
 
