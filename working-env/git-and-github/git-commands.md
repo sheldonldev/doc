@@ -30,6 +30,33 @@ git pull
 git stash apply    # or follow the error tips if something went wrong
 ```
 
+## Delete All Commits of a Branch
+
+- It's useful to delete all sensitive information in your commits.
+
+```bash
+git checkout --orphan new_branch_name
+git add .
+git commit -m 'a new branch without history commits'
+git push origin HEAD:new_branch_name
+
+# now, delete the old branch on github
+# and, delete it in local:
+git branch -D old_branch_name 
+
+# now you can create branches based on your new orphan
+git branch another_new_branch
+```
+
+## How to Merge Orphan Branches
+
+```bash
+git checkout orphan_branch_1
+git rebase orphan_branch_2
+git checkout orphan_branch_2
+git merge orphan_branch_1
+```
+
 ## Deal With Large Files
 
 - [Git Large File Storage](https://git-lfs.github.com/)
