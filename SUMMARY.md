@@ -10,7 +10,7 @@
   * [Accelerate Git in China](working-env/git-and-github/accelerate-git-in-china.md)
   * [Git Commands](working-env/git-and-github/git-commands.md)
   * [GH-Pages](working-env/git-and-github/gh-pages.md)
-* [Ubuntu Workspace](working-env/ubuntu-workspace.md)
+* [Ubuntu Workspace](working-env/ubuntu-workspace/README.md)
 * [macOS Workspace](working-env/macos-workspace/README.md)
   * [Set Up MacOS](working-env/macos-workspace/set-up-macos.md)
 * [Vim Based Workspace](working-env/vim-based-workspace/README.md)
