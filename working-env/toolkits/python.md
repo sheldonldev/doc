@@ -1,5 +1,5 @@
 ---
-description: published at 2021-01-13; updated at 2021-01-13
+description: published at 2021-01-13
 ---
 
 # Python
@@ -97,11 +97,12 @@ pip install -r requirements.txt
     If using macOS: `brew install chromedriver`
   - To authorize ChromeDriver: `xattr -d com.apple.quarantine chromedriver`
   - start your python script like following:
-  ```py
+
+  ```python
   import selenium
   from selenium import webdriver
 
-  driver = webdriver.Chrome(chromedriverPATH) 
+  driver = webdriver.Chrome(chromedriverPATH)
   # no parameter if istall chromedriver with brew
 
   driver.get('https://www.tecmint.com')
