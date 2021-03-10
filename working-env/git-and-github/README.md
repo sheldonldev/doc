@@ -1,2 +1,2 @@
-# Git & Github
+# Git & GitHub
 

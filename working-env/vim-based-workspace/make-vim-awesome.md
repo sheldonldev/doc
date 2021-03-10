@@ -6,10 +6,9 @@
 
 ```
 
-
 ## Awesome Commands
 
-- Followings may be very commonly used.
+* Followings may be very commonly used.
 
 ### Start
 
@@ -45,17 +44,16 @@ vim -o file1 file2 file3
 
 ### netrw
 
-- It's a built-in plugin now
+* It's a built-in plugin now
 
 ```bash
 :h netrw
 ```
 
-
 ## References
 
-- [Neovim Setting up the basics](https://www.chrisatmachine.com/Neovim/02-vim-general-settings/)
-- [devilyouwei/Vimmer](https://github.com/devilyouwei/Vimmer)
-- [ThePrimeagen - Your first VimRC: How to setup your vim's vimrc](https://www.youtube.com/watch?v=n9k9scbTuvQ)
+* [Neovim Setting up the basics](https://www.chrisatmachine.com/Neovim/02-vim-general-settings/)
+* [devilyouwei/Vimmer](https://github.com/devilyouwei/Vimmer)
+* [ThePrimeagen - Your first VimRC: How to setup your vim's vimrc](https://www.youtube.com/watch?v=n9k9scbTuvQ)
+* [https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db](https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db)
 
-- https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db

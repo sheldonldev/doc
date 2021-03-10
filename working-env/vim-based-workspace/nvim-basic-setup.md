@@ -2,8 +2,8 @@
 
 ## Install Node
 
-- `npm` provides a lot of tools for web development, such as `live-server`.
-- We use `coc.nvim` plugin as Language Server, which depends on NodeJS.
+* `npm` provides a lot of tools for web development, such as `live-server`.
+* We use `coc.nvim` plugin as Language Server, which depends on NodeJS.
 
 > You can install node and some global npm packages by following this instruction:
 
@@ -11,15 +11,14 @@
 
 ## Install Neovim
 
-- Install [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) (HEAD Version is recommended)
-- Run command `:checkhealth` to show more todo list.
+* Install [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) \(HEAD Version is recommended\)
+* Run command `:checkhealth` to show more todo list.
 
 ## Awesome Settings for Neovim
 
-- You can use Neovim like Vim by loading `.vimrc` in `~/.config/nvim/init.vim`.
-  > Read [basic keymaps](https://doc.sheldonl.dev/working-env/vim-based-workspace/basic-keymaps) to learn basic vim motion;
-  > Read [make vim awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome) to set up your `.vimrc`.
-  > Check out [quickref](https://neovim.io/doc/user/quickref.html#quickref) to get complete info.
+* You can use Neovim like Vim by loading `.vimrc` in `~/.config/nvim/init.vim`.
+
+  > Read [basic keymaps](https://doc.sheldonl.dev/working-env/vim-based-workspace/basic-keymaps) to learn basic vim motion; Read [make vim awesome](https://doc.sheldonl.dev/working-env/vim-based-workspace/make-vim-awesome) to set up your `.vimrc`. Check out [quickref](https://neovim.io/doc/user/quickref.html#quickref) to get complete info.
 
 ```bash
 " load ~/.vimrc and ~/.vim because I use vim before switched to nvim "
@@ -32,7 +31,7 @@ source ~/.vimrc
 
 ### Plugin Manager
 
-- Install plugin manager: [vim-plug](https://github.com/junegunn/vim-plug).
+* Install plugin manager: [vim-plug](https://github.com/junegunn/vim-plug).
 
 > Add following script to `init.vim` and run `:w`and `:source %` will help you install it automatically.
 
@@ -46,7 +45,8 @@ endif
 
 ### Install Some Simple Plugins
 
-- Now you can append plugins like the following in `init.vim`. the plugins' names are the names of their git repositories:
+* Now you can append plugins like the following in `init.vim`. the plugins' names are the names of their git repositories:
+
   > Remember, only single quote is recognizable in vim script, double quote is for commentary.
 
 ```bash
@@ -58,17 +58,17 @@ Plug 'Yggdroot/indentLine'
 call plug#end()
 ```
 
-- Run `:w`and `:source %`, then run `:PlugInstall`/`:PlugUpdate`/`:PlugClean`/`:PlugStatus`/`:PlugDiff`.
-- Now you should read the documentation in the repositories to set up your plugins.
-- For simple plugin settings, it is OK to add configuations in `init.vim`. The followings are some examples.
+* Run `:w`and `:source %`, then run `:PlugInstall`/`:PlugUpdate`/`:PlugClean`/`:PlugStatus`/`:PlugDiff`.
+* Now you should read the documentation in the repositories to set up your plugins.
+* For simple plugin settings, it is OK to add configuations in `init.vim`. The followings are some examples.
 
 #### gruvbox
 
-- `gruvbox` is one of the most welcome editor theme.
-- [My gruvbox](https://github.com/sheldonldev/gruvbox) is forked from [morhetz/gruvbox](https://github.com/morhetz/gruvbox):
-  - just slightly increase some contrast;
-  - only optimized for hard contrast of dark background;
-- Add following configuations to `init.vim`:
+* `gruvbox` is one of the most welcome editor theme.
+* [My gruvbox](https://github.com/sheldonldev/gruvbox) is forked from [morhetz/gruvbox](https://github.com/morhetz/gruvbox):
+  * just slightly increase some contrast;
+  * only optimized for hard contrast of dark background;
+* Add following configuations to `init.vim`:
 
 ```bash
 let g:gruvbox_contrast_dark = 'hard'
@@ -78,8 +78,8 @@ set background=dark
 
 #### vim-polyglot
 
-- [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot): syntax and indentation support.
-- Add following configuations to `init.vim`, and it should insert before the plugin caller:
+* [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot): syntax and indentation support.
+* Add following configuations to `init.vim`, and it should insert before the plugin caller:
 
 ```bash
 " --- disable some languages that already well been colorized --- "
@@ -91,8 +91,8 @@ let g:polyglot_disabled = [
 
 #### Others
 
-- [vim-smoothie](https://github.com/psliwka/vim-smoothie) helps you chatch up the cursor when moving with `<C-d>` and `<C-u>`;
-- [indentLine](https://github.com/Yggdroot/indentLine) helps you read the indentation.
+* [vim-smoothie](https://github.com/psliwka/vim-smoothie) helps you chatch up the cursor when moving with `<C-d>` and `<C-u>`;
+* [indentLine](https://github.com/Yggdroot/indentLine) helps you read the indentation.
 
 ## More Functional Plugins ans Settings
 
@@ -102,24 +102,23 @@ let g:polyglot_disabled = [
 Plug 'tpope/vim-fugitive'
 ```
 
-- [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) allows you interactive with git in vim command mode without terminal.
-- It also helps you recoganize if the current file belongs to a git project and which branch it belongs to if you use statusline like following.
+* [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) allows you interactive with git in vim command mode without terminal.
+* It also helps you recoganize if the current file belongs to a git project and which branch it belongs to if you use statusline like following.
 
 ### Statusline and Tabline
 
-- I use `vim-devicons` and `vim-airline` to set up my statusline and tabline.
+* I use `vim-devicons` and `vim-airline` to set up my statusline and tabline.
 
 #### vim-devicons
 
-- [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons): support a lot of tools to show beautiful icons. It works as long as:
-  - [Nerd Font](https://github.com/ryanoasis/nerd-fonts) is installed and has been set as your terminal text font.
+* [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons): support a lot of tools to show beautiful icons. It works as long as:
+  * [Nerd Font](https://github.com/ryanoasis/nerd-fonts) is installed and has been set as your terminal text font.
 
 #### vim-airline
 
-- [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline): statusline and tabline
-- It works with a lot of other plugins, such as `gruvbox`, `vim-devicons`, `fugitive`...
-
-- You can use buffer tabs by setting like this:
+* [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline): statusline and tabline
+* It works with a lot of other plugins, such as `gruvbox`, `vim-devicons`, `fugitive`...
+* You can use buffer tabs by setting like this:
 
 ```bash
 " enable tabline "
@@ -140,7 +139,7 @@ nnoremap  <silent> <A-q>    :bd<CR>
 
 ### Terminal
 
-- Neovim has integrated terminal, you can set like following:
+* Neovim has integrated terminal, you can set like following:
 
 ```bash
 tnoremap <Esc> <C-\><C-n>
@@ -150,7 +149,7 @@ nnoremap <A-b> :split term://zsh <bar>resize 5<CR>
 
 > remember to replace `zsh` to match your shell.
 
-- However, sometimes I'd like to use [vim-floaterm](https://github.com/voldikss/vim-floaterm).
+* However, sometimes I'd like to use [vim-floaterm](https://github.com/voldikss/vim-floaterm).
 
 ```bash
 Plug 'voldikss/vim-floaterm'
@@ -168,7 +167,7 @@ tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
 
 ### Explorer
 
-- There are a lot explorer tools: `coc-explorer`, `netrw`, `nerd-tree`... While I prefer [defx](https://github.com/shougo/defx.nvim) along with its helpers:
+* There are a lot explorer tools: `coc-explorer`, `netrw`, `nerd-tree`... While I prefer [defx](https://github.com/shougo/defx.nvim) along with its helpers:
 
 ```bash
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -176,7 +175,7 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
 ```
 
-- To easily manage your plugins, it is recommended to write configuations in a seperated file, `defx.vim` in this case. I set up like following:
+* To easily manage your plugins, it is recommended to write configuations in a seperated file, `defx.vim` in this case. I set up like following:
 
 ```bash
 nnoremap <silent> <Leader>e
@@ -223,7 +222,7 @@ call defx#custom#option('_', {
   \ })
 ```
 
-- Don't forget to source int in `init.vim` like following:
+* Don't forget to source int in `init.vim` like following:
 
 ```bash
 source `~/.config/nvim/defx.vim`
@@ -233,9 +232,9 @@ source `~/.config/nvim/defx.vim`
 
 #### Awesome tools to help you search stuff
 
-- [FZF](https://github.com/junegunn/fzf.vim)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [universal-ctags](https://github.com/universal-ctags/ctags)
+* [FZF](https://github.com/junegunn/fzf.vim)
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
+* [universal-ctags](https://github.com/universal-ctags/ctags)
 
 > You can install them in macOS with following commands:
 
@@ -332,4 +331,5 @@ command! -bang -nargs=* GGrep
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 ```
 
-- [Note for Extra Keybindings (Optional)](https://wiki.archlinux.org/index.php/Fzf)
+* [Note for Extra Keybindings \(Optional\)](https://wiki.archlinux.org/index.php/Fzf)
+

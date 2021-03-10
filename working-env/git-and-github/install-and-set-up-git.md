@@ -1,8 +1,8 @@
 # Install and Set Up Git
 
-- Install [Git](https//git-scm.com);
-- Sign up for a [GitHub](https://github.com) account if you haven't got one;
-- Associate your `Git` and `GitHub`:
+* Install [Git](https://github.com/sheldonldev/doc/tree/804ec9140919cf641e377a1b87f2428db52597e9/working-env/git-and-github/https/git-scm.com);
+* Sign up for a [GitHub](https://github.com) account if you haven't got one;
+* Associate your `Git` and `GitHub`:
 
 ```bash
 # user settings
@@ -24,3 +24,4 @@ cat ~/.ssh/id_rsa.pub
 # DANGER: If you messed up, and want to remove the key
 rm ~/.ssh/id_rsa.pub
 ```
+

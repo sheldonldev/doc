@@ -2,11 +2,11 @@
 
 ## Documentation
 
-- [nodjs documentation](https://nodejs.org/en/docs/guides/)
-- [learn nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
-- [npm](https://npmjs.com/)
-- [yarn](https://yarnpkg.com/)
-- [nvm](https://github.com/nvm-sh/nvm)
+* [nodjs documentation](https://nodejs.org/en/docs/guides/)
+* [learn nodejs](https://nodejs.dev/learn/introduction-to-nodejs)
+* [npm](https://npmjs.com/)
+* [yarn](https://yarnpkg.com/)
+* [nvm](https://github.com/nvm-sh/nvm)
 
 ## Install node
 
@@ -22,7 +22,7 @@ npm config set prefix /usr/local
 
 ## Install multi-version node with nvm
 
-- Install `nvm`
+* Install `nvm`
 
 ```bash
 cd ~ && git clone https://github.com/nvm-sh/nvm.git .nvm
@@ -39,7 +39,7 @@ export NVM_DIR="$HOME/.nvm"
 nvm -v
 ```
 
-- Install and run `node.js`
+* Install and run `node.js`
 
 ```bash
 # list all versions
@@ -54,7 +54,6 @@ nvm exec 14.5.3 node --version  # or:
 nvm use --delete-prefix v14.15.3
 ```
 
-
 ## Update
 
 ```bash
@@ -65,7 +64,7 @@ npm install -g npm
 
 ## Uninstallation
 
-- [https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx](https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx)
+* [https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx](https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx)
 
 ```bash
 brew uninstall node
@@ -98,13 +97,13 @@ npm outdated -g --depth=3
 
 > I feel that yarn is much better for managing npm packages globally.
 
-- It is recommended to install an independent yarn with `homebrew`;
+* It is recommended to install an independent yarn with `homebrew`;
 
 ```bash
 brew install yarn
 ```
 
-- Usage
+* Usage
 
 ```bash
 yarn [global] add <packageName>
@@ -112,13 +111,13 @@ yarn [global] add <packageName>
 yarn [global] list --depth=0
 ```
 
-- Path: `~/.config/yarn`, I init as a git repo:
+* Path: `~/.config/yarn`, I init as a git repo:
 
-{% embed url="https://github.com/sheldonldev/yarn_config" caption="My Global Yarnpkg" %}
+{% embed url="https://github.com/sheldonldev/yarn\_config" caption="My Global Yarnpkg" %}
 
 ## SemVer
 
-- Semantic Versioning
+* Semantic Versioning
 
 ```bash
 "dependencies": {
@@ -139,7 +138,7 @@ yarn [global] list --depth=0
 
 ### live-server
 
-- I need this because I use neovim, no IDE
+* I need this because I use neovim, no IDE
 
 ```bash
 # allow web developers use live server
@@ -166,16 +165,17 @@ yarn global add intelephense
 
 ### Linters and Prettier
 
-- Some project builder such as @vue/cli has its own lint, see its README:
+* Some project builder such as @vue/cli has its own lint, see its README:
 
 ```bash
 yarn lint
 ```
 
-- In a JS project, Prettier and Eslint is commonly used.
+* In a JS project, Prettier and Eslint is commonly used.
 
 #### Prettier
-- [Prettier](https://prettier.io/docs/en/install.html)
+
+* [Prettier](https://prettier.io/docs/en/install.html)
 
 ```bash
 # Note: It’s important to install Prettier locally in every project, so each project gets the correct Prettier version.
@@ -199,7 +199,5 @@ yarn eslint --fix
 
 ### tailwindcss
 
-- <https://tailwindcss.com>
-
-
+* [https://tailwindcss.com](https://tailwindcss.com)
 

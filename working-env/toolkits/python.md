@@ -2,11 +2,11 @@
 description: published at 2021-01-13
 ---
 
-# Python
+# python
 
 ## Pysocks
 
-- In case of sometimes there may some problems caused by using proxy.
+* In case of sometimes there may some problems caused by using proxy.
 
 ```bash
 # pysocks allows you request through proxy
@@ -23,9 +23,9 @@ export all_proxy=socks5://127.0.0.1:1080  # replace with your own protocol and p
 
 ### Installation
 
-- download from <https://www.anaconda.com/products/individual>
-- install by double click in MacOS or by running `bash /path/to/package` in Ubuntu
-- check if Anaconda is in the `PATH`, check `which python`, check `which conda`
+* download from [https://www.anaconda.com/products/individual](https://www.anaconda.com/products/individual)
+* install by double click in MacOS or by running `bash /path/to/package` in Ubuntu
+* check if Anaconda is in the `PATH`, check `which python`, check `which conda`
 
 #### Use Virtual Env with Conda
 
@@ -77,26 +77,27 @@ pip install -r requirements.txt
 
 ### Getting Start
 
-- open  your virtual python env, enter your project dir;
-- run `scrapy start project ProjectName`;
-- enter the project and open editor;
-
+* open  your virtual python env, enter your project dir;
+* run `scrapy start project ProjectName`;
+* enter the project and open editor;
 
 ## Selenium
 
-- An open-source tool which is used for automating the test carried out on web browsers
+* An open-source tool which is used for automating the test carried out on web browsers
 
 ### Tools Suite
 
-- `Selenium IDE`: Install from chrome extension market or something like that
+* `Selenium IDE`: Install from chrome extension market or something like that
+* Selenium with python:
 
-- Selenium with python:
-  - <https://selenium-python.readthedocs.io/>
-  - `pip install selenium`
-  - `ChromeDriver`: use exactly the same version with chrome browser.
+  * [https://selenium-python.readthedocs.io/](https://selenium-python.readthedocs.io/)
+  * `pip install selenium`
+  * `ChromeDriver`: use exactly the same version with chrome browser.
+
     If using macOS: `brew install chromedriver`
-  - To authorize ChromeDriver: `xattr -d com.apple.quarantine chromedriver`
-  - start your python script like following:
+
+  * To authorize ChromeDriver: `xattr -d com.apple.quarantine chromedriver`
+  * start your python script like following:
 
   ```python
   import selenium
@@ -108,3 +109,4 @@ pip install -r requirements.txt
   driver.get('https://www.tecmint.com')
   print(driver.title)
   ```
+

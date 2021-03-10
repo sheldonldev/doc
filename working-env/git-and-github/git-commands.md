@@ -4,7 +4,7 @@
 
 ### How to push a local project to github
 
-- init local project as a git repo:
+* init local project as a git repo:
 
 ```bash
 git init
@@ -12,17 +12,17 @@ git add .
 git commit -m 'some commentary'
 ```
 
-- create an empty repo in github, then an insturction will appear, just follow it.
+* create an empty repo in github, then an insturction will appear, just follow it.
 
 ### How to pull from remote
 
-- if remote is more updated than localgit push:
+* if remote is more updated than localgit push:
 
 ```bash
 git pull
 ```
 
-- if local is more updated than remote
+* if local is more updated than remote
 
 ```bash
 git stash
@@ -32,7 +32,7 @@ git stash apply    # or follow the error tips if something went wrong
 
 ## Delete All Commits of a Branch
 
-- It's useful to delete all sensitive information in your commits.
+* It's useful to delete all sensitive information in your commits.
 
 ```bash
 git checkout --orphan new_branch_name
@@ -59,26 +59,26 @@ git merge orphan_branch_1
 
 ## Deal With Large Files
 
-- [Git Large File Storage](https://git-lfs.github.com/)
+* [Git Large File Storage](https://git-lfs.github.com/)
 
 ## Keeping a Fork Up To Date
 
-- To sync changes you make in a fork with the original repository, you must configure a remote that points to the upstream repository in Git.
+* To sync changes you make in a fork with the original repository, you must configure a remote that points to the upstream repository in Git.
 
 ```bash
 git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 ```
 
-- You can check if it was succesful with: `git remote -v`;
-
-- Then fetch it to update your project:
+* You can check if it was succesful with: `git remote -v`;
+* Then fetch it to update your project:
 
 ```bash
 git fetch upstream
 ```
 
-- Merge the changes from upstream/master into your local master branch:
+* Merge the changes from upstream/master into your local master branch:
 
 ```bash
 git merge upstream/master
 ```
+

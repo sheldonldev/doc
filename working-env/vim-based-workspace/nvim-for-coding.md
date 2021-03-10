@@ -1,15 +1,14 @@
 # Nvim for Coding
 
-- Based on [Nvim Basic Setup](https://doc.sheldonl.dev/working-env/vim-based-workspace/nvim-basic-setup);
-- Complete configurations and features are kept on GitHub:
-  {% embed url="https://github.com/sheldonldev/nvim_config" caption="My Neovim Config on GitHub" %}
+* Based on [Nvim Basic Setup](https://doc.sheldonl.dev/working-env/vim-based-workspace/nvim-basic-setup);
+* Complete configurations and features are kept on GitHub:
 
 > I have to say, everyone should have their own settings, while I'll be glad if some of my settings can inspare you.
 
 ## Auto-Completion and Snipptes
 
-- There are some auto-completion tools you can use, such as `YouCompleteMe`, `coc.nvim`. I've tried those, finally I stick to `deoplete.nvim`, it can use `nvim-lspconfig` as LSP.
-- If you feel you are repeatedly writing code, you need snipptes to helps you auto-complete. I use `ultisnips` as snips engine and use `vim-snippets` as snips repo.
+* There are some auto-completion tools you can use, such as `YouCompleteMe`, `coc.nvim`. I've tried those, finally I stick to `deoplete.nvim`, it can use `nvim-lspconfig` as LSP.
+* If you feel you are repeatedly writing code, you need snipptes to helps you auto-complete. I use `ultisnips` as snips engine and use `vim-snippets` as snips repo.
 
 ```bash
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -60,3 +59,4 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'norcalli/nvim-colorizer.lua'
 ```
+
