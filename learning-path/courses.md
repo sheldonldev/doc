@@ -34,7 +34,7 @@
   * Official guide: [CCNA 200-301 Official Cert Guide V1](https://b-ok.cc/book/5279006/733c2a)
   * Official guide: [CCNA 200-301 Official Cert Guide V2](https://b-ok.cc/book/5261245/090ae9)
   * Official guide: [CCNA 200-301 Portable Command Guide](https://b-ok.cc/book/5308783/e473c5?dsource=recommend)
-  * Official guide: [31 Days Before your CCNA Exam](https://b-ok.org/book/738599/7b91b3)
+  * Official guide: [31 Days Before Your CCNA Exam](https://b-ok.org/book/738599/7b91b3)
   * Official guide: [CCNA 200-301 Exam Cram](https://b-ok.org/book/5546061/5c1481)
   * Another book: [V1](https://b-ok.org/book/5445804/ca05d7)
   * Another book: [V2](https://b-ok.org/book/5444948/06d6df)
@@ -51,7 +51,7 @@
 
 ## Advanced
 
-Im still learning in this part
+I'm still learning in this part
 
 * [ ] Algorithms
 
@@ -103,7 +103,7 @@ Fundamentals of computer systems programming, machine organization, and performa
 ### Programming Languages
 
 * [x] [Java Programming and Software Engineering Fundamentals Specialization](https://www.coursera.org/specializations/java-programming)
-* [x] [Object Oriented Java Programming: Data Structures and Beyond Specialization](https://www.coursera.org/specializations/java-object-oriented)
+* [x] [Object-Oriented Java Programming: Data Structures and Beyond Specialization](https://www.coursera.org/specializations/java-object-oriented)
 * [ ] [Computer programming language](https://www.britannica.com/technology/computer-programming-language)
 * [ ] [CS-Fundamentals](https://cs-fundamentals.com/)
 * [ ] [Computer Science: An Interdisciplinary Approach](https://introcs.cs.princeton.edu/java/home/)
@@ -127,7 +127,7 @@ Fundamentals of computer systems programming, machine organization, and performa
 * [ ] [IaC Infrastructure as Code \(LFS162x\)](https://www.edx.org/course/infrastructure-as-code)
 * [ ] [Introduction to ONAP: Complete Network Automation \(LFS163\)](https://training.linuxfoundation.org/training/introduction-to-onap-complete-network-automation/)
 * [ ] [Inclusive Speaker Orientation \(LFC101\)](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/)
-* [ ] [Introduction to Cloud Foundry and Cloud Native Software Architecture \(LFS132\)](https://training.linuxfoundation.org/training/introduction-to-cloud-foundry-and-cloud-native-software-architecture/)
+* [ ] [Introduction to Cloud Foundry and Cloud-Native Software Architecture \(LFS132\)](https://training.linuxfoundation.org/training/introduction-to-cloud-foundry-and-cloud-native-software-architecture/)
 * [ ] [Introduction to Cloud Infrastructure Technologies \(LFS151\)](https://training.linuxfoundation.org/training/introduction-to-cloud-infrastructure-technologies/)
 * [ ] [Exploring GraphQL: A Query Language for APIs \(LFS141\)](https://training.linuxfoundation.org/training/exploring-graphql-a-query-language-for-apis-lfs141/)
 
