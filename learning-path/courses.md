@@ -1,6 +1,6 @@
 # Courses
 
-# Basics
+## Basics
 
 - [x] [Internet History, Technology, and Security](https://www.coursera.org/learn/internet-history/home/welcome)
 
@@ -52,7 +52,7 @@
 
 ---
 
-# Web Dev Schools
+## Web Dev Schools
 
 [Bitfumes](https://bitfumes.com/)
 
@@ -60,7 +60,7 @@
 
 ---
 
-# Advanced
+## Advanced
 
 Im still learning in this part
 
