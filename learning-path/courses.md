@@ -1,8 +1,6 @@
 # Courses
 
-## Courses
-
-### Basics
+## Basics
 
 * [x] [Internet History, Technology, and Security](https://www.coursera.org/learn/internet-history/home/welcome)
 
@@ -45,13 +43,13 @@
 
   > I just read these materials, haven't take any certification exam yet. I'm still planning to get a certification. While It gives me a vision of the TCP/IP model which composes the lower level under the IOS model's application layer, presentation layer, and session layer. And it gives me more details about IPv4, IPv6, DNS, network security, IT automation, and more...
 
-### Web Dev Schools
+## Web Dev Schools
 
 [Bitfumes](https://bitfumes.com/)
 
 > There are so many dev schools nowadays, I just began with this guy. There are so many choices out there, just pick up the one you like.
 
-### Advanced
+## Advanced
 
 Im still learning in this part
 
