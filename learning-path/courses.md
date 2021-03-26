@@ -53,6 +53,10 @@
 
 I'm still learning in this part
 
+* [ ] Distributed Systems
+
+  [MIT: Distributed Systems](https://www.youtube.com/channel/UC_7WrbZTCODu1o_kfUMq88g)
+
 * [ ] Algorithms
 
   [Algorithms: Design and Analysis, Part 1](https://www.edx.org/course/algorithms-design-and-analysis)

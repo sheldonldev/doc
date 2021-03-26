@@ -81,6 +81,10 @@ pip install -r requirements.txt
 * run `scrapy start project ProjectName`;
 * enter the project and open editor;
 
+```python
+
+```
+
 ## Selenium
 
 * An open-source tool which is used for automating the test carried out on web browsers
@@ -110,3 +114,21 @@ pip install -r requirements.txt
   print(driver.title)
   ```
 
+
+## Datetime
+
+```python
+from datetime import date, datetime, timestamp
+import time
+
+print(datetime.now())
+print(date(2019, 1, 20))
+print(datetime(2019, 1, 20, 23, 0))
+print(datetime.now().timestamp())
+print(datetime(2021, 3, 21, 13, 0).timestamp())   
+# 2021-03-23 11:29:53.442655
+# 2019-01-20
+# 2019-01-20 23:00:00
+# 1616499300.881008
+# 1616331600.0
+```
